@@ -40,14 +40,17 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.menuStrip1.BackColor = System.Drawing.Color.Lavender;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registeerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(670, 25);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(81, 397);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // registeerToolStripMenuItem
             // 
@@ -56,7 +59,7 @@
             this.lijstToolStripMenuItem});
             this.registeerToolStripMenuItem.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registeerToolStripMenuItem.Name = "registeerToolStripMenuItem";
-            this.registeerToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
+            this.registeerToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.registeerToolStripMenuItem.Text = "Registeer";
             // 
             // oudLeerlingToolStripMenuItem
@@ -76,7 +79,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Basisformulier.Properties.Resources.logo_handelsschool_sint_joris;
-            this.pictureBox1.Location = new System.Drawing.Point(161, 141);
+            this.pictureBox1.Location = new System.Drawing.Point(205, 135);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(356, 150);
             this.pictureBox1.TabIndex = 32;
