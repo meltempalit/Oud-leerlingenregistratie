@@ -19,7 +19,6 @@ namespace FormPosts
 
         private void Ervaring_Load(object sender, EventArgs e)
         {
-            string strTextBegin = txtErvaring.Text = "Typ hier uw ervaringen...";
             
         }
         
@@ -46,6 +45,33 @@ namespace FormPosts
             else
             {
 
+            }
+        }
+
+        private void txtErvaring_Enter(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void txtErvaring_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtErvaring_Enter_1(object sender, EventArgs e)
+        {
+            if(txtErvaring.Text == "Typ hier uw loopbaan/ ervaringen...")
+            { txtErvaring.Text = "";
+                txtErvaring.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtErvaring_Leave_1(object sender, EventArgs e)
+        {
+            if (txtErvaring.Text == "")
+            {
+                txtErvaring.Text = "Typ hier uw loopbaan/ ervaringen...";
+                txtErvaring.ForeColor = Color.Silver;
             }
         }
     }

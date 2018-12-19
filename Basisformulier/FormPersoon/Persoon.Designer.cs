@@ -28,24 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persoon));
             this.btnRegistreer = new System.Windows.Forms.Button();
             this.txtAfstudeerjaar = new System.Windows.Forms.DateTimePicker();
             this.txtGeboortedatum = new System.Windows.Forms.DateTimePicker();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtRichting = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
-            this.txtVoornaam = new System.Windows.Forms.TextBox();
+            this.txtFamilienaam = new System.Windows.Forms.TextBox();
             this.txtNaam = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblAfstudeerj = new System.Windows.Forms.Label();
+            this.lblafstrichting = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblGeboorte = new System.Windows.Forms.Label();
+            this.lblFamilienaam = new System.Windows.Forms.Label();
+            this.lblNaam = new System.Windows.Forms.Label();
             this.grpbReg = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cboLand = new System.Windows.Forms.ComboBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grpbReg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +61,7 @@
             this.btnRegistreer.Name = "btnRegistreer";
             this.btnRegistreer.Size = new System.Drawing.Size(169, 40);
             this.btnRegistreer.TabIndex = 29;
-            this.btnRegistreer.Text = "REGISTREER";
+            this.btnRegistreer.Text = "Registreer";
             this.btnRegistreer.UseVisualStyleBackColor = false;
             this.btnRegistreer.Click += new System.EventHandler(this.btnRegistreer_Click);
             // 
@@ -77,10 +81,15 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.ForeColor = System.Drawing.Color.Silver;
             this.txtEmail.Location = new System.Drawing.Point(151, 226);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 20);
             this.txtEmail.TabIndex = 26;
+            this.txtEmail.Text = "someone@example.com";
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // txtRichting
             // 
@@ -91,44 +100,46 @@
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(151, 263);
+            this.txtTel.Location = new System.Drawing.Point(367, 263);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(200, 20);
             this.txtTel.TabIndex = 24;
             // 
-            // txtVoornaam
+            // txtFamilienaam
             // 
-            this.txtVoornaam.Location = new System.Drawing.Point(151, 94);
-            this.txtVoornaam.Name = "txtVoornaam";
-            this.txtVoornaam.Size = new System.Drawing.Size(200, 20);
-            this.txtVoornaam.TabIndex = 23;
+            this.txtFamilienaam.Location = new System.Drawing.Point(151, 94);
+            this.txtFamilienaam.Name = "txtFamilienaam";
+            this.txtFamilienaam.Size = new System.Drawing.Size(200, 20);
+            this.txtFamilienaam.TabIndex = 23;
             // 
             // txtNaam
             // 
+            this.txtNaam.ForeColor = System.Drawing.Color.Black;
             this.txtNaam.Location = new System.Drawing.Point(151, 58);
             this.txtNaam.Name = "txtNaam";
             this.txtNaam.Size = new System.Drawing.Size(200, 20);
             this.txtNaam.TabIndex = 22;
             // 
-            // label7
+            // lblAfstudeerj
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(42, 350);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 20);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Afstudeerjaar ";
+            this.lblAfstudeerj.AutoSize = true;
+            this.lblAfstudeerj.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAfstudeerj.Location = new System.Drawing.Point(42, 350);
+            this.lblAfstudeerj.Name = "lblAfstudeerj";
+            this.lblAfstudeerj.Size = new System.Drawing.Size(83, 20);
+            this.lblAfstudeerj.TabIndex = 21;
+            this.lblAfstudeerj.Text = "Afstudeerjaar*";
+            this.lblAfstudeerj.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label6
+            // lblafstrichting
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 304);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 20);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Aftstudeerrichting";
+            this.lblafstrichting.AutoSize = true;
+            this.lblafstrichting.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblafstrichting.Location = new System.Drawing.Point(42, 304);
+            this.lblafstrichting.Name = "lblafstrichting";
+            this.lblafstrichting.Size = new System.Drawing.Size(108, 20);
+            this.lblafstrichting.TabIndex = 20;
+            this.lblafstrichting.Text = "Aftstudeerrichting*";
             // 
             // label5
             // 
@@ -150,71 +161,71 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "E-mail";
             // 
-            // label3
+            // lblGeboorte
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 20);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Geboortedatum";
+            this.lblGeboorte.AutoSize = true;
+            this.lblGeboorte.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeboorte.Location = new System.Drawing.Point(44, 163);
+            this.lblGeboorte.Name = "lblGeboorte";
+            this.lblGeboorte.Size = new System.Drawing.Size(96, 20);
+            this.lblGeboorte.TabIndex = 17;
+            this.lblGeboorte.Text = "Geboortedatum*";
             // 
-            // label2
+            // lblFamilienaam
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Voornaam";
+            this.lblFamilienaam.AutoSize = true;
+            this.lblFamilienaam.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilienaam.Location = new System.Drawing.Point(44, 94);
+            this.lblFamilienaam.Name = "lblFamilienaam";
+            this.lblFamilienaam.Size = new System.Drawing.Size(78, 20);
+            this.lblFamilienaam.TabIndex = 16;
+            this.lblFamilienaam.Text = "Familienaam*";
             // 
-            // label1
+            // lblNaam
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Naam";
+            this.lblNaam.AutoSize = true;
+            this.lblNaam.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNaam.Location = new System.Drawing.Point(44, 60);
+            this.lblNaam.Name = "lblNaam";
+            this.lblNaam.Size = new System.Drawing.Size(43, 20);
+            this.lblNaam.TabIndex = 15;
+            this.lblNaam.Text = "Naam*";
             // 
             // grpbReg
             // 
+            this.grpbReg.Controls.Add(this.cboLand);
             this.grpbReg.Controls.Add(this.lnklAnnu);
-            this.grpbReg.Controls.Add(this.label1);
+            this.grpbReg.Controls.Add(this.lblNaam);
             this.grpbReg.Controls.Add(this.btnRegistreer);
-            this.grpbReg.Controls.Add(this.label2);
+            this.grpbReg.Controls.Add(this.lblFamilienaam);
             this.grpbReg.Controls.Add(this.txtAfstudeerjaar);
-            this.grpbReg.Controls.Add(this.label3);
+            this.grpbReg.Controls.Add(this.lblGeboorte);
             this.grpbReg.Controls.Add(this.txtGeboortedatum);
             this.grpbReg.Controls.Add(this.label4);
             this.grpbReg.Controls.Add(this.txtEmail);
             this.grpbReg.Controls.Add(this.label5);
             this.grpbReg.Controls.Add(this.txtRichting);
-            this.grpbReg.Controls.Add(this.label6);
+            this.grpbReg.Controls.Add(this.lblafstrichting);
             this.grpbReg.Controls.Add(this.txtTel);
-            this.grpbReg.Controls.Add(this.label7);
-            this.grpbReg.Controls.Add(this.txtVoornaam);
+            this.grpbReg.Controls.Add(this.lblAfstudeerj);
+            this.grpbReg.Controls.Add(this.txtFamilienaam);
             this.grpbReg.Controls.Add(this.txtNaam);
-            this.grpbReg.Location = new System.Drawing.Point(83, 87);
+            this.grpbReg.Location = new System.Drawing.Point(50, 87);
             this.grpbReg.Name = "grpbReg";
-            this.grpbReg.Size = new System.Drawing.Size(489, 494);
+            this.grpbReg.Size = new System.Drawing.Size(616, 494);
             this.grpbReg.TabIndex = 30;
             this.grpbReg.TabStop = false;
             this.grpbReg.Text = "REGISTREER";
             this.grpbReg.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // pictureBox1
+            // cboLand
             // 
-            this.pictureBox1.Image = global::FormPersoon.Properties.Resources.VHSJ;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 79);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.cboLand.FormattingEnabled = true;
+            this.cboLand.Location = new System.Drawing.Point(151, 263);
+            this.cboLand.Name = "cboLand";
+            this.cboLand.Size = new System.Drawing.Size(200, 21);
+            this.cboLand.TabIndex = 31;
+            this.cboLand.SelectedIndexChanged += new System.EventHandler(this.cboLand_SelectedIndexChanged);
             // 
             // lnklAnnu
             // 
@@ -227,16 +238,30 @@
             this.lnklAnnu.Text = "Annuleer";
             this.lnklAnnu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklAnnu_LinkClicked);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FormPersoon.Properties.Resources.VHSJ;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 79);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Persoon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(636, 617);
+            this.ClientSize = new System.Drawing.Size(711, 617);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpbReg);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Persoon";
-            this.Text = "Persoon";
             this.Load += new System.EventHandler(this.Persoon_Load);
             this.grpbReg.ResumeLayout(false);
             this.grpbReg.PerformLayout();
@@ -253,18 +278,20 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtRichting;
         private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.TextBox txtVoornaam;
+        private System.Windows.Forms.TextBox txtFamilienaam;
         private System.Windows.Forms.TextBox txtNaam;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblAfstudeerj;
+        private System.Windows.Forms.Label lblafstrichting;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGeboorte;
+        private System.Windows.Forms.Label lblFamilienaam;
+        private System.Windows.Forms.Label lblNaam;
         private System.Windows.Forms.GroupBox grpbReg;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lnklAnnu;
+        private System.Windows.Forms.ComboBox cboLand;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -31,5 +31,60 @@ namespace Basisformulier
 
             }
         }
+
+        private void txtZoek_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
+
+        private void txtZoek_TextChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+        Business bus = new Business();
+        private void LijstOudleerlingen_Load(object sender, EventArgs e)
+        {
+
+
+            foreach (string item in bus.getOudleerlingen())
+            {
+                lstLijst.Items.Add(item);
+            }
+
+
+        }
+
+        private void txtZoek_Enter(object sender, EventArgs e)
+        {
+            if(txtZoek.Text == "Zoeken...")
+            {
+                txtZoek.Text = "";
+                txtZoek.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtZoek_Leave(object sender, EventArgs e)
+        {
+            if (txtZoek.Text == "")
+            {
+                txtZoek.Text = "Zoeken...";
+                txtZoek.ForeColor = Color.Silver;
+            }
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void btnZoek_Click(object sender, EventArgs e)
+        {
+            
+
+           
+        }
     }
 }

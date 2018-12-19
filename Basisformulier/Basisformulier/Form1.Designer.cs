@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registeerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oudLeerlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,11 +40,12 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registeerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(670, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(670, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -52,21 +54,22 @@
             this.registeerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.oudLeerlingToolStripMenuItem,
             this.lijstToolStripMenuItem});
+            this.registeerToolStripMenuItem.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registeerToolStripMenuItem.Name = "registeerToolStripMenuItem";
-            this.registeerToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.registeerToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
             this.registeerToolStripMenuItem.Text = "Registeer";
             // 
             // oudLeerlingToolStripMenuItem
             // 
             this.oudLeerlingToolStripMenuItem.Name = "oudLeerlingToolStripMenuItem";
-            this.oudLeerlingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oudLeerlingToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.oudLeerlingToolStripMenuItem.Text = "Oud-Leerling";
             this.oudLeerlingToolStripMenuItem.Click += new System.EventHandler(this.oudLeerlingToolStripMenuItem_Click);
             // 
             // lijstToolStripMenuItem
             // 
             this.lijstToolStripMenuItem.Name = "lijstToolStripMenuItem";
-            this.lijstToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lijstToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.lijstToolStripMenuItem.Text = "Lijst oud-leerlingen";
             this.lijstToolStripMenuItem.Click += new System.EventHandler(this.lijstToolStripMenuItem_Click);
             // 
@@ -87,9 +90,11 @@
             this.ClientSize = new System.Drawing.Size(670, 397);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Basis";
+            this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

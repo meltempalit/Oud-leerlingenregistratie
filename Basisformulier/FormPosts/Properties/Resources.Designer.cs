@@ -63,6 +63,36 @@ namespace FormPosts.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Tick_Mark_1398911 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Tick_Mark_1398911", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Tick_Mark_1398911__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Tick_Mark_1398911 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_windows_xp_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-windows-xp-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap VHSJ {
             get {
                 object obj = ResourceManager.GetObject("VHSJ", resourceCulture);

@@ -101,5 +101,14 @@
   <ItemGroup>
     <None Include="Resources\VHSJ.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-windows-xp-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Tick_Mark_1398911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Tick_Mark_1398911 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

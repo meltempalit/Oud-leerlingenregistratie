@@ -19,7 +19,7 @@ namespace FormPosts
 
         private void Herinnering_Load(object sender, EventArgs e)
         {
-            txtHerinneringen.Text = "Typ hier wat uw leukste herinnering zijn aan Sint-Joris?...";
+           
         }
 
         private void txtHerinneringen_TextChanged(object sender, EventArgs e)
@@ -45,6 +45,36 @@ namespace FormPosts
             {
 
             }
+        }
+
+        private void txtHerinneringen_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtHerinneringen_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtHerrinering_Enter(object sender, EventArgs e)
+        {
+            if(txtHerrinering.Text == "Typ hier wat uw leukste herinnering zijn aan Sint-Joris?...")
+            {
+                txtHerrinering.Text = "";
+                txtHerrinering.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void txtHerrinering_Leave(object sender, EventArgs e)
+        {
+            if (txtHerrinering.Text == "")
+            {
+                txtHerrinering.Text = "Typ hier wat uw leukste herinnering zijn aan Sint-Joris?...";
+                txtHerrinering.ForeColor = Color.Silver;
+            }
+
         }
     }
 }
