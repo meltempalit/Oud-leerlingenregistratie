@@ -74,5 +74,17 @@ namespace FormPosts
                 txtErvaring.ForeColor = Color.Silver;
             }
         }
+
+        private void btnToevoegenErvaring_MouseHover(object sender, EventArgs e)
+        {
+            btnToevoegenErvaring.BackColor = Color.SteelBlue;
+            btnToevoegenErvaring.ForeColor = Color.White;
+        }
+
+        private void btnToevoegenErvaring_MouseLeave(object sender, EventArgs e)
+        {
+            btnToevoegenErvaring.BackColor = Color.Transparent;
+            btnToevoegenErvaring.ForeColor = Color.Black;
+        }
     }
 }

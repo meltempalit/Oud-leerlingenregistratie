@@ -47,6 +47,8 @@
             this.btnToevoegenErvaring.Text = "Volgende";
             this.btnToevoegenErvaring.UseVisualStyleBackColor = true;
             this.btnToevoegenErvaring.Click += new System.EventHandler(this.btnToevoegenErvaring_Click);
+            this.btnToevoegenErvaring.MouseLeave += new System.EventHandler(this.btnToevoegenErvaring_MouseLeave);
+            this.btnToevoegenErvaring.MouseHover += new System.EventHandler(this.btnToevoegenErvaring_MouseHover);
             // 
             // pictureBox1
             // 
@@ -70,6 +72,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.groupBox1.Controls.Add(this.txtErvaring);
             this.groupBox1.Controls.Add(this.lnklAnnu);
             this.groupBox1.Controls.Add(this.btnToevoegenErvaring);

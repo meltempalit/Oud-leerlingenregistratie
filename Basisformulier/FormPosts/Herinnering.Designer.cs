@@ -47,6 +47,8 @@
             this.button1.Text = "Volgende";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // pictureBox1
             // 
@@ -70,6 +72,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.groupBox1.Controls.Add(this.txtHerrinering);
             this.groupBox1.Controls.Add(this.lnklAnnu);
             this.groupBox1.Controls.Add(this.button1);

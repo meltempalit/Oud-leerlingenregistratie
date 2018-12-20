@@ -84,5 +84,17 @@ namespace FormPosts
                 }
             }
         }
+
+        private void btnToevoegenmededeling_MouseHover(object sender, EventArgs e)
+        {
+            btnToevoegenmededeling.BackColor = Color.SteelBlue;
+            btnToevoegenmededeling.ForeColor = Color.White;
+        }
+
+        private void btnToevoegenmededeling_MouseLeave(object sender, EventArgs e)
+        {
+            btnToevoegenmededeling.BackColor = Color.Transparent;
+            btnToevoegenmededeling.ForeColor = Color.Black;
+        }
     }
 }

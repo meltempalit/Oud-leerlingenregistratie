@@ -86,5 +86,17 @@ namespace Basisformulier
 
            
         }
+
+        private void btnZoek_MouseHover(object sender, EventArgs e)
+        {
+            btnZoek.BackColor = Color.SteelBlue;
+            btnZoek.ForeColor = Color.White;
+        }
+
+        private void btnZoek_MouseLeave(object sender, EventArgs e)
+        {
+            btnZoek.BackColor = Color.Transparent;
+            btnZoek.ForeColor = Color.Black;
+        }
     }
 }

@@ -30,28 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mededeling));
-            this.btnToevoegenHerinnering = new System.Windows.Forms.Button();
+            this.btnToevoegenmededeling = new System.Windows.Forms.Button();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMededeling = new System.Windows.Forms.TextBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pcbox = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.txtMededeling = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnToevoegenHerinnering
+            // btnToevoegenmededeling
             // 
-            this.btnToevoegenHerinnering.Location = new System.Drawing.Point(254, 215);
-            this.btnToevoegenHerinnering.Name = "btnToevoegenHerinnering";
-            this.btnToevoegenHerinnering.Size = new System.Drawing.Size(152, 49);
-            this.btnToevoegenHerinnering.TabIndex = 8;
-            this.btnToevoegenHerinnering.Text = "Volgende";
-            this.btnToevoegenHerinnering.UseVisualStyleBackColor = true;
-            this.btnToevoegenHerinnering.Click += new System.EventHandler(this.btnToevoegenHerinnering_Click);
+            this.btnToevoegenmededeling.Location = new System.Drawing.Point(254, 215);
+            this.btnToevoegenmededeling.Name = "btnToevoegenmededeling";
+            this.btnToevoegenmededeling.Size = new System.Drawing.Size(152, 49);
+            this.btnToevoegenmededeling.TabIndex = 8;
+            this.btnToevoegenmededeling.Text = "Volgende";
+            this.btnToevoegenmededeling.UseVisualStyleBackColor = true;
+            this.btnToevoegenmededeling.Click += new System.EventHandler(this.btnToevoegenHerinnering_Click);
+            this.btnToevoegenmededeling.MouseLeave += new System.EventHandler(this.btnToevoegenmededeling_MouseLeave);
+            this.btnToevoegenmededeling.MouseHover += new System.EventHandler(this.btnToevoegenmededeling_MouseHover);
             // 
             // lnklAnnu
             // 
@@ -66,17 +68,37 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.groupBox1.Controls.Add(this.pcbox);
             this.groupBox1.Controls.Add(this.progressBar1);
             this.groupBox1.Controls.Add(this.txtMededeling);
             this.groupBox1.Controls.Add(this.lnklAnnu);
-            this.groupBox1.Controls.Add(this.btnToevoegenHerinnering);
+            this.groupBox1.Controls.Add(this.btnToevoegenmededeling);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(464, 327);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MEDEDELING";
+            // 
+            // pcbox
+            // 
+            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
+            this.pcbox.Location = new System.Drawing.Point(412, 284);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(16, 16);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pcbox.TabIndex = 36;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(20, 284);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(386, 23);
+            this.progressBar1.TabIndex = 36;
+            this.progressBar1.Visible = false;
             // 
             // txtMededeling
             // 
@@ -90,28 +112,9 @@
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter);
             this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(20, 284);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(386, 23);
-            this.progressBar1.TabIndex = 36;
-            this.progressBar1.Visible = false;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pcbox
-            // 
-            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
-            this.pcbox.Location = new System.Drawing.Point(412, 284);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(16, 16);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pcbox.TabIndex = 36;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
             // 
             // pictureBox1
             // 
@@ -143,7 +146,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnToevoegenHerinnering;
+        private System.Windows.Forms.Button btnToevoegenmededeling;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lnklAnnu;
         private System.Windows.Forms.GroupBox groupBox1;

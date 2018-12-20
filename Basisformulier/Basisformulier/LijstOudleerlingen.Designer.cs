@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LijstOudleerlingen));
             this.lstLijst = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.groupBox1.Controls.Add(this.lstLijst);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
@@ -91,13 +93,16 @@
             // 
             // btnZoek
             // 
+            this.btnZoek.BackColor = System.Drawing.Color.LightGray;
             this.btnZoek.Location = new System.Drawing.Point(399, 71);
             this.btnZoek.Name = "btnZoek";
             this.btnZoek.Size = new System.Drawing.Size(75, 20);
             this.btnZoek.TabIndex = 36;
             this.btnZoek.Text = "ZOEKEN";
-            this.btnZoek.UseVisualStyleBackColor = true;
+            this.btnZoek.UseVisualStyleBackColor = false;
             this.btnZoek.Click += new System.EventHandler(this.btnZoek_Click);
+            this.btnZoek.MouseLeave += new System.EventHandler(this.btnZoek_MouseLeave);
+            this.btnZoek.MouseHover += new System.EventHandler(this.btnZoek_MouseHover);
             // 
             // LijstOudleerlingen
             // 
@@ -110,6 +115,7 @@
             this.Controls.Add(this.llblclose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LijstOudleerlingen";
             this.Text = "LijstOudleerlingen";
             this.Load += new System.EventHandler(this.LijstOudleerlingen_Load);

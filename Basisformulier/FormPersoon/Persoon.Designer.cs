@@ -48,15 +48,18 @@
             this.grpbReg = new System.Windows.Forms.GroupBox();
             this.cboLand = new System.Windows.Forms.ComboBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
+            this.lbltel = new System.Windows.Forms.Label();
             this.grpbReg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistreer
             // 
-            this.btnRegistreer.BackColor = System.Drawing.Color.Silver;
+            this.btnRegistreer.BackColor = System.Drawing.Color.LightGray;
             this.btnRegistreer.Location = new System.Drawing.Point(182, 418);
             this.btnRegistreer.Name = "btnRegistreer";
             this.btnRegistreer.Size = new System.Drawing.Size(169, 40);
@@ -64,6 +67,8 @@
             this.btnRegistreer.Text = "Registreer";
             this.btnRegistreer.UseVisualStyleBackColor = false;
             this.btnRegistreer.Click += new System.EventHandler(this.btnRegistreer_Click);
+            this.btnRegistreer.MouseLeave += new System.EventHandler(this.btnRegistreer_MouseLeave);
+            this.btnRegistreer.MouseHover += new System.EventHandler(this.btnRegistreer_MouseHover);
             // 
             // txtAfstudeerjaar
             // 
@@ -82,7 +87,7 @@
             // txtEmail
             // 
             this.txtEmail.ForeColor = System.Drawing.Color.Silver;
-            this.txtEmail.Location = new System.Drawing.Point(151, 226);
+            this.txtEmail.Location = new System.Drawing.Point(151, 263);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 20);
             this.txtEmail.TabIndex = 26;
@@ -100,10 +105,11 @@
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(367, 263);
+            this.txtTel.Location = new System.Drawing.Point(369, 216);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(200, 20);
             this.txtTel.TabIndex = 24;
+            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             // 
             // txtFamilienaam
             // 
@@ -145,7 +151,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 265);
+            this.label5.Location = new System.Drawing.Point(44, 216);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 19;
@@ -155,7 +161,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 228);
+            this.label4.Location = new System.Drawing.Point(47, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 20);
             this.label4.TabIndex = 18;
@@ -193,6 +199,9 @@
             // 
             // grpbReg
             // 
+            this.grpbReg.BackColor = System.Drawing.Color.GhostWhite;
+            this.grpbReg.Controls.Add(this.lbltel);
+            this.grpbReg.Controls.Add(this.picAvatar);
             this.grpbReg.Controls.Add(this.cboLand);
             this.grpbReg.Controls.Add(this.lnklAnnu);
             this.grpbReg.Controls.Add(this.lblNaam);
@@ -221,7 +230,7 @@
             // cboLand
             // 
             this.cboLand.FormattingEnabled = true;
-            this.cboLand.Location = new System.Drawing.Point(151, 263);
+            this.cboLand.Location = new System.Drawing.Point(151, 216);
             this.cboLand.Name = "cboLand";
             this.cboLand.Size = new System.Drawing.Size(200, 21);
             this.cboLand.TabIndex = 31;
@@ -238,6 +247,10 @@
             this.lnklAnnu.Text = "Annuleer";
             this.lnklAnnu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklAnnu_LinkClicked);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormPersoon.Properties.Resources.VHSJ;
@@ -248,9 +261,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // timer1
+            // picAvatar
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.picAvatar.Image = global::FormPersoon.Properties.Resources._142;
+            this.picAvatar.Location = new System.Drawing.Point(401, 48);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(140, 135);
+            this.picAvatar.TabIndex = 32;
+            this.picAvatar.TabStop = false;
+            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
+            // 
+            // lbltel
+            // 
+            this.lbltel.AutoSize = true;
+            this.lbltel.ForeColor = System.Drawing.Color.Red;
+            this.lbltel.Location = new System.Drawing.Point(369, 243);
+            this.lbltel.Name = "lbltel";
+            this.lbltel.Size = new System.Drawing.Size(0, 13);
+            this.lbltel.TabIndex = 33;
             // 
             // Persoon
             // 
@@ -266,6 +294,7 @@
             this.grpbReg.ResumeLayout(false);
             this.grpbReg.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,6 +321,8 @@
         private System.Windows.Forms.LinkLabel lnklAnnu;
         private System.Windows.Forms.ComboBox cboLand;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox picAvatar;
+        private System.Windows.Forms.Label lbltel;
     }
 }
 

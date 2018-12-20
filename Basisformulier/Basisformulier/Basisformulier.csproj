@@ -105,5 +105,20 @@
   <ItemGroup>
     <None Include="Resources\VHSJ.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Paul-17_2524745 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_view_text_6227.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picc.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pccc.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
