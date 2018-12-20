@@ -40,7 +40,8 @@
             // 
             // btnToevoegenErvaring
             // 
-            this.btnToevoegenErvaring.Location = new System.Drawing.Point(251, 165);
+            this.btnToevoegenErvaring.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToevoegenErvaring.Location = new System.Drawing.Point(251, 191);
             this.btnToevoegenErvaring.Name = "btnToevoegenErvaring";
             this.btnToevoegenErvaring.Size = new System.Drawing.Size(152, 37);
             this.btnToevoegenErvaring.TabIndex = 5;
@@ -62,7 +63,7 @@
             // lnklAnnu
             // 
             this.lnklAnnu.AutoSize = true;
-            this.lnklAnnu.Location = new System.Drawing.Point(196, 189);
+            this.lnklAnnu.Location = new System.Drawing.Point(196, 215);
             this.lnklAnnu.Name = "lnklAnnu";
             this.lnklAnnu.Size = new System.Drawing.Size(49, 13);
             this.lnklAnnu.TabIndex = 33;
@@ -78,7 +79,7 @@
             this.groupBox1.Controls.Add(this.btnToevoegenErvaring);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 228);
+            this.groupBox1.Size = new System.Drawing.Size(425, 252);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ERVARINGEN";
@@ -101,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(459, 339);
+            this.ClientSize = new System.Drawing.Size(451, 361);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

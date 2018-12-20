@@ -45,9 +45,10 @@
             // 
             // btnToevoegenmededeling
             // 
-            this.btnToevoegenmededeling.Location = new System.Drawing.Point(254, 215);
+            this.btnToevoegenmededeling.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToevoegenmededeling.Location = new System.Drawing.Point(254, 194);
             this.btnToevoegenmededeling.Name = "btnToevoegenmededeling";
-            this.btnToevoegenmededeling.Size = new System.Drawing.Size(152, 49);
+            this.btnToevoegenmededeling.Size = new System.Drawing.Size(152, 37);
             this.btnToevoegenmededeling.TabIndex = 8;
             this.btnToevoegenmededeling.Text = "Volgende";
             this.btnToevoegenmededeling.UseVisualStyleBackColor = true;
@@ -58,7 +59,7 @@
             // lnklAnnu
             // 
             this.lnklAnnu.AutoSize = true;
-            this.lnklAnnu.Location = new System.Drawing.Point(199, 251);
+            this.lnklAnnu.Location = new System.Drawing.Point(199, 218);
             this.lnklAnnu.Name = "lnklAnnu";
             this.lnklAnnu.Size = new System.Drawing.Size(49, 13);
             this.lnklAnnu.TabIndex = 34;
@@ -76,7 +77,7 @@
             this.groupBox1.Controls.Add(this.btnToevoegenmededeling);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(464, 327);
+            this.groupBox1.Size = new System.Drawing.Size(427, 252);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MEDEDELING";
@@ -84,7 +85,7 @@
             // pcbox
             // 
             this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
-            this.pcbox.Location = new System.Drawing.Point(412, 284);
+            this.pcbox.Location = new System.Drawing.Point(6, 172);
             this.pcbox.Name = "pcbox";
             this.pcbox.Size = new System.Drawing.Size(16, 16);
             this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -94,7 +95,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(20, 284);
+            this.progressBar1.Location = new System.Drawing.Point(22, 165);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(386, 23);
             this.progressBar1.TabIndex = 36;
@@ -106,7 +107,7 @@
             this.txtMededeling.Location = new System.Drawing.Point(20, 19);
             this.txtMededeling.Multiline = true;
             this.txtMededeling.Name = "txtMededeling";
-            this.txtMededeling.Size = new System.Drawing.Size(386, 190);
+            this.txtMededeling.Size = new System.Drawing.Size(386, 137);
             this.txtMededeling.TabIndex = 35;
             this.txtMededeling.Text = "Typ hier wat u wenst mee te geven aan de leerlingen...";
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter);
@@ -130,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(519, 450);
+            this.ClientSize = new System.Drawing.Size(451, 361);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

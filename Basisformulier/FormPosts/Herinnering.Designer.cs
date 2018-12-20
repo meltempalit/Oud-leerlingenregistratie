@@ -40,9 +40,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(252, 214);
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(252, 188);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 49);
+            this.button1.Size = new System.Drawing.Size(152, 37);
             this.button1.TabIndex = 8;
             this.button1.Text = "Volgende";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,7 +63,7 @@
             // lnklAnnu
             // 
             this.lnklAnnu.AutoSize = true;
-            this.lnklAnnu.Location = new System.Drawing.Point(197, 250);
+            this.lnklAnnu.Location = new System.Drawing.Point(197, 212);
             this.lnklAnnu.Name = "lnklAnnu";
             this.lnklAnnu.Size = new System.Drawing.Size(49, 13);
             this.lnklAnnu.TabIndex = 33;
@@ -78,7 +79,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(463, 318);
+            this.groupBox1.Size = new System.Drawing.Size(425, 252);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "HERINNERINGEN";
@@ -89,7 +90,7 @@
             this.txtHerrinering.Location = new System.Drawing.Point(18, 19);
             this.txtHerrinering.Multiline = true;
             this.txtHerrinering.Name = "txtHerrinering";
-            this.txtHerrinering.Size = new System.Drawing.Size(386, 189);
+            this.txtHerrinering.Size = new System.Drawing.Size(386, 137);
             this.txtHerrinering.TabIndex = 34;
             this.txtHerrinering.Text = "Typ hier wat uw leukste herinnering zijn aan Sint-Joris?...";
             this.txtHerrinering.Enter += new System.EventHandler(this.txtHerrinering_Enter);
@@ -100,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(519, 450);
+            this.ClientSize = new System.Drawing.Size(451, 361);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
