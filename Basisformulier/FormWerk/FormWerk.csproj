@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33D1D4C9-DAC0-4A07-8056-D42587F22970}</ProjectGuid>
+    <ProjectGuid>{51BABB84-A6C5-49C0-A220-0106981FE543}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FormPosts</RootNamespace>
-    <AssemblyName>FormPosts</AssemblyName>
+    <RootNamespace>FormWerk</RootNamespace>
+    <AssemblyName>FormWerk</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,36 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business.cs" />
-    <Compile Include="Ervaring.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ervaring.Designer.cs">
-      <DependentUpon>Ervaring.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Herinnering.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Herinnering.Designer.cs">
-      <DependentUpon>Herinnering.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mededeling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mededeling.Designer.cs">
-      <DependentUpon>Mededeling.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Ervaring.resx">
-      <DependentUpon>Ervaring.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Herinnering.resx">
-      <DependentUpon>Herinnering.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mededeling.resx">
-      <DependentUpon>Mededeling.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -85,7 +64,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,18 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\VHSJ.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-windows-xp-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_Tick_Mark_1398911.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_Tick_Mark_1398911 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

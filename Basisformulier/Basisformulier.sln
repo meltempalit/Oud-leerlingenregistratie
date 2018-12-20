@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormPosts", "FormPosts\Form
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormPersoon", "FormPersoon\FormPersoon.csproj", "{4D7BA203-5B9A-420B-A030-A81A6235C760}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormWerk", "FormWerk\FormWerk.csproj", "{51BABB84-A6C5-49C0-A220-0106981FE543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormVervolgstudies", "FormVervolgstudies\FormVervolgstudies.csproj", "{82742039-351A-40FF-8E8F-8C4C6BA671FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{4D7BA203-5B9A-420B-A030-A81A6235C760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D7BA203-5B9A-420B-A030-A81A6235C760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D7BA203-5B9A-420B-A030-A81A6235C760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51BABB84-A6C5-49C0-A220-0106981FE543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51BABB84-A6C5-49C0-A220-0106981FE543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51BABB84-A6C5-49C0-A220-0106981FE543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51BABB84-A6C5-49C0-A220-0106981FE543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82742039-351A-40FF-8E8F-8C4C6BA671FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82742039-351A-40FF-8E8F-8C4C6BA671FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82742039-351A-40FF-8E8F-8C4C6BA671FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82742039-351A-40FF-8E8F-8C4C6BA671FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
