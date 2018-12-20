@@ -86,5 +86,10 @@ namespace FormPosts
             btnToevoegenErvaring.BackColor = Color.Transparent;
             btnToevoegenErvaring.ForeColor = Color.Black;
         }
+
+        private void txtErvaring_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

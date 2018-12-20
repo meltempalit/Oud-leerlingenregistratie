@@ -42,13 +42,15 @@ namespace Basisformulier
         private void oudLeerlingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Persoon().Show();
-            
+            //Visible = false;
 
         }
 
         private void lijstToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new LijstOudleerlingen().Show();
+            
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,6 +64,11 @@ namespace Basisformulier
         }
 
         private void piToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registeerToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

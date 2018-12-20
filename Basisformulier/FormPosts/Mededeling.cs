@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FormPosts
 {
     public partial class Mededeling : Form
@@ -33,6 +34,7 @@ namespace FormPosts
             progressBar1.Visible = true;
             
             
+            
         }
 
         private void lnklAnnu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -42,6 +44,8 @@ namespace FormPosts
             if(dialogresult == DialogResult.Yes)
             {
                 Visible = false;
+              
+                
             }
             else
             {

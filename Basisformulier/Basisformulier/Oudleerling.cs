@@ -69,6 +69,7 @@ namespace Basisformulier
             strNaam = pnaam;
             strFamilienaam = pfamn;
         }
+        
 
         public override string ToString()
         {

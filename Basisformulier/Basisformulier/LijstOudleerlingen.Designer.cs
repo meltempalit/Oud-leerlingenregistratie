@@ -31,21 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LijstOudleerlingen));
             this.lstLijst = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
             this.txtZoek = new System.Windows.Forms.TextBox();
             this.btnZoek = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lstLijst
             // 
+            this.lstLijst.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstLijst.ForeColor = System.Drawing.Color.Gray;
             this.lstLijst.FormattingEnabled = true;
+            this.lstLijst.ItemHeight = 19;
             this.lstLijst.Location = new System.Drawing.Point(44, 37);
             this.lstLijst.Name = "lstLijst";
-            this.lstLijst.Size = new System.Drawing.Size(359, 238);
+            this.lstLijst.Size = new System.Drawing.Size(359, 232);
             this.lstLijst.TabIndex = 0;
+            this.lstLijst.SelectedIndexChanged += new System.EventHandler(this.lstLijst_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -58,15 +62,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OUD-LEERLINGEN";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Basisformulier.Properties.Resources.VHSJ;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 79);
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
             // 
             // llblclose
             // 
@@ -103,6 +98,15 @@
             this.btnZoek.Click += new System.EventHandler(this.btnZoek_Click);
             this.btnZoek.MouseLeave += new System.EventHandler(this.btnZoek_MouseLeave);
             this.btnZoek.MouseHover += new System.EventHandler(this.btnZoek_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Basisformulier.Properties.Resources.VHSJ;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 79);
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
             // 
             // LijstOudleerlingen
             // 

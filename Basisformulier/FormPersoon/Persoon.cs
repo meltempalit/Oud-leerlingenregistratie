@@ -56,7 +56,7 @@ namespace FormPersoon
             else
             {
                 new Ervaring().Show();
-               Visible = false;
+              Visible = false;
 
             }
 
@@ -86,6 +86,8 @@ namespace FormPersoon
             cboLand.Items.Add("Nederland");
             cboLand.Items.Add("Anders");
 
+            
+       
             Random random = new Random();
 
             intAvatar = random.Next(1,24);
@@ -94,6 +96,7 @@ namespace FormPersoon
             {
                 case 1:
                     picAvatar.Image = Properties.Resources._1;
+                    
                    
                     break;
                 case 2:
@@ -144,6 +147,9 @@ namespace FormPersoon
                 case 16:
                     picAvatar.Image = Properties.Resources._16;
                     break;
+                case 17:
+                    picAvatar.Image = Properties.Resources._17;
+                    break;
                 case 19:
                     picAvatar.Image = Properties.Resources._19;
                     break;
@@ -165,7 +171,10 @@ namespace FormPersoon
                 case 24:
                     picAvatar.Image = Properties.Resources._24;
                     break;
-               
+
+
+
+
 
 
             }
@@ -196,7 +205,7 @@ namespace FormPersoon
             if(txtEmail.Text == "someone@example.com")
             {
                 txtEmail.Text = "";
-                txtEmail.ForeColor = Color.Black;
+                txtEmail.ForeColor = Color.Silver;
             }
         }
 
@@ -231,12 +240,15 @@ namespace FormPersoon
 
         private void btnRegistreer_MouseHover(object sender, EventArgs e)
         {
+           
             btnRegistreer.BackColor = Color.SteelBlue;
             btnRegistreer.ForeColor = Color.White;
-        }
+            }
 
         private void btnRegistreer_MouseLeave(object sender, EventArgs e)
         {
+            
+
             btnRegistreer.BackColor = Color.Transparent;
             btnRegistreer.ForeColor = Color.Black;
         }
@@ -249,6 +261,25 @@ namespace FormPersoon
         private void txtTel_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtGeboortedatum_SizeChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cboLand_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            Brush myBrush = Brushes.Silver;
+            Font ft = cboLand.Font; ;
+            e.Graphics.DrawString(cboLand.Items[e.Index].ToString(), ft, myBrush, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
+        }
+
+        private void cboLand_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            e.ItemHeight = 31;
         }
     }
 }

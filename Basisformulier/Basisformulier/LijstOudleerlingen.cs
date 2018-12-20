@@ -62,7 +62,7 @@ namespace Basisformulier
             if(txtZoek.Text == "Zoeken...")
             {
                 txtZoek.Text = "";
-                txtZoek.ForeColor = Color.Black;
+                txtZoek.ForeColor = Color.Silver;
             }
         }
 
@@ -97,6 +97,11 @@ namespace Basisformulier
         {
             btnZoek.BackColor = Color.Transparent;
             btnZoek.ForeColor = Color.Black;
+        }
+
+        private void lstLijst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+         //messagebox
         }
     }
 }

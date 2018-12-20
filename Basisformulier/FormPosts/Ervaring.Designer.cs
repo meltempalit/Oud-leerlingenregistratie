@@ -40,9 +40,9 @@
             // 
             // btnToevoegenErvaring
             // 
-            this.btnToevoegenErvaring.Location = new System.Drawing.Point(251, 214);
+            this.btnToevoegenErvaring.Location = new System.Drawing.Point(251, 165);
             this.btnToevoegenErvaring.Name = "btnToevoegenErvaring";
-            this.btnToevoegenErvaring.Size = new System.Drawing.Size(152, 49);
+            this.btnToevoegenErvaring.Size = new System.Drawing.Size(152, 37);
             this.btnToevoegenErvaring.TabIndex = 5;
             this.btnToevoegenErvaring.Text = "Volgende";
             this.btnToevoegenErvaring.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             // lnklAnnu
             // 
             this.lnklAnnu.AutoSize = true;
-            this.lnklAnnu.Location = new System.Drawing.Point(196, 250);
+            this.lnklAnnu.Location = new System.Drawing.Point(196, 189);
             this.lnklAnnu.Name = "lnklAnnu";
             this.lnklAnnu.Size = new System.Drawing.Size(49, 13);
             this.lnklAnnu.TabIndex = 33;
@@ -78,7 +78,7 @@
             this.groupBox1.Controls.Add(this.btnToevoegenErvaring);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(468, 318);
+            this.groupBox1.Size = new System.Drawing.Size(431, 228);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ERVARINGEN";
@@ -89,9 +89,10 @@
             this.txtErvaring.Location = new System.Drawing.Point(17, 22);
             this.txtErvaring.Multiline = true;
             this.txtErvaring.Name = "txtErvaring";
-            this.txtErvaring.Size = new System.Drawing.Size(386, 186);
+            this.txtErvaring.Size = new System.Drawing.Size(386, 137);
             this.txtErvaring.TabIndex = 35;
             this.txtErvaring.Text = "Typ hier uw loopbaan/ ervaringen...";
+            this.txtErvaring.TextChanged += new System.EventHandler(this.txtErvaring_TextChanged_1);
             this.txtErvaring.Enter += new System.EventHandler(this.txtErvaring_Enter_1);
             this.txtErvaring.Leave += new System.EventHandler(this.txtErvaring_Leave_1);
             // 
@@ -100,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(519, 450);
+            this.ClientSize = new System.Drawing.Size(459, 339);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
