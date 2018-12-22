@@ -101,7 +101,8 @@ namespace Basisformulier
 
         private void lstLijst_SelectedIndexChanged(object sender, EventArgs e)
         {
-         //messagebox
+            //messagebox
+            new Form1().Show();
         }
     }
 }

@@ -96,6 +96,10 @@
       <Project>{33d1d4c9-dac0-4a07-8056-d42587f22970}</Project>
       <Name>FormPosts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lijst\Lijst.csproj">
+      <Project>{7cdaa542-4ef9-43c1-ace3-1709ab272a0e}</Project>
+      <Name>Lijst</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconfinder_Paul-17_2524745 %281%29.png" />

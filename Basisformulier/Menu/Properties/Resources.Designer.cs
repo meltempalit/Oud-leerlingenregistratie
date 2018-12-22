@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Basisformulier.Properties {
+namespace Menu.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Basisformulier.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Basisformulier.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Menu.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,16 +66,6 @@ namespace Basisformulier.Properties {
         internal static System.Drawing.Bitmap iconfinder_close2_1814078 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_close2_1814078", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconfinder_conversation_job_seeker_employee_unemployee_work_2620525 {
-            get {
-                object obj = ResourceManager.GetObject("iconfinder_conversation_job_seeker_employee_unemployee_work_2620525", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,49 +103,9 @@ namespace Basisformulier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconfinder_Paul_17_2524745__1_ {
+        internal static System.Drawing.Bitmap iconfinder_system_job_seeker_employee_unemployee_work_2620499 {
             get {
-                object obj = ResourceManager.GetObject("iconfinder_Paul-17_2524745 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconfinder_SignOut_1031505 {
-            get {
-                object obj = ResourceManager.GetObject("iconfinder_SignOut_1031505", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconfinder_statistic_job_seeker_employee_unemployee_work_2620500 {
-            get {
-                object obj = ResourceManager.GetObject("iconfinder_statistic_job_seeker_employee_unemployee_work_2620500", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconfinder_user_close_add_103747 {
-            get {
-                object obj = ResourceManager.GetObject("iconfinder_user_close_add_103747", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconfinder_view_text_6227 {
-            get {
-                object obj = ResourceManager.GetObject("iconfinder_view_text_6227", resourceCulture);
+                object obj = ResourceManager.GetObject("iconfinder_system_job_seeker_employee_unemployee_work_2620499", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,46 +116,6 @@ namespace Basisformulier.Properties {
         internal static System.Drawing.Bitmap logo_handelsschool_sint_joris {
             get {
                 object obj = ResourceManager.GetObject("logo_handelsschool_sint_joris", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pccc {
-            get {
-                object obj = ResourceManager.GetObject("pccc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pic {
-            get {
-                object obj = ResourceManager.GetObject("pic", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap picc {
-            get {
-                object obj = ResourceManager.GetObject("picc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap VHSJ {
-            get {
-                object obj = ResourceManager.GetObject("VHSJ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

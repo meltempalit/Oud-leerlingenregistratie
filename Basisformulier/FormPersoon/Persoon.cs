@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FormPosts;
+using Lijst;
+
 
 namespace FormPersoon
 {
@@ -35,7 +37,7 @@ namespace FormPersoon
             //new Ervaring().Show();
            // Visible = false;
 
-            if(txtNaam.Text =="" || txtFamilienaam.Text =="" || txtRichting.Text =="" || txtGeboortedatum.Text =="" || txtAfstudeerjaar.Text == "" )
+            if(txtNaam.Text =="" || txtFamilienaam.Text =="" || txtRichting.Text ==""  )
             {
                 MessageBox.Show("U moet iets ingeven!","Fout",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                
@@ -55,8 +57,12 @@ namespace FormPersoon
             }
             else
             {
-                new Ervaring().Show();
+
+                
+                MessageBox.Show("U bent geregistreerd!", "Welkom", MessageBoxButtons.OK, MessageBoxIcon.Information);
               Visible = false;
+                new frmLijst().Show();
+                
 
             }
 
@@ -82,6 +88,8 @@ namespace FormPersoon
         int intAvatar;
         private void Persoon_Load(object sender, EventArgs e)
         {
+      
+
             cboLand.Items.Add("België");
             cboLand.Items.Add("Nederland");
             cboLand.Items.Add("Anders");
@@ -206,6 +214,7 @@ namespace FormPersoon
             {
                 txtEmail.Text = "";
                 txtEmail.ForeColor = Color.Silver;
+                this.txtEmail.Font = new Font(this.txtEmail.Font, FontStyle.Regular);
             }
         }
 
@@ -215,6 +224,8 @@ namespace FormPersoon
             {
                 txtEmail.Text = "someone@example.com";
                 txtEmail.ForeColor = Color.Silver;
+                this.txtEmail.Font = new Font(this.txtEmail.Font, FontStyle.Italic);
+
             }
         }
 
@@ -251,6 +262,7 @@ namespace FormPersoon
 
             btnRegistreer.BackColor = Color.Transparent;
             btnRegistreer.ForeColor = Color.Black;
+
         }
 
         private void picAvatar_Click(object sender, EventArgs e)
@@ -279,7 +291,54 @@ namespace FormPersoon
 
         private void cboLand_MeasureItem(object sender, MeasureItemEventArgs e)
         {
-            e.ItemHeight = 31;
+            e.ItemHeight = 20;
+        }
+
+        private void txtRichting_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGeboorte_Enter(object sender, EventArgs e)
+        {
+            if (txtGeboorte.Text == "dd/mm/jjjj")
+            {
+                txtGeboorte.Text = "";
+                txtGeboorte.ForeColor = Color.Silver;
+                this.txtGeboorte.Font = new Font(this.txtGeboorte.Font, FontStyle.Regular);
+            }
+        }
+
+        private void txtGeboorte_Leave(object sender, EventArgs e)
+        {
+            if (txtGeboorte.Text == "")
+            {
+                txtGeboorte.Text = "dd/mm/jjjj";
+                txtGeboorte.ForeColor = Color.Silver;
+                this.txtGeboorte.Font = new Font(this.txtGeboorte.Font, FontStyle.Italic);
+
+            }
+        }
+
+        private void txtNaam_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAfst_Enter(object sender, EventArgs e)
+        {
+            if(txtAfst.Text == "2019")
+            {
+                txtAfst.Text = "";
+                txtAfst.ForeColor = Color.Silver;
+                this.txtAfst.Font = new Font(txtAfst.Font, FontStyle.Regular);
+                
+            }
+        }
+
+        private void txtAfst_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

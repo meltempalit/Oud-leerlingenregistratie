@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FormPersoon;
+using FormPosts;
+using FormVervolgstudies;
+using FormWerk;
+using Lijst;
+
 
 
 namespace Basisformulier
@@ -48,7 +53,7 @@ namespace Basisformulier
 
         private void lijstToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new LijstOudleerlingen().Show();
+            
             
             
         }
@@ -71,6 +76,31 @@ namespace Basisformulier
         private void registeerToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Ervaring().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new frmLijst().Show();
+        }
+
+        private void btnReg_Click(object sender, EventArgs e)
+        {
+            new Persoon().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

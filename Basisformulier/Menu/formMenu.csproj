@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76666169-4CCA-442E-AB3D-43E85224E180}</ProjectGuid>
+    <ProjectGuid>{75EC2051-6E39-4192-B1D9-36171738389A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Basisformulier</RootNamespace>
-    <AssemblyName>Basisformulier</AssemblyName>
+    <RootNamespace>Menu</RootNamespace>
+    <AssemblyName>Menu</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,28 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Oudleerling.cs" />
-    <Compile Include="Persistence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +84,21 @@
     <None Include="Resources\logo_handelsschool_sint_joris.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\iconfinder_system_job_seeker_employee_unemployee_work_2620499.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_graduate_job_seeker_employee_unemployee_work_2620520.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_laptop_job_seeker_employee_unemployee_work_1_2620515.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_list_job_seeker_employee_unemployee_work_2620512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_close2_1814078.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\FormPersoon\FormPersoon.csproj">
       <Project>{4d7ba203-5b9a-420b-a030-a81a6235c760}</Project>
       <Name>FormPersoon</Name>
@@ -117,48 +119,6 @@
       <Project>{7cdaa542-4ef9-43c1-ace3-1709ab272a0e}</Project>
       <Name>Lijst</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\VHSJ.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_Paul-17_2524745 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_view_text_6227.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\picc.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pic.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pccc.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_statistic_job_seeker_employee_unemployee_work_2620500.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_graduate_job_seeker_employee_unemployee_work_2620520.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_conversation_job_seeker_employee_unemployee_work_2620525.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_laptop_job_seeker_employee_unemployee_work_1_2620515.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_list_job_seeker_employee_unemployee_work_2620512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_SignOut_1031505.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_user_close_add_103747.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_close2_1814078.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
