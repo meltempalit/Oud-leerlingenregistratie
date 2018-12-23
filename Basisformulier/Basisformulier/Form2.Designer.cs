@@ -30,6 +30,7 @@
         {
             this.btnReg = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLijst = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,12 +55,24 @@
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
+            // btnLijst
+            // 
+            this.btnLijst.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnLijst.Location = new System.Drawing.Point(86, 198);
+            this.btnLijst.Name = "btnLijst";
+            this.btnLijst.Size = new System.Drawing.Size(266, 49);
+            this.btnLijst.TabIndex = 37;
+            this.btnLijst.Text = "LIJST";
+            this.btnLijst.UseVisualStyleBackColor = false;
+            this.btnLijst.Click += new System.EventHandler(this.btnLijst_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(431, 317);
+            this.Controls.Add(this.btnLijst);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnReg);
             this.Name = "Form2";
@@ -73,5 +86,6 @@
 
         private System.Windows.Forms.Button btnReg;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnLijst;
     }
 }

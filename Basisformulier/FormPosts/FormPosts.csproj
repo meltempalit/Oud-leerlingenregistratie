@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,35 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business.cs" />
-    <Compile Include="Ervaring.cs">
+    <Compile Include="Posts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ervaring.Designer.cs">
-      <DependentUpon>Ervaring.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Herinnering.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Herinnering.Designer.cs">
-      <DependentUpon>Herinnering.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mededeling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mededeling.Designer.cs">
-      <DependentUpon>Mededeling.cs</DependentUpon>
+    <Compile Include="Posts.Designer.cs">
+      <DependentUpon>Posts.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence.cs" />
+    <Compile Include="Post.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Ervaring.resx">
-      <DependentUpon>Ervaring.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Herinnering.resx">
-      <DependentUpon>Herinnering.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mededeling.resx">
-      <DependentUpon>Mededeling.cs</DependentUpon>
+    <EmbeddedResource Include="Posts.resx">
+      <DependentUpon>Posts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

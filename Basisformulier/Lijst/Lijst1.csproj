@@ -88,10 +88,6 @@
     <None Include="Resources\logo_handelsschool_sint_joris.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FormKeuze\FormKeuze.csproj">
-      <Project>{97cce4c9-c704-4b00-8cd0-fca6f183de85}</Project>
-      <Name>FormKeuze</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FormPosts\FormPosts.csproj">
       <Project>{33d1d4c9-dac0-4a07-8056-d42587f22970}</Project>
       <Name>FormPosts</Name>

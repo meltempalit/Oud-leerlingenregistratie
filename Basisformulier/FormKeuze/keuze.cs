@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using FormPosts;
 using FormVervolgstudies;
 using FormWerk;
+using FormKeuze;
+
 
 namespace FormKeuze
 {
@@ -29,6 +31,11 @@ namespace FormKeuze
         {
             Close();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Lijst().Show();
         }
     }
 }

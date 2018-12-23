@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FormKeuze;
+
 
 
 namespace Lijst
@@ -36,7 +36,8 @@ namespace Lijst
 
         private void lstLijst_SelectedIndexChanged(object sender, EventArgs e)
         {
-            new keuze().Show();
+            
+            
         }
     }
 }

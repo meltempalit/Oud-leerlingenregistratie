@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FormPersoon;
+using Lijst;
 
 namespace Basisformulier
 {
@@ -21,7 +22,12 @@ namespace Basisformulier
         private void btnReg_Click(object sender, EventArgs e)
         {
             new Persoon().Show();
-            Visible = false;
+            
+        }
+
+        private void btnLijst_Click(object sender, EventArgs e)
+        {
+            new frmLijst().Show();
         }
     }
 }

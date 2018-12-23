@@ -44,14 +44,15 @@
             this.lblFamilienaam = new System.Windows.Forms.Label();
             this.lblNaam = new System.Windows.Forms.Label();
             this.grpbReg = new System.Windows.Forms.GroupBox();
+            this.txtAfst = new System.Windows.Forms.TextBox();
+            this.txtGeboorte = new System.Windows.Forms.TextBox();
             this.lbltel = new System.Windows.Forms.Label();
             this.picAvatar = new System.Windows.Forms.PictureBox();
             this.cboLand = new System.Windows.Forms.ComboBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtGeboorte = new System.Windows.Forms.TextBox();
-            this.txtAfst = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.grpbReg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -229,6 +230,32 @@
             this.grpbReg.Text = "REGISTREER";
             this.grpbReg.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtAfst
+            // 
+            this.txtAfst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAfst.ForeColor = System.Drawing.Color.Silver;
+            this.txtAfst.Location = new System.Drawing.Point(165, 430);
+            this.txtAfst.Multiline = true;
+            this.txtAfst.Name = "txtAfst";
+            this.txtAfst.Size = new System.Drawing.Size(200, 26);
+            this.txtAfst.TabIndex = 35;
+            this.txtAfst.Text = "2019";
+            this.txtAfst.Enter += new System.EventHandler(this.txtAfst_Enter);
+            this.txtAfst.Leave += new System.EventHandler(this.txtAfst_Leave);
+            // 
+            // txtGeboorte
+            // 
+            this.txtGeboorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGeboorte.ForeColor = System.Drawing.Color.Silver;
+            this.txtGeboorte.Location = new System.Drawing.Point(165, 223);
+            this.txtGeboorte.Multiline = true;
+            this.txtGeboorte.Name = "txtGeboorte";
+            this.txtGeboorte.Size = new System.Drawing.Size(200, 26);
+            this.txtGeboorte.TabIndex = 34;
+            this.txtGeboorte.Text = "dd/mm/jjjj";
+            this.txtGeboorte.Enter += new System.EventHandler(this.txtGeboorte_Enter);
+            this.txtGeboorte.Leave += new System.EventHandler(this.txtGeboorte_Leave);
+            // 
             // lbltel
             // 
             this.lbltel.AutoSize = true;
@@ -290,31 +317,10 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txtGeboorte
+            // contextMenuStrip1
             // 
-            this.txtGeboorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGeboorte.ForeColor = System.Drawing.Color.Silver;
-            this.txtGeboorte.Location = new System.Drawing.Point(165, 223);
-            this.txtGeboorte.Multiline = true;
-            this.txtGeboorte.Name = "txtGeboorte";
-            this.txtGeboorte.Size = new System.Drawing.Size(200, 26);
-            this.txtGeboorte.TabIndex = 34;
-            this.txtGeboorte.Text = "dd/mm/jjjj";
-            this.txtGeboorte.Enter += new System.EventHandler(this.txtGeboorte_Enter);
-            this.txtGeboorte.Leave += new System.EventHandler(this.txtGeboorte_Leave);
-            // 
-            // txtAfst
-            // 
-            this.txtAfst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAfst.ForeColor = System.Drawing.Color.Silver;
-            this.txtAfst.Location = new System.Drawing.Point(165, 430);
-            this.txtAfst.Multiline = true;
-            this.txtAfst.Name = "txtAfst";
-            this.txtAfst.Size = new System.Drawing.Size(200, 26);
-            this.txtAfst.TabIndex = 35;
-            this.txtAfst.Text = "2019";
-            this.txtAfst.Enter += new System.EventHandler(this.txtAfst_Enter);
-            this.txtAfst.Leave += new System.EventHandler(this.txtAfst_Leave);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Persoon
             // 
@@ -359,6 +365,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtAfst;
         private System.Windows.Forms.TextBox txtGeboorte;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,8 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business.cs" />
-    <Compile Include="Persistence.cs" />
     <Compile Include="Persoon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,9 +95,9 @@
       <Project>{33d1d4c9-dac0-4a07-8056-d42587f22970}</Project>
       <Name>FormPosts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Lijst\Lijst.csproj">
+    <ProjectReference Include="..\Lijst\Lijst1.csproj">
       <Project>{7cdaa542-4ef9-43c1-ace3-1709ab272a0e}</Project>
-      <Name>Lijst</Name>
+      <Name>Lijst1</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

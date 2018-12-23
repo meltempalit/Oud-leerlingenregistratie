@@ -34,8 +34,8 @@ namespace FormPersoon
         {
             
             
-            //new Ervaring().Show();
-           // Visible = false;
+            
+         
 
             if(txtNaam.Text =="" || txtFamilienaam.Text =="" || txtRichting.Text ==""  )
             {
@@ -60,10 +60,9 @@ namespace FormPersoon
 
                 
                 MessageBox.Show("U bent geregistreerd!", "Welkom", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              Visible = false;
-                new frmLijst().Show();
-                
+                Visible = false;
 
+                new Posts().Show();
             }
 
         

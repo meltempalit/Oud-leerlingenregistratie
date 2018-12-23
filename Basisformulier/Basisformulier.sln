@@ -13,9 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormWerk", "FormWerk\FormWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormVervolgstudies", "FormVervolgstudies\FormVervolgstudies.csproj", "{82742039-351A-40FF-8E8F-8C4C6BA671FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lijst", "Lijst\Lijst.csproj", "{7CDAA542-4EF9-43C1-ACE3-1709AB272A0E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormKeuze", "FormKeuze\FormKeuze.csproj", "{97CCE4C9-C704-4B00-8CD0-FCA6F183DE85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lijst1", "Lijst\Lijst1.csproj", "{7CDAA542-4EF9-43C1-ACE3-1709AB272A0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{7CDAA542-4EF9-43C1-ACE3-1709AB272A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CDAA542-4EF9-43C1-ACE3-1709AB272A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CDAA542-4EF9-43C1-ACE3-1709AB272A0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97CCE4C9-C704-4B00-8CD0-FCA6F183DE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97CCE4C9-C704-4B00-8CD0-FCA6F183DE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97CCE4C9-C704-4B00-8CD0-FCA6F183DE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97CCE4C9-C704-4B00-8CD0-FCA6F183DE85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
