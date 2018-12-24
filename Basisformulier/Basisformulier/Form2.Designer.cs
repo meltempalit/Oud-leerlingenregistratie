@@ -44,6 +44,8 @@
             this.btnReg.Text = "REGISTREER";
             this.btnReg.UseVisualStyleBackColor = false;
             this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
+            this.btnReg.MouseLeave += new System.EventHandler(this.btnReg_MouseLeave);
+            this.btnReg.MouseHover += new System.EventHandler(this.btnReg_MouseHover);
             // 
             // pictureBox1
             // 
@@ -65,6 +67,8 @@
             this.btnLijst.Text = "LIJST";
             this.btnLijst.UseVisualStyleBackColor = false;
             this.btnLijst.Click += new System.EventHandler(this.btnLijst_Click);
+            this.btnLijst.MouseLeave += new System.EventHandler(this.btnLijst_MouseLeave);
+            this.btnLijst.MouseHover += new System.EventHandler(this.btnLijst_MouseHover);
             // 
             // Form2
             // 

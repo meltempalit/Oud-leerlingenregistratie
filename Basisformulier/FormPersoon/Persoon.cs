@@ -19,6 +19,15 @@ namespace FormPersoon
         {
             InitializeComponent();
         }
+        Business bus = new Business();
+
+        public void vulForm()
+        {
+            bus = new Business();
+
+
+
+        }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -32,12 +41,13 @@ namespace FormPersoon
 
         private void btnRegistreer_Click(object sender, EventArgs e)
         {
-            
-            
-            
-         
+            bus.voegPersoon(txtNaam.Text,txtFamilienaam.Text,txtGeboorte.Text,txtEmail.Text,txtTel.Text,txtAfst.Text,txtRichting.Text);
+            vulForm();
 
-            if(txtNaam.Text =="" || txtFamilienaam.Text =="" || txtRichting.Text ==""  )
+
+
+
+            if (txtNaam.Text =="" || txtFamilienaam.Text =="" || txtRichting.Text ==""  )
             {
                 MessageBox.Show("U moet iets ingeven!","Fout",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                
@@ -87,7 +97,7 @@ namespace FormPersoon
         int intAvatar;
         private void Persoon_Load(object sender, EventArgs e)
         {
-      
+            vulForm();
 
             cboLand.Items.Add("België");
             cboLand.Items.Add("Nederland");
@@ -253,7 +263,7 @@ namespace FormPersoon
            
             btnRegistreer.BackColor = Color.SteelBlue;
             btnRegistreer.ForeColor = Color.White;
-            }
+        }
 
         private void btnRegistreer_MouseLeave(object sender, EventArgs e)
         {

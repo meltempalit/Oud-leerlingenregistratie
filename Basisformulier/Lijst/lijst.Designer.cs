@@ -47,6 +47,8 @@
             this.btnZoek.TabIndex = 41;
             this.btnZoek.Text = "ZOEKEN";
             this.btnZoek.UseVisualStyleBackColor = false;
+            this.btnZoek.MouseLeave += new System.EventHandler(this.btnZoek_MouseLeave);
+            this.btnZoek.MouseHover += new System.EventHandler(this.btnZoek_MouseHover);
             // 
             // txtZoek
             // 
