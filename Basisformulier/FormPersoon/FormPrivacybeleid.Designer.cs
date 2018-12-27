@@ -86,7 +86,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "FormPrivacybeleid";
-            this.Text = "FormPrivacybeleid";
+            this.Text = "Privacy";
             this.Load += new System.EventHandler(this.FormPrivacybeleid_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

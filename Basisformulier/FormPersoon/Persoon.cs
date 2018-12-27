@@ -49,7 +49,12 @@ namespace FormPersoon
             // moet nog aangepast worden
             if (chkControle.Checked == false)
             {
-                MessageBox.Show("U moet het Privacybeleid aanvaarden", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               DialogResult dialog = MessageBox.Show("U moet het Privacybeleid aanvaarden", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                if(dialog == DialogResult.OK)
+                {
+                    chkControle.Checked = true;
+                }
             }
             else
             {
@@ -240,7 +245,7 @@ namespace FormPersoon
             if(txtEmail.Text == "someone@example.com")
             {
                 txtEmail.Text = "";
-                txtEmail.ForeColor = Color.Silver;
+                txtEmail.ForeColor = Color.DarkGray;
                 this.txtEmail.Font = new Font(this.txtEmail.Font, FontStyle.Regular);
                 lblmail.Visible = true;
             }
@@ -327,7 +332,7 @@ namespace FormPersoon
             if (txtGeboorte.Text == "dd/mm/jjjj")
             {
                 txtGeboorte.Text = "";
-                txtGeboorte.ForeColor = Color.Silver;
+                txtGeboorte.ForeColor = Color.DarkGray;
                 this.txtGeboorte.Font = new Font(this.txtGeboorte.Font, FontStyle.Regular);
                 lblGeboorte.Visible = true;
             }
@@ -354,7 +359,7 @@ namespace FormPersoon
             if(txtAfst.Text == "2019")
             {
                 txtAfst.Text = "";
-                txtAfst.ForeColor = Color.Silver;
+                txtAfst.ForeColor = Color.DarkGray;
                 this.txtAfst.Font = new Font(txtAfst.Font, FontStyle.Regular);
                 lblAfstudeerj.Visible = true;
             }
@@ -386,7 +391,7 @@ namespace FormPersoon
             if (txtNaam.Text == "Naam")
             {
                 txtNaam.Text = "";
-                txtNaam.ForeColor = Color.Silver;
+                txtNaam.ForeColor = Color.DarkGray;
                 this.txtNaam.Font = new Font(this.txtNaam.Font, FontStyle.Regular);
                 lblNaam.Visible = true;
             }
@@ -408,7 +413,7 @@ namespace FormPersoon
             if (txtFamilienaam.Text == "Familienaam")
             {
                 txtFamilienaam.Text = "";
-                txtFamilienaam.ForeColor = Color.Silver;
+                txtFamilienaam.ForeColor = Color.DarkGray;
                 this.txtFamilienaam.Font = new Font(this.txtFamilienaam.Font, FontStyle.Regular);
                 lblFamilienaam.Visible = true;
             }
@@ -431,7 +436,7 @@ namespace FormPersoon
             if (cboLand.Text == "Telefoonnummer")
             {
                 cboLand.Text = "";
-                cboLand.ForeColor = Color.Silver;
+                cboLand.ForeColor = Color.DarkGray;
                 this.cboLand.Font = new Font(this.cboLand.Font, FontStyle.Regular);
                 lbltel.Visible = true;
             }
@@ -480,7 +485,7 @@ namespace FormPersoon
             if (txtRichting.Text == "IT & Netwerken")
             {
                 txtRichting.Text = "";
-                txtRichting.ForeColor = Color.Silver;
+                txtRichting.ForeColor = Color.DarkGray;
                 this.txtRichting.Font = new Font(this.txtRichting.Font, FontStyle.Regular);
                 lblafstrichting.Visible = true;
             }
@@ -490,6 +495,26 @@ namespace FormPersoon
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new FormPrivacybeleid().Show();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Persoon_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void txtTel_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTel_Leave(object sender, EventArgs e)
+        {
+            
         }
     }
 }
