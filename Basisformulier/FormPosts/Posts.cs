@@ -41,8 +41,17 @@ namespace FormPosts
             bus.voegToe(txtErvaring.Text, txtMededeling.Text, txtHerinnering.Text);
             vulForm();
             
-            this.timer1.Start();
-            progressBar1.Visible = true;
+            
+
+            if(txtErvaring.Text.Length ==2 || txtHerinnering.Text.Length==2 || txtMededeling.Text.Length==2)
+            {
+                MessageBox.Show("U moet iets ingeven!", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                this.timer1.Start();
+                progressBar1.Visible = true;
+            }
 
         }
 

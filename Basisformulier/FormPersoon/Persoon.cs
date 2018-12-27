@@ -53,21 +53,21 @@ namespace FormPersoon
             }
             else
             {
-                if (txtNaam.Text.Length == 2 || txtFamilienaam.Text.Length == 2 || txtRichting.Text.Length == 2)
+                if (  txtNaam.Text.Length == 2 || txtNaam.Text.Length == 1 || txtFamilienaam.Text.Length == 2 || txtFamilienaam.Text.Length==1 || txtRichting.Text.Length == 2|| txtRichting.Text.Length == 1)
                 {
                     MessageBox.Show("U moet iets ingeven!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                    if (txtNaam.Text.Length == 2)
+                    if (txtNaam.Text.Length == 2|| txtNaam.Text.Length == 1)
                     {
                         lblNaam.ForeColor = Color.Red;
 
                     }
-                    if (txtFamilienaam.Text.Length == 2)
+                    if (txtFamilienaam.Text.Length == 2|| txtFamilienaam.Text.Length == 1)
                     {
                         lblFamilienaam.ForeColor = Color.Red;
                     }
 
-                    if (txtRichting.Text.Length == 2)
+                    if (txtRichting.Text.Length == 2|| txtRichting.Text.Length == 1)
                     {
                         lblafstrichting.ForeColor = Color.Red;
                     }

@@ -64,5 +64,17 @@ namespace FormPersoon
         {
 
         }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.SteelBlue;
+            button1.ForeColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Transparent;
+            button1.ForeColor = Color.Black;
+        }
     }
 }
