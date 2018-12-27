@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.btnReg = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLijst = new System.Windows.Forms.Button();
+            this.llblclose = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,16 +48,6 @@
             this.btnReg.MouseLeave += new System.EventHandler(this.btnReg_MouseLeave);
             this.btnReg.MouseHover += new System.EventHandler(this.btnReg_MouseHover);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Basisformulier.Properties.Resources.logo_handelsschool_sint_joris;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnLijst
             // 
             this.btnLijst.BackColor = System.Drawing.Color.GhostWhite;
@@ -70,12 +61,35 @@
             this.btnLijst.MouseLeave += new System.EventHandler(this.btnLijst_MouseLeave);
             this.btnLijst.MouseHover += new System.EventHandler(this.btnLijst_MouseHover);
             // 
+            // llblclose
+            // 
+            this.llblclose.AutoSize = true;
+            this.llblclose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.llblclose.Location = new System.Drawing.Point(386, 295);
+            this.llblclose.Name = "llblclose";
+            this.llblclose.Size = new System.Drawing.Size(33, 13);
+            this.llblclose.TabIndex = 41;
+            this.llblclose.TabStop = true;
+            this.llblclose.Text = "Close";
+            this.llblclose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblclose_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Basisformulier.Properties.Resources.logo_handelsschool_sint_joris;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(431, 317);
+            this.Controls.Add(this.llblclose);
             this.Controls.Add(this.btnLijst);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnReg);
@@ -83,6 +97,7 @@
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -91,5 +106,6 @@
         private System.Windows.Forms.Button btnReg;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLijst;
+        private System.Windows.Forms.LinkLabel llblclose;
     }
 }

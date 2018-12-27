@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FormPersoon
+namespace FormInformatie
 {
-    class KlassePersoon
+    class PersoonInfo
     {
         private int intID, idWerk, idVervolgstudies, idPosts;
         private string strNaam, strFamilienaam, strGeboortedatum, strEmail, strTel, strAfstudeerjaar, strRichting;
@@ -71,8 +71,9 @@ namespace FormPersoon
             set { idPosts = value; }
         }
 
-        public KlassePersoon(string naam, string fnaam, string geboorte, string email, string telo, string afstjaar, string richting)
+        public PersoonInfo(int id ,string naam, string fnaam, string geboorte, string email, string telo, string afstjaar, string richting)
         {
+            idPersoon = id;
             strNaam = naam;
             strFamilienaam = fnaam;
             strGeboortedatum = geboorte;
@@ -85,12 +86,11 @@ namespace FormPersoon
 
         public override string ToString()
         {
-            return strNaam + " " + strFamilienaam + ": " + Environment.NewLine +
+            return "OUD-LEERLING ID: "+idPersoon + Environment.NewLine + strNaam + " " + strFamilienaam + " " + Environment.NewLine +
             "Geboortedatum: " + strGeboortedatum + Environment.NewLine +
-            "E-mail: " + strEmail + " Telefoonnummer: " + strTel + Environment.NewLine
-            + strAfstudeerjaar + " " + strRichting;
+            "E-mail: " + strEmail + Environment.NewLine + "Telefoonnummer: " + strTel + Environment.NewLine
+            + strAfstudeerjaar + " " + strRichting + Environment.NewLine + Environment.NewLine;
         }
-
 
     }
 }

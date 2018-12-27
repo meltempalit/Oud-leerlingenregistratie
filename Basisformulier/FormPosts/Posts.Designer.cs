@@ -34,12 +34,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtHerinnering = new System.Windows.Forms.TextBox();
+            this.txtMededeling = new System.Windows.Forms.TextBox();
             this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtErvaring = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtMededeling = new System.Windows.Forms.TextBox();
-            this.txtHerinnering = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
@@ -70,6 +70,7 @@
             // lnklAnnu
             // 
             this.lnklAnnu.AutoSize = true;
+            this.lnklAnnu.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.lnklAnnu.Location = new System.Drawing.Point(181, 377);
             this.lnklAnnu.Name = "lnklAnnu";
             this.lnklAnnu.Size = new System.Drawing.Size(49, 13);
@@ -94,6 +95,31 @@
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "POST";
+            // 
+            // txtHerinnering
+            // 
+            this.txtHerinnering.ForeColor = System.Drawing.Color.Silver;
+            this.txtHerinnering.Location = new System.Drawing.Point(17, 215);
+            this.txtHerinnering.Multiline = true;
+            this.txtHerinnering.Name = "txtHerinnering";
+            this.txtHerinnering.Size = new System.Drawing.Size(371, 82);
+            this.txtHerinnering.TabIndex = 40;
+            this.txtHerinnering.Text = "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business...";
+            this.txtHerinnering.TextChanged += new System.EventHandler(this.txtHerinnering_TextChanged_1);
+            this.txtHerinnering.Enter += new System.EventHandler(this.txtHerinnering_Enter_1);
+            this.txtHerinnering.Leave += new System.EventHandler(this.txtHerinnering_Leave_1);
+            // 
+            // txtMededeling
+            // 
+            this.txtMededeling.ForeColor = System.Drawing.Color.Silver;
+            this.txtMededeling.Location = new System.Drawing.Point(17, 117);
+            this.txtMededeling.Multiline = true;
+            this.txtMededeling.Name = "txtMededeling";
+            this.txtMededeling.Size = new System.Drawing.Size(371, 82);
+            this.txtMededeling.TabIndex = 39;
+            this.txtMededeling.Text = "Typ hier wat u wenst mee te geven aan de leerlingen...";
+            this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
+            this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
             // 
             // pcbox
             // 
@@ -130,31 +156,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // txtMededeling
-            // 
-            this.txtMededeling.ForeColor = System.Drawing.Color.Silver;
-            this.txtMededeling.Location = new System.Drawing.Point(17, 117);
-            this.txtMededeling.Multiline = true;
-            this.txtMededeling.Name = "txtMededeling";
-            this.txtMededeling.Size = new System.Drawing.Size(371, 82);
-            this.txtMededeling.TabIndex = 39;
-            this.txtMededeling.Text = "Typ hier wat u wenst mee te geven aan de leerlingen...";
-            this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
-            this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
-            // 
-            // txtHerinnering
-            // 
-            this.txtHerinnering.ForeColor = System.Drawing.Color.Silver;
-            this.txtHerinnering.Location = new System.Drawing.Point(17, 215);
-            this.txtHerinnering.Multiline = true;
-            this.txtHerinnering.Name = "txtHerinnering";
-            this.txtHerinnering.Size = new System.Drawing.Size(371, 82);
-            this.txtHerinnering.TabIndex = 40;
-            this.txtHerinnering.Text = "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business...";
-            this.txtHerinnering.TextChanged += new System.EventHandler(this.txtHerinnering_TextChanged_1);
-            this.txtHerinnering.Enter += new System.EventHandler(this.txtHerinnering_Enter_1);
-            this.txtHerinnering.Leave += new System.EventHandler(this.txtHerinnering_Leave_1);
             // 
             // Posts
             // 

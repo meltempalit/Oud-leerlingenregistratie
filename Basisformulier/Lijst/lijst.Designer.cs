@@ -31,11 +31,12 @@
             this.btnZoek = new System.Windows.Forms.Button();
             this.txtZoek = new System.Windows.Forms.TextBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lstLijst = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnZoek
@@ -47,6 +48,7 @@
             this.btnZoek.TabIndex = 41;
             this.btnZoek.Text = "ZOEKEN";
             this.btnZoek.UseVisualStyleBackColor = false;
+            this.btnZoek.Click += new System.EventHandler(this.btnZoek_Click);
             this.btnZoek.MouseLeave += new System.EventHandler(this.btnZoek_MouseLeave);
             this.btnZoek.MouseHover += new System.EventHandler(this.btnZoek_MouseHover);
             // 
@@ -58,17 +60,56 @@
             this.txtZoek.Size = new System.Drawing.Size(188, 20);
             this.txtZoek.TabIndex = 40;
             this.txtZoek.Text = "Zoeken...";
+            this.txtZoek.Enter += new System.EventHandler(this.txtZoek_Enter);
+            this.txtZoek.Leave += new System.EventHandler(this.txtZoek_Leave);
             // 
             // llblclose
             // 
             this.llblclose.AutoSize = true;
-            this.llblclose.Location = new System.Drawing.Point(432, 383);
+            this.llblclose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.llblclose.Location = new System.Drawing.Point(397, 284);
             this.llblclose.Name = "llblclose";
             this.llblclose.Size = new System.Drawing.Size(33, 13);
             this.llblclose.TabIndex = 39;
             this.llblclose.TabStop = true;
             this.llblclose.Text = "Close";
             this.llblclose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblclose_LinkClicked);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lstLijst);
+            this.groupBox1.Controls.Add(this.llblclose);
+            this.groupBox1.Location = new System.Drawing.Point(12, 74);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(453, 303);
+            this.groupBox1.TabIndex = 37;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "OUD-LEERLINGEN";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(13, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Klik op een oud-leerling voor meer informatie";
+            // 
+            // lstLijst
+            // 
+            this.lstLijst.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstLijst.ForeColor = System.Drawing.Color.Gray;
+            this.lstLijst.FormattingEnabled = true;
+            this.lstLijst.ItemHeight = 19;
+            this.lstLijst.Location = new System.Drawing.Point(16, 49);
+            this.lstLijst.Name = "lstLijst";
+            this.lstLijst.Size = new System.Drawing.Size(414, 232);
+            this.lstLijst.TabIndex = 0;
+            this.lstLijst.SelectedIndexChanged += new System.EventHandler(this.lstLijst_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -80,45 +121,22 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
-            this.groupBox1.Controls.Add(this.lstLijst);
-            this.groupBox1.Location = new System.Drawing.Point(12, 74);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(453, 303);
-            this.groupBox1.TabIndex = 37;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "OUD-LEERLINGEN";
-            // 
-            // lstLijst
-            // 
-            this.lstLijst.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstLijst.ForeColor = System.Drawing.Color.Gray;
-            this.lstLijst.FormattingEnabled = true;
-            this.lstLijst.ItemHeight = 19;
-            this.lstLijst.Location = new System.Drawing.Point(40, 34);
-            this.lstLijst.Name = "lstLijst";
-            this.lstLijst.Size = new System.Drawing.Size(359, 232);
-            this.lstLijst.TabIndex = 0;
-            this.lstLijst.SelectedIndexChanged += new System.EventHandler(this.lstLijst_SelectedIndexChanged);
-            // 
             // frmLijst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(482, 405);
+            this.ClientSize = new System.Drawing.Size(482, 390);
             this.Controls.Add(this.btnZoek);
             this.Controls.Add(this.txtZoek);
-            this.Controls.Add(this.llblclose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmLijst";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmLijst_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +150,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lstLijst;
+        private System.Windows.Forms.Label label1;
     }
 }
 

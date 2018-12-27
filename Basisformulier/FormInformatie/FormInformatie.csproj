@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76666169-4CCA-442E-AB3D-43E85224E180}</ProjectGuid>
+    <ProjectGuid>{66E512E6-B126-4218-91EF-45EDB6587ABC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Basisformulier</RootNamespace>
-    <AssemblyName>Basisformulier</AssemblyName>
+    <RootNamespace>FormInformatie</RootNamespace>
+    <AssemblyName>FormInformatie</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,24 +48,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business.cs" />
-    <Compile Include="Form2.cs">
+    <Compile Include="FormInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormInfo.Designer.cs">
+      <DependentUpon>FormInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Oudleerling.cs" />
+    <Compile Include="FormPostsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPostsInfo.Designer.cs">
+      <DependentUpon>FormPostsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVervolgstudiesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVervolgstudiesInfo.Designer.cs">
+      <DependentUpon>FormVervolgstudiesInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWerkInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWerkInfo.Designer.cs">
+      <DependentUpon>FormWerkInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persistence.cs" />
+    <Compile Include="PersoonInfo.cs" />
+    <Compile Include="PostInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WachtwoordBeheerder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WachtwoordBeheerder.Designer.cs">
-      <DependentUpon>WachtwoordBeheerder.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormInfo.resx">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPostsInfo.resx">
+      <DependentUpon>FormPostsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVervolgstudiesInfo.resx">
+      <DependentUpon>FormVervolgstudiesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWerkInfo.resx">
+      <DependentUpon>FormWerkInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,9 +99,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WachtwoordBeheerder.resx">
-      <DependentUpon>WachtwoordBeheerder.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,70 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_handelsschool_sint_joris.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FormPersoon\FormPersoon.csproj">
-      <Project>{4d7ba203-5b9a-420b-a030-a81a6235c760}</Project>
-      <Name>FormPersoon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FormPosts\FormPosts.csproj">
-      <Project>{33d1d4c9-dac0-4a07-8056-d42587f22970}</Project>
-      <Name>FormPosts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FormVervolgstudies\FormVervolgstudies.csproj">
-      <Project>{82742039-351a-40ff-8e8f-8c4c6ba671fd}</Project>
-      <Name>FormVervolgstudies</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FormWerk\FormWerk.csproj">
-      <Project>{51babb84-a6c5-49c0-a220-0106981fe543}</Project>
-      <Name>FormWerk</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lijst\Lijst1.csproj">
-      <Project>{7cdaa542-4ef9-43c1-ace3-1709ab272a0e}</Project>
-      <Name>Lijst1</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\VHSJ.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_Paul-17_2524745 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_view_text_6227.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\picc.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pic.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pccc.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_statistic_job_seeker_employee_unemployee_work_2620500.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_graduate_job_seeker_employee_unemployee_work_2620520.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_conversation_job_seeker_employee_unemployee_work_2620525.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_laptop_job_seeker_employee_unemployee_work_1_2620515.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_list_job_seeker_employee_unemployee_work_2620512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_SignOut_1031505.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_user_close_add_103747.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_close2_1814078.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

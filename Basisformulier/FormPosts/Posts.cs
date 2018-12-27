@@ -188,10 +188,10 @@ namespace FormPosts
 
         private void txtHerinnering_Leave_1(object sender, EventArgs e)
         {
-            if (txtMededeling.Text == "")
+            if (txtHerinnering.Text =="")
             {
-                txtMededeling.Text = "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business...";
-                txtMededeling.ForeColor = Color.Silver;
+                txtHerinnering.Text = "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business...";
+                txtHerinnering.ForeColor = Color.Silver;
             }
         }
 

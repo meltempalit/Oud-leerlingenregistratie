@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FormPosts;
+using FormInformatie;
+
 
 
 
@@ -22,7 +25,7 @@ namespace Lijst
         private void frmLijst_Load(object sender, EventArgs e)
         {
 
-            foreach(string item in bus.getOudleerlingen())
+            foreach (string item in bus.getOudleerlingen())
             {
                 lstLijst.Items.Add(item);
             }
@@ -31,18 +34,23 @@ namespace Lijst
 
         private void llblclose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Close();
+            DialogResult dialogResult = MessageBox.Show("Weet u zeker dat u wilt afsluiten?", "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Close();
+            }
+            else { }
         }
 
         private void lstLijst_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
+            new FormInfo().Show();
+            Visible = false;
         }
 
         private void btnZoek_MouseHover(object sender, EventArgs e)
         {
-            btnZoek.BackColor = Color.FromArgb(18,74,111);
+            btnZoek.BackColor = Color.FromArgb(18, 74, 111);
             btnZoek.ForeColor = Color.White;
         }
 
@@ -50,6 +58,37 @@ namespace Lijst
         {
             btnZoek.BackColor = Color.Transparent;
             btnZoek.ForeColor = Color.Black;
+        }
+
+        private void txtZoek_Enter(object sender, EventArgs e)
+        {
+            if (txtZoek.Text == "Zoeken...")
+            {
+                txtZoek.Text = "";
+                txtZoek.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtZoek_Leave(object sender, EventArgs e)
+        {
+            if (txtZoek.Text == "")
+            {
+                txtZoek.Text = "Zoeken...";
+                txtZoek.ForeColor = Color.Silver;
+            }
+        }
+
+        private void btnZoek_Click(object sender, EventArgs e)
+        {
+
+
+
+          
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

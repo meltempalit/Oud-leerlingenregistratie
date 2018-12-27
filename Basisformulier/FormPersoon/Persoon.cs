@@ -31,7 +31,7 @@ namespace FormPersoon
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,39 +41,55 @@ namespace FormPersoon
 
         private void btnRegistreer_Click(object sender, EventArgs e)
         {
-            bus.voegPersoon(txtNaam.Text,txtFamilienaam.Text,txtGeboorte.Text,txtEmail.Text,txtTel.Text,txtAfst.Text,txtRichting.Text);
+            bus.voegPersoon(txtNaam.Text, txtFamilienaam.Text, txtGeboorte.Text, txtEmail.Text, txtTel.Text, txtAfst.Text, txtRichting.Text);
             vulForm();
 
 
 
-
-            if (txtNaam.Text =="" || txtFamilienaam.Text =="" || txtRichting.Text ==""  )
+            // moet nog aangepast worden
+            if (chkControle.Checked == false)
             {
-                MessageBox.Show("U moet iets ingeven!","Fout",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-               
-                if(txtNaam.Text=="")
-                {
-                    lblNaam.ForeColor = Color.Red;
-                }
-                if (txtFamilienaam.Text == "")
-                {
-                    lblFamilienaam.ForeColor = Color.Red;
-                }
-                
-                if (txtRichting.Text == "")
-                {
-                    lblafstrichting.ForeColor = Color.Red;
-                }
+                MessageBox.Show("U moet het Privacybeleid aanvaarden", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
+                if (txtNaam.Text.Length == 2 || txtFamilienaam.Text.Length == 2 || txtRichting.Text.Length == 2)
+                {
+                    MessageBox.Show("U moet iets ingeven!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                
-                MessageBox.Show("U bent geregistreerd!", "Welkom", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Visible = false;
+                    if (txtNaam.Text.Length == 2)
+                    {
+                        lblNaam.ForeColor = Color.Red;
 
-                new Posts().Show();
+                    }
+                    if (txtFamilienaam.Text.Length == 2)
+                    {
+                        lblFamilienaam.ForeColor = Color.Red;
+                    }
+
+                    if (txtRichting.Text.Length == 2)
+                    {
+                        lblafstrichting.ForeColor = Color.Red;
+                    }
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Weet u zeker dat u door wilt gaan?", "Controleer", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        MessageBox.Show("U bent geregistreerd!", "Welkom", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Visible = false;
+
+                        new Posts().Show();
+                    }
+                    else
+                    { }
+
+
+                }
             }
+                
+
 
         
 
@@ -97,6 +113,7 @@ namespace FormPersoon
         int intAvatar;
         private void Persoon_Load(object sender, EventArgs e)
         {
+            cboLand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             vulForm();
 
             cboLand.Items.Add("België");
@@ -104,7 +121,7 @@ namespace FormPersoon
             cboLand.Items.Add("Anders");
 
             
-       
+
             Random random = new Random();
 
             intAvatar = random.Next(1,24);
@@ -213,6 +230,7 @@ namespace FormPersoon
             {
                 txtTel.Text = "";
             }
+            lbltel.Visible = true;
 
 
         }
@@ -224,6 +242,7 @@ namespace FormPersoon
                 txtEmail.Text = "";
                 txtEmail.ForeColor = Color.Silver;
                 this.txtEmail.Font = new Font(this.txtEmail.Font, FontStyle.Regular);
+                lblmail.Visible = true;
             }
         }
 
@@ -234,7 +253,7 @@ namespace FormPersoon
                 txtEmail.Text = "someone@example.com";
                 txtEmail.ForeColor = Color.Silver;
                 this.txtEmail.Font = new Font(this.txtEmail.Font, FontStyle.Italic);
-
+                lblmail.Visible = false;
             }
         }
 
@@ -303,11 +322,6 @@ namespace FormPersoon
             e.ItemHeight = 20;
         }
 
-        private void txtRichting_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtGeboorte_Enter(object sender, EventArgs e)
         {
             if (txtGeboorte.Text == "dd/mm/jjjj")
@@ -315,6 +329,7 @@ namespace FormPersoon
                 txtGeboorte.Text = "";
                 txtGeboorte.ForeColor = Color.Silver;
                 this.txtGeboorte.Font = new Font(this.txtGeboorte.Font, FontStyle.Regular);
+                lblGeboorte.Visible = true;
             }
         }
 
@@ -325,7 +340,7 @@ namespace FormPersoon
                 txtGeboorte.Text = "dd/mm/jjjj";
                 txtGeboorte.ForeColor = Color.Silver;
                 this.txtGeboorte.Font = new Font(this.txtGeboorte.Font, FontStyle.Italic);
-
+                lblGeboorte.Visible = false;
             }
         }
 
@@ -341,13 +356,140 @@ namespace FormPersoon
                 txtAfst.Text = "";
                 txtAfst.ForeColor = Color.Silver;
                 this.txtAfst.Font = new Font(txtAfst.Font, FontStyle.Regular);
-                
+                lblAfstudeerj.Visible = true;
             }
         }
 
         private void txtAfst_Leave(object sender, EventArgs e)
         {
+            if (txtAfst.Text == "")
+            {
+                txtAfst.Text = "2019";
+                txtAfst.ForeColor = Color.Silver;
+                this.txtAfst.Font = new Font(this.txtAfst.Font, FontStyle.Italic);
+                lblAfstudeerj.Visible = false;
+            }
+        }
 
+        private void txtNaam_Enter(object sender, EventArgs e)
+        {
+            //lblname.Visible = true;
+        }
+
+        private void txtNaam_Leave(object sender, EventArgs e)
+        {
+           // lblname.Visible = false;
+        }
+
+        private void txtNaam_Enter_1(object sender, EventArgs e)
+        {
+            if (txtNaam.Text == "Naam")
+            {
+                txtNaam.Text = "";
+                txtNaam.ForeColor = Color.Silver;
+                this.txtNaam.Font = new Font(this.txtNaam.Font, FontStyle.Regular);
+                lblNaam.Visible = true;
+            }
+        }
+
+        private void txtNaam_Leave_1(object sender, EventArgs e)
+        {
+            if (txtNaam.Text == "")
+            {
+                txtNaam.Text = "Naam";
+                txtNaam.ForeColor = Color.Silver;
+                this.txtNaam.Font = new Font(this.txtNaam.Font, FontStyle.Italic);
+                lblNaam.Visible = false;
+            }
+        }
+
+        private void txtFamilienaam_Enter(object sender, EventArgs e)
+        {
+            if (txtFamilienaam.Text == "Familienaam")
+            {
+                txtFamilienaam.Text = "";
+                txtFamilienaam.ForeColor = Color.Silver;
+                this.txtFamilienaam.Font = new Font(this.txtFamilienaam.Font, FontStyle.Regular);
+                lblFamilienaam.Visible = true;
+            }
+        }
+
+        private void txtFamilienaam_Leave(object sender, EventArgs e)
+        {
+            if (txtFamilienaam.Text == "")
+            {
+                txtFamilienaam.Text = "Familienaam";
+                txtFamilienaam.ForeColor = Color.Silver;
+                this.txtFamilienaam.Font = new Font(this.txtFamilienaam.Font, FontStyle.Italic);
+                lblFamilienaam.Visible = false;
+            }
+
+        }
+
+        private void cboLand_Enter(object sender, EventArgs e)
+        {
+            if (cboLand.Text == "Telefoonnummer")
+            {
+                cboLand.Text = "";
+                cboLand.ForeColor = Color.Silver;
+                this.cboLand.Font = new Font(this.cboLand.Font, FontStyle.Regular);
+                lbltel.Visible = true;
+            }
+
+        }
+
+        private void cboLand_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void cboLand_Leave(object sender, EventArgs e)
+        {
+            if (cboLand.Text == "")
+            {
+                cboLand.Text = "Telefoonnummer";
+                cboLand.ForeColor = Color.Silver;
+                this.cboLand.Font = new Font(this.cboLand.Font, FontStyle.Italic);
+                lbltel.Visible = false;
+            }
+        }
+
+        private void txtRichting_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRichting_Leave(object sender, EventArgs e)
+        {
+            if (txtRichting.Text == "")
+            {
+                txtRichting.Text = "IT & Netwerken";
+                txtRichting.ForeColor = Color.Silver;
+                this.txtRichting.Font = new Font(this.txtRichting.Font, FontStyle.Italic);
+                lblafstrichting.Visible = false;
+            }
+        }
+
+        private void txtRichting_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtRichting_Enter_1(object sender, EventArgs e)
+        {
+            if (txtRichting.Text == "IT & Netwerken")
+            {
+                txtRichting.Text = "";
+                txtRichting.ForeColor = Color.Silver;
+                this.txtRichting.Font = new Font(this.txtRichting.Font, FontStyle.Regular);
+                lblafstrichting.Visible = true;
+            }
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new FormPrivacybeleid().Show();
         }
     }
 }

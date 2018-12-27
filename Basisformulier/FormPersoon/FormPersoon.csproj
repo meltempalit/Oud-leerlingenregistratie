@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business.cs" />
+    <Compile Include="FormPrivacybeleid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrivacybeleid.Designer.cs">
+      <DependentUpon>FormPrivacybeleid.cs</DependentUpon>
+    </Compile>
     <Compile Include="KlassePersoon.cs" />
     <Compile Include="Persistence.cs" />
     <Compile Include="Persoon.cs">
@@ -58,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormPrivacybeleid.resx">
+      <DependentUpon>FormPrivacybeleid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Persoon.resx">
       <DependentUpon>Persoon.cs</DependentUpon>
     </EmbeddedResource>

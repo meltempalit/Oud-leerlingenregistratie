@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FormPersoon;
 using Lijst;
+using Microsoft.VisualBasic;
+
 
 namespace Basisformulier
 {
@@ -27,7 +29,9 @@ namespace Basisformulier
 
         private void btnLijst_Click(object sender, EventArgs e)
         {
-            new frmLijst().Show();
+            new WachtwoordBeheerder().Show();
+
+           // new frmLijst().Show();
         }
 
         private void btnReg_MouseHover(object sender, EventArgs e)
@@ -52,6 +56,16 @@ namespace Basisformulier
         {
             btnLijst.BackColor = Color.Transparent;
             btnLijst.ForeColor = Color.Black;
+        }
+
+        private void llblclose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Weet u zeker dat u wilt afsluiten?", "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Close();
+            }
+            else { }
         }
     }
 }
