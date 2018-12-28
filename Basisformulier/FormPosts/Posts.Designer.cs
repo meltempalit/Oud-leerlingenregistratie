@@ -35,10 +35,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtHerinnering = new System.Windows.Forms.TextBox();
             this.txtMededeling = new System.Windows.Forms.TextBox();
+            this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtErvaring = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pcbox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
@@ -112,6 +112,17 @@
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
             this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
             // 
+            // pcbox
+            // 
+            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
+            this.pcbox.Location = new System.Drawing.Point(394, 320);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(16, 16);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pcbox.TabIndex = 37;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
+            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(17, 313);
@@ -137,17 +148,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pcbox
-            // 
-            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
-            this.pcbox.Location = new System.Drawing.Point(394, 320);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(16, 16);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pcbox.TabIndex = 37;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormPosts.Properties.Resources.VHSJ;
@@ -167,6 +167,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Posts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Ervaring_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

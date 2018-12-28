@@ -49,23 +49,24 @@
             this.txtAfst = new System.Windows.Forms.TextBox();
             this.txtGeboorte = new System.Windows.Forms.TextBox();
             this.lbltel = new System.Windows.Forms.Label();
-            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.cboLand = new System.Windows.Forms.ComboBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.lblNaam = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.grpbReg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistreer
             // 
             this.btnRegistreer.BackColor = System.Drawing.Color.Lavender;
             this.btnRegistreer.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistreer.ForeColor = System.Drawing.Color.DimGray;
             this.btnRegistreer.Location = new System.Drawing.Point(132, 546);
             this.btnRegistreer.Name = "btnRegistreer";
             this.btnRegistreer.Size = new System.Drawing.Size(121, 29);
@@ -246,6 +247,8 @@
             this.grpbReg.Controls.Add(this.lblAfstudeerj);
             this.grpbReg.Controls.Add(this.txtFamilienaam);
             this.grpbReg.Controls.Add(this.txtNaam);
+            this.grpbReg.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbReg.ForeColor = System.Drawing.Color.DarkGray;
             this.grpbReg.Location = new System.Drawing.Point(12, 61);
             this.grpbReg.Name = "grpbReg";
             this.grpbReg.Size = new System.Drawing.Size(324, 587);
@@ -258,7 +261,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.DarkOrchid;
+            this.linkLabel1.LinkColor = System.Drawing.Color.MediumOrchid;
             this.linkLabel1.Location = new System.Drawing.Point(129, 505);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(82, 16);
@@ -273,7 +276,7 @@
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(70, 523);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 13);
+            this.label1.Size = new System.Drawing.Size(189, 13);
             this.label1.TabIndex = 37;
             this.label1.Text = "gelezen en ga hiermee akkoord";
             // 
@@ -283,7 +286,7 @@
             this.chkControle.ForeColor = System.Drawing.Color.DimGray;
             this.chkControle.Location = new System.Drawing.Point(55, 505);
             this.chkControle.Name = "chkControle";
-            this.chkControle.Size = new System.Drawing.Size(77, 17);
+            this.chkControle.Size = new System.Drawing.Size(89, 17);
             this.chkControle.TabIndex = 36;
             this.chkControle.Text = "Ik heb het ";
             this.chkControle.UseVisualStyleBackColor = true;
@@ -325,17 +328,6 @@
             this.lbltel.Size = new System.Drawing.Size(0, 13);
             this.lbltel.TabIndex = 33;
             // 
-            // picAvatar
-            // 
-            this.picAvatar.Image = global::FormPersoon.Properties.Resources._17__2_;
-            this.picAvatar.Location = new System.Drawing.Point(105, 10);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(111, 116);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAvatar.TabIndex = 32;
-            this.picAvatar.TabStop = false;
-            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
-            // 
             // cboLand
             // 
             this.cboLand.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -360,9 +352,9 @@
             this.lnklAnnu.AutoSize = true;
             this.lnklAnnu.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.lnklAnnu.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lnklAnnu.Location = new System.Drawing.Point(77, 562);
+            this.lnklAnnu.Location = new System.Drawing.Point(68, 562);
             this.lnklAnnu.Name = "lnklAnnu";
-            this.lnklAnnu.Size = new System.Drawing.Size(49, 13);
+            this.lnklAnnu.Size = new System.Drawing.Size(58, 13);
             this.lnklAnnu.TabIndex = 30;
             this.lnklAnnu.TabStop = true;
             this.lnklAnnu.Text = "Annuleer";
@@ -388,6 +380,10 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormPersoon.Properties.Resources.VHSJ;
@@ -399,9 +395,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // timer2
+            // picAvatar
             // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.picAvatar.Image = global::FormPersoon.Properties.Resources._17__2_;
+            this.picAvatar.Location = new System.Drawing.Point(105, 10);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(111, 116);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 32;
+            this.picAvatar.TabStop = false;
+            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
             // 
             // Persoon
             // 
@@ -411,14 +414,16 @@
             this.ClientSize = new System.Drawing.Size(348, 660);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpbReg);
+            this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Persoon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Persoon_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Persoon_MouseDown);
             this.grpbReg.ResumeLayout(false);
             this.grpbReg.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }

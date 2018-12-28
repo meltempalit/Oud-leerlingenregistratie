@@ -38,11 +38,12 @@
             // 
             this.txtWW.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWW.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtWW.Location = new System.Drawing.Point(106, 43);
+            this.txtWW.Location = new System.Drawing.Point(109, 37);
             this.txtWW.Name = "txtWW";
             this.txtWW.PasswordChar = '•';
             this.txtWW.Size = new System.Drawing.Size(222, 25);
             this.txtWW.TabIndex = 0;
+            this.txtWW.UseWaitCursor = true;
             this.txtWW.TextChanged += new System.EventHandler(this.txtWW_TextChanged);
             this.txtWW.Enter += new System.EventHandler(this.txtWW_Enter);
             this.txtWW.Leave += new System.EventHandler(this.txtWW_Leave);
@@ -51,11 +52,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 46);
+            this.label1.Location = new System.Drawing.Point(27, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Wachtwoord";
+            this.label1.UseWaitCursor = true;
             // 
             // btnAnu
             // 
@@ -92,8 +94,11 @@
             this.Controls.Add(this.btnAnu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtWW);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "WachtwoordBeheerder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wachtwoord beheerder";
+            this.UseWaitCursor = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

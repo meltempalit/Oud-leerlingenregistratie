@@ -86,6 +86,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "FormPrivacybeleid";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Privacy";
             this.Load += new System.EventHandler(this.FormPrivacybeleid_Load);
             this.ResumeLayout(false);

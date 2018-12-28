@@ -137,6 +137,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "FormVervolgstudiesInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vervolgstudies";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

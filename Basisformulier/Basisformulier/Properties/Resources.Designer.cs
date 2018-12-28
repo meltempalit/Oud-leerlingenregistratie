@@ -63,6 +63,76 @@ namespace Basisformulier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_icon {
+            get {
+                object obj = ResourceManager.GetObject("close-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deep_blue_background_dark_edition {
+            get {
+                object obj = ResourceManager.GetObject("deep-blue-background-dark-edition", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_close_476323 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_close_476323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_close_blue_619554 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_close_blue_619554", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Close_Icon_1398919 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Close_Icon_1398919", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Close_Icon_Dark_1398917 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Close_Icon_Dark_1398917", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_close_red_619539 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_close_red_619539", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_close2_1814078 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_close2_1814078", resourceCulture);
@@ -76,6 +146,16 @@ namespace Basisformulier.Properties {
         internal static System.Drawing.Bitmap iconfinder_conversation_job_seeker_employee_unemployee_work_2620525 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_conversation_job_seeker_employee_unemployee_work_2620525", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Cross_2001870 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Cross_2001870", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

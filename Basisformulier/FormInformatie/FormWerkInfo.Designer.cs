@@ -137,6 +137,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormWerkInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Werk";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

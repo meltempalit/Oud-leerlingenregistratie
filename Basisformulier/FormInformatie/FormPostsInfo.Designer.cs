@@ -138,6 +138,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormPostsInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Posts";
             this.Load += new System.EventHandler(this.FormPostsInfo_Load);
             this.menuStrip1.ResumeLayout(false);
