@@ -49,17 +49,20 @@
             this.txtAfst = new System.Windows.Forms.TextBox();
             this.txtGeboorte = new System.Windows.Forms.TextBox();
             this.lbltel = new System.Windows.Forms.Label();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.cboLand = new System.Windows.Forms.ComboBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.lblNaam = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.grpbReg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistreer
@@ -328,6 +331,17 @@
             this.lbltel.Size = new System.Drawing.Size(0, 13);
             this.lbltel.TabIndex = 33;
             // 
+            // picAvatar
+            // 
+            this.picAvatar.Image = global::FormPersoon.Properties.Resources._17__2_;
+            this.picAvatar.Location = new System.Drawing.Point(105, 10);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(111, 116);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 32;
+            this.picAvatar.TabStop = false;
+            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
+            // 
             // cboLand
             // 
             this.cboLand.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -384,6 +398,22 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // jDragControl1
+            // 
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FormPersoon.Properties.Resources.iconfinder_Cross_2001870;
+            this.pictureBox2.Location = new System.Drawing.Point(305, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormPersoon.Properties.Resources.VHSJ;
@@ -395,26 +425,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // picAvatar
-            // 
-            this.picAvatar.Image = global::FormPersoon.Properties.Resources._17__2_;
-            this.picAvatar.Location = new System.Drawing.Point(105, 10);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(111, 116);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAvatar.TabIndex = 32;
-            this.picAvatar.TabStop = false;
-            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
-            // 
             // Persoon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(348, 660);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpbReg);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Persoon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -422,8 +443,9 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Persoon_MouseDown);
             this.grpbReg.ResumeLayout(false);
             this.grpbReg.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,6 +479,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkControle;
         private System.Windows.Forms.Timer timer2;
+        private JDragControl.JDragControl jDragControl1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

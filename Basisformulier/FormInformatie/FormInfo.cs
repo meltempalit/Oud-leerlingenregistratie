@@ -7,14 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace FormInformatie
 {
     public partial class FormInfo : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+
+        private static extern IntPtr CreateRoundRectRgn
+            (
+
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+
+            );
+
         public FormInfo()
         {
             InitializeComponent();
+           
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+        }
+
+        private const int CS_schaduw = 0x00020000;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle = CS_schaduw;
+                return cp;
+            }
         }
         Business bus = new Business();
         private void FormInfo_Load(object sender, EventArgs e)
@@ -66,6 +95,11 @@ namespace FormInformatie
         {
             new FormWerkInfo().Show();
             Visible = false;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

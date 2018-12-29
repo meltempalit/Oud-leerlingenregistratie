@@ -28,21 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnZoek = new System.Windows.Forms.Button();
             this.txtZoek = new System.Windows.Forms.TextBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lstLijst = new System.Windows.Forms.ListBox();
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnZoek
             // 
             this.btnZoek.BackColor = System.Drawing.Color.LightGray;
-            this.btnZoek.Location = new System.Drawing.Point(397, 30);
+            this.btnZoek.Location = new System.Drawing.Point(429, 39);
             this.btnZoek.Name = "btnZoek";
             this.btnZoek.Size = new System.Drawing.Size(75, 20);
             this.btnZoek.TabIndex = 41;
@@ -55,7 +59,7 @@
             // txtZoek
             // 
             this.txtZoek.ForeColor = System.Drawing.Color.Silver;
-            this.txtZoek.Location = new System.Drawing.Point(203, 30);
+            this.txtZoek.Location = new System.Drawing.Point(235, 39);
             this.txtZoek.Name = "txtZoek";
             this.txtZoek.Size = new System.Drawing.Size(188, 20);
             this.txtZoek.TabIndex = 40;
@@ -67,9 +71,9 @@
             // 
             this.llblclose.AutoSize = true;
             this.llblclose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.llblclose.Location = new System.Drawing.Point(397, 284);
+            this.llblclose.Location = new System.Drawing.Point(472, 284);
             this.llblclose.Name = "llblclose";
-            this.llblclose.Size = new System.Drawing.Size(33, 13);
+            this.llblclose.Size = new System.Drawing.Size(39, 13);
             this.llblclose.TabIndex = 39;
             this.llblclose.TabStop = true;
             this.llblclose.Text = "Close";
@@ -81,9 +85,11 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lstLijst);
             this.groupBox1.Controls.Add(this.llblclose);
-            this.groupBox1.Location = new System.Drawing.Point(12, 74);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Gray;
+            this.groupBox1.Location = new System.Drawing.Point(12, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(453, 303);
+            this.groupBox1.Size = new System.Drawing.Size(526, 308);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OUD-LEERLINGEN";
@@ -95,7 +101,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(13, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 13);
+            this.label1.Size = new System.Drawing.Size(269, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Klik op een oud-leerling voor meer informatie";
             // 
@@ -107,9 +113,25 @@
             this.lstLijst.ItemHeight = 19;
             this.lstLijst.Location = new System.Drawing.Point(16, 49);
             this.lstLijst.Name = "lstLijst";
-            this.lstLijst.Size = new System.Drawing.Size(414, 232);
+            this.lstLijst.Size = new System.Drawing.Size(489, 232);
             this.lstLijst.TabIndex = 0;
             this.lstLijst.SelectedIndexChanged += new System.EventHandler(this.lstLijst_SelectedIndexChanged);
+            // 
+            // jDragControl1
+            // 
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Lijst.Properties.Resources.iconfinder_Cross_2001870;
+            this.pictureBox2.Location = new System.Drawing.Point(514, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -126,17 +148,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(482, 390);
+            this.ClientSize = new System.Drawing.Size(550, 421);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnZoek);
             this.Controls.Add(this.txtZoek);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLijst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmLijst_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -152,6 +177,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lstLijst;
         private System.Windows.Forms.Label label1;
+        private JDragControl.JDragControl jDragControl1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

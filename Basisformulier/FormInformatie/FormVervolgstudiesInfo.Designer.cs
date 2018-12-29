@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
             this.txt1 = new System.Windows.Forms.RichTextBox();
@@ -37,9 +38,12 @@
             this.ervaringenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.werkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.werkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -47,7 +51,9 @@
             this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.groupBox1.Controls.Add(this.llblclose);
             this.groupBox1.Controls.Add(this.txt1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 85);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Gray;
+            this.groupBox1.Location = new System.Drawing.Point(12, 92);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(529, 272);
             this.groupBox1.TabIndex = 44;
@@ -60,7 +66,7 @@
             this.llblclose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.llblclose.Location = new System.Drawing.Point(476, 252);
             this.llblclose.Name = "llblclose";
-            this.llblclose.Size = new System.Drawing.Size(33, 13);
+            this.llblclose.Size = new System.Drawing.Size(39, 13);
             this.llblclose.TabIndex = 40;
             this.llblclose.TabStop = true;
             this.llblclose.Text = "Close";
@@ -75,6 +81,7 @@
             this.txt1.Size = new System.Drawing.Size(491, 230);
             this.txt1.TabIndex = 0;
             this.txt1.Text = "";
+            this.txt1.TextChanged += new System.EventHandler(this.txt1_TextChanged);
             // 
             // pictureBox2
             // 
@@ -88,6 +95,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.oudleerlingGegevensToolStripMenuItem,
             this.ervaringenToolStripMenuItem,
@@ -127,23 +135,44 @@
             this.werkToolStripMenuItem1.Text = "Werk";
             this.werkToolStripMenuItem1.Click += new System.EventHandler(this.werkToolStripMenuItem1_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox3.Image = global::FormInformatie.Properties.Resources.iconfinder_Cross_2001870;
+            this.pictureBox3.Location = new System.Drawing.Point(517, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 46;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // jDragControl1
+            // 
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this.menuStrip1;
+            // 
             // FormVervolgstudiesInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(553, 376);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVervolgstudiesInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vervolgstudies";
+            this.Load += new System.EventHandler(this.FormVervolgstudiesInfo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +189,7 @@
         private System.Windows.Forms.ToolStripMenuItem ervaringenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem werkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem werkToolStripMenuItem1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private JDragControl.JDragControl jDragControl1;
     }
 }

@@ -35,12 +35,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtHerinnering = new System.Windows.Forms.TextBox();
             this.txtMededeling = new System.Windows.Forms.TextBox();
-            this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtErvaring = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pcbox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +51,7 @@
             // btnToevoegenErvaring
             // 
             this.btnToevoegenErvaring.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToevoegenErvaring.Location = new System.Drawing.Point(236, 354);
+            this.btnToevoegenErvaring.Location = new System.Drawing.Point(236, 342);
             this.btnToevoegenErvaring.Name = "btnToevoegenErvaring";
             this.btnToevoegenErvaring.Size = new System.Drawing.Size(152, 27);
             this.btnToevoegenErvaring.TabIndex = 5;
@@ -62,9 +65,9 @@
             // 
             this.lnklAnnu.AutoSize = true;
             this.lnklAnnu.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lnklAnnu.Location = new System.Drawing.Point(181, 368);
+            this.lnklAnnu.Location = new System.Drawing.Point(172, 356);
             this.lnklAnnu.Name = "lnklAnnu";
-            this.lnklAnnu.Size = new System.Drawing.Size(49, 13);
+            this.lnklAnnu.Size = new System.Drawing.Size(58, 13);
             this.lnklAnnu.TabIndex = 33;
             this.lnklAnnu.TabStop = true;
             this.lnklAnnu.Text = "Annuleer";
@@ -80,6 +83,8 @@
             this.groupBox1.Controls.Add(this.txtErvaring);
             this.groupBox1.Controls.Add(this.lnklAnnu);
             this.groupBox1.Controls.Add(this.btnToevoegenErvaring);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Gray;
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(425, 395);
@@ -112,17 +117,6 @@
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
             this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
             // 
-            // pcbox
-            // 
-            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
-            this.pcbox.Location = new System.Drawing.Point(394, 320);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(16, 16);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pcbox.TabIndex = 37;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
-            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(17, 313);
@@ -148,6 +142,33 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // jDragControl1
+            // 
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FormPosts.Properties.Resources.iconfinder_Cross_2001870;
+            this.pictureBox2.Location = new System.Drawing.Point(416, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pcbox
+            // 
+            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
+            this.pcbox.Location = new System.Drawing.Point(394, 320);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(16, 16);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pcbox.TabIndex = 37;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormPosts.Properties.Resources.VHSJ;
@@ -163,14 +184,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(451, 513);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Posts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Ervaring_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -189,5 +213,7 @@
         private System.Windows.Forms.PictureBox pcbox;
         private System.Windows.Forms.TextBox txtHerinnering;
         private System.Windows.Forms.TextBox txtMededeling;
+        private JDragControl.JDragControl jDragControl1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

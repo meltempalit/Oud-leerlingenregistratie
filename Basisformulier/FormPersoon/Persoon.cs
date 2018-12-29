@@ -9,15 +9,44 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FormPosts;
 using Lijst;
+using System.Runtime.InteropServices;
 
 
 namespace FormPersoon
 {
     public partial class Persoon : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+
+        private static extern IntPtr CreateRoundRectRgn
+            (
+
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+
+            );
+
+
         public Persoon()
         {
             InitializeComponent();
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+        }
+
+        private const int CS_schaduw = 0x00020000;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle = CS_schaduw;
+                return cp;
+            }
         }
         Business bus = new Business();
 
@@ -515,6 +544,11 @@ namespace FormPersoon
         private void txtTel_Leave(object sender, EventArgs e)
         {
             
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

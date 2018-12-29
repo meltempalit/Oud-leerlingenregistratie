@@ -25,16 +25,22 @@ namespace Basisformulier
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(txtWW.Text == "1250")
-            {
-                new frmLijst().Show();
-                Visible = false;
-            }
-            else
-            {
-                label1.ForeColor = Color.Red;
-                txtWW.BackColor = Color.FromArgb(242,220,220);
-            }
+
+            
+                if (txtWW.Text == "1250")
+                {
+                    new frmLijst().Show();
+                    Visible = false;
+                }
+                else
+                {
+                    label1.ForeColor = Color.Red;
+                    txtWW.BackColor = Color.FromArgb(242, 220, 220);
+                }
+          
+            
+
+            
         }
 
         private void button2_MouseHover(object sender, EventArgs e)
@@ -80,6 +86,11 @@ namespace Basisformulier
         private void txtWW_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void WachtwoordBeheerder_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
