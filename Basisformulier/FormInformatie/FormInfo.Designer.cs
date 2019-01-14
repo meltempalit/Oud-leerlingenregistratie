@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txt1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.oudleerlingGegevensToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,7 +36,6 @@
             this.werkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -127,11 +125,6 @@
             this.llblclose.Text = "Close";
             this.llblclose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblclose_LinkClicked);
             // 
-            // jDragControl1
-            // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this.menuStrip1;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
@@ -204,7 +197,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.LinkLabel llblclose;
-        private JDragControl.JDragControl jDragControl1;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

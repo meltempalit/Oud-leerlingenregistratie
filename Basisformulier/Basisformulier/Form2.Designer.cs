@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnReg = new System.Windows.Forms.Button();
             this.btnLijst = new System.Windows.Forms.Button();
             this.llblclose = new System.Windows.Forms.LinkLabel();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -82,11 +80,6 @@
             this.llblclose.TabStop = true;
             this.llblclose.Text = "Close";
             this.llblclose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblclose_LinkClicked);
-            // 
-            // jDragControl1
-            // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this;
             // 
             // panel1
             // 
@@ -147,7 +140,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLijst;
         private System.Windows.Forms.LinkLabel llblclose;
-        private JDragControl.JDragControl jDragControl1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

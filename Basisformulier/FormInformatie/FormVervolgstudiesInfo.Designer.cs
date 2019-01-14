@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
             this.txt1 = new System.Windows.Forms.RichTextBox();
@@ -39,7 +38,6 @@
             this.werkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.werkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -147,11 +145,6 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // jDragControl1
-            // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this.menuStrip1;
-            // 
             // FormVervolgstudiesInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +183,5 @@
         private System.Windows.Forms.ToolStripMenuItem werkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem werkToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private JDragControl.JDragControl jDragControl1;
     }
 }

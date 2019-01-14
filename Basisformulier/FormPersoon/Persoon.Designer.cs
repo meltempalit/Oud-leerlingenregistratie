@@ -56,7 +56,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpbReg.SuspendLayout();
@@ -398,11 +397,6 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // jDragControl1
-            // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::FormPersoon.Properties.Resources.iconfinder_Cross_2001870;
@@ -479,7 +473,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkControle;
         private System.Windows.Forms.Timer timer2;
-        private JDragControl.JDragControl jDragControl1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -28,23 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Posts));
             this.btnToevoegenErvaring = new System.Windows.Forms.Button();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtHerinnering = new System.Windows.Forms.TextBox();
             this.txtMededeling = new System.Windows.Forms.TextBox();
+            this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtErvaring = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pcbox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +115,17 @@
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
             this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
             // 
+            // pcbox
+            // 
+            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
+            this.pcbox.Location = new System.Drawing.Point(394, 320);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(16, 16);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pcbox.TabIndex = 37;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
+            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(17, 313);
@@ -142,11 +151,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // jDragControl1
-            // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::FormPosts.Properties.Resources.iconfinder_Cross_2001870;
@@ -157,17 +161,6 @@
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pcbox
-            // 
-            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
-            this.pcbox.Location = new System.Drawing.Point(394, 320);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(16, 16);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pcbox.TabIndex = 37;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
             // 
             // pictureBox1
             // 
@@ -194,8 +187,8 @@
             this.Load += new System.EventHandler(this.Ervaring_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -213,7 +206,6 @@
         private System.Windows.Forms.PictureBox pcbox;
         private System.Windows.Forms.TextBox txtHerinnering;
         private System.Windows.Forms.TextBox txtMededeling;
-        private JDragControl.JDragControl jDragControl1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
