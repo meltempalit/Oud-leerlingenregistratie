@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnZoek = new System.Windows.Forms.Button();
             this.txtZoek = new System.Windows.Forms.TextBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lstLijst = new System.Windows.Forms.ListBox();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
@@ -117,11 +115,6 @@
             this.lstLijst.TabIndex = 0;
             this.lstLijst.SelectedIndexChanged += new System.EventHandler(this.lstLijst_SelectedIndexChanged);
             // 
-            // jDragControl1
-            // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Lijst.Properties.Resources.iconfinder_Cross_2001870;
@@ -177,7 +170,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lstLijst;
         private System.Windows.Forms.Label label1;
-        private JDragControl.JDragControl jDragControl1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
