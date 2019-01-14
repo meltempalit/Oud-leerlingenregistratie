@@ -265,7 +265,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.MediumOrchid;
-            this.linkLabel1.Location = new System.Drawing.Point(129, 505);
+            this.linkLabel1.Location = new System.Drawing.Point(134, 505);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(82, 16);
             this.linkLabel1.TabIndex = 38;
