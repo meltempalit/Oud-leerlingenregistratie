@@ -66,19 +66,34 @@ namespace FormPosts
         private void btnToevoegenErvaring_Click(object sender, EventArgs e)
         {
 
-            bus.voegToe(txtErvaring.Text, txtMededeling.Text, txtHerinnering.Text);
-            vulForm();
-            
-            
 
-            if(txtErvaring.Text.Length ==2 || txtHerinnering.Text.Length==2 || txtMededeling.Text.Length==2)
+
+            if (txtErvaring.Text.Length <= 2 || txtHerinnering.Text.Length <= 2 || txtMededeling.Text.Length <= 2)
             {
                 MessageBox.Show("U moet iets ingeven!", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                if (txtErvaring.Text.Length <= 2)
+                {
+                    txtErvaring.BackColor = Color.FromArgb(242, 220, 220);
+
+                }
+                if (txtHerinnering.Text.Length <= 2)
+                {
+                    txtHerinnering.BackColor = Color.FromArgb(242, 220, 220);
+                }
+
+                if (txtMededeling.Text.Length <= 2)
+                {
+                    txtMededeling.BackColor = Color.FromArgb(242, 220, 220);
+
+                }
             }
             else
             {
                 this.timer1.Start();
                 progressBar1.Visible = true;
+                bus.voegToe(txtErvaring.Text, txtMededeling.Text, txtHerinnering.Text);
+                vulForm();
             }
 
         }
@@ -240,6 +255,31 @@ namespace FormPosts
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtErvaring_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtErvaring_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtErvaring.BackColor = Color.White;
+        }
+
+        private void txtMededeling_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtMededeling.BackColor = Color.White;
+        }
+
+        private void txtHerinnering_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtHerinnering.BackColor = Color.White;
         }
     }
 }

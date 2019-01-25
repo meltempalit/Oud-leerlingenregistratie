@@ -36,6 +36,7 @@
             this.lstLijst = new System.Windows.Forms.ListBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnVerwijder = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,9 +70,9 @@
             // 
             this.llblclose.AutoSize = true;
             this.llblclose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.llblclose.Location = new System.Drawing.Point(472, 284);
+            this.llblclose.Location = new System.Drawing.Point(485, 423);
             this.llblclose.Name = "llblclose";
-            this.llblclose.Size = new System.Drawing.Size(39, 13);
+            this.llblclose.Size = new System.Drawing.Size(33, 13);
             this.llblclose.TabIndex = 39;
             this.llblclose.TabStop = true;
             this.llblclose.Text = "Close";
@@ -80,14 +81,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.groupBox1.Controls.Add(this.btnVerwijder);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lstLijst);
-            this.groupBox1.Controls.Add(this.llblclose);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Gray;
             this.groupBox1.Location = new System.Drawing.Point(12, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(526, 308);
+            this.groupBox1.Size = new System.Drawing.Size(526, 333);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OUD-LEERLINGEN";
@@ -114,6 +115,7 @@
             this.lstLijst.Size = new System.Drawing.Size(489, 232);
             this.lstLijst.TabIndex = 0;
             this.lstLijst.SelectedIndexChanged += new System.EventHandler(this.lstLijst_SelectedIndexChanged);
+            this.lstLijst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstLijst_MouseDoubleClick);
             // 
             // pictureBox2
             // 
@@ -136,15 +138,29 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
+            // btnVerwijder
+            // 
+            this.btnVerwijder.Enabled = false;
+            this.btnVerwijder.ForeColor = System.Drawing.Color.Black;
+            this.btnVerwijder.Location = new System.Drawing.Point(16, 294);
+            this.btnVerwijder.Name = "btnVerwijder";
+            this.btnVerwijder.Size = new System.Drawing.Size(108, 26);
+            this.btnVerwijder.TabIndex = 45;
+            this.btnVerwijder.Text = "VERWIJDER";
+            this.btnVerwijder.UseVisualStyleBackColor = true;
+            this.btnVerwijder.MouseLeave += new System.EventHandler(this.btnVerwijder_MouseLeave);
+            this.btnVerwijder.MouseHover += new System.EventHandler(this.btnVerwijder_MouseHover);
+            // 
             // frmLijst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(550, 421);
+            this.ClientSize = new System.Drawing.Size(550, 443);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnZoek);
             this.Controls.Add(this.txtZoek);
+            this.Controls.Add(this.llblclose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -171,6 +187,7 @@
         private System.Windows.Forms.ListBox lstLijst;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnVerwijder;
     }
 }
 

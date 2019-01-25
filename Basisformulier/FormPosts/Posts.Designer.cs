@@ -90,6 +90,7 @@
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "POST";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtHerinnering
             // 
@@ -100,6 +101,7 @@
             this.txtHerinnering.Size = new System.Drawing.Size(371, 82);
             this.txtHerinnering.TabIndex = 40;
             this.txtHerinnering.Text = "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business...";
+            this.txtHerinnering.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtHerinnering_MouseClick);
             this.txtHerinnering.TextChanged += new System.EventHandler(this.txtHerinnering_TextChanged_1);
             this.txtHerinnering.Enter += new System.EventHandler(this.txtHerinnering_Enter_1);
             this.txtHerinnering.Leave += new System.EventHandler(this.txtHerinnering_Leave_1);
@@ -113,6 +115,7 @@
             this.txtMededeling.Size = new System.Drawing.Size(371, 82);
             this.txtMededeling.TabIndex = 39;
             this.txtMededeling.Text = "Typ hier wat u wenst mee te geven aan de leerlingen...";
+            this.txtMededeling.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMededeling_MouseClick);
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
             this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
             // 
@@ -144,8 +147,10 @@
             this.txtErvaring.Size = new System.Drawing.Size(371, 82);
             this.txtErvaring.TabIndex = 35;
             this.txtErvaring.Text = "Typ hier uw loopbaan/ ervaringen...";
+            this.txtErvaring.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtErvaring_MouseClick);
             this.txtErvaring.TextChanged += new System.EventHandler(this.txtErvaring_TextChanged_1);
             this.txtErvaring.Enter += new System.EventHandler(this.txtErvaring_Enter_1);
+            this.txtErvaring.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtErvaring_KeyPress);
             this.txtErvaring.Leave += new System.EventHandler(this.txtErvaring_Leave_1);
             // 
             // timer1

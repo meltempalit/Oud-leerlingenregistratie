@@ -73,8 +73,9 @@ namespace Lijst
 
         private void lstLijst_SelectedIndexChanged(object sender, EventArgs e)
         {
-            new FormInfo().Show();
-            Visible = false;
+           // new FormInfo().Show();
+           // Visible = false;
+            btnVerwijder.Enabled = true;
         }
 
         private void btnZoek_MouseHover(object sender, EventArgs e)
@@ -123,6 +124,24 @@ namespace Lijst
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnVerwijder_MouseHover(object sender, EventArgs e)
+        {
+            btnVerwijder.BackColor = Color.FromArgb(18, 74, 111);
+            btnVerwijder.ForeColor = Color.White;
+        }
+
+        private void btnVerwijder_MouseLeave(object sender, EventArgs e)
+        {
+            btnVerwijder.BackColor = Color.Transparent;
+            btnVerwijder.ForeColor = Color.Black;
+        }
+
+        private void lstLijst_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+             new FormInfo().Show();
+             Visible = false;
         }
     }
 }

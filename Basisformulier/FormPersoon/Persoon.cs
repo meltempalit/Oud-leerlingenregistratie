@@ -70,8 +70,7 @@ namespace FormPersoon
 
         private void btnRegistreer_Click(object sender, EventArgs e)
         {
-            bus.voegPersoon(txtNaam.Text, txtFamilienaam.Text, txtGeboorte.Text, txtEmail.Text, txtTel.Text, txtAfst.Text, txtRichting.Text);
-            vulForm();
+            
 
 
 
@@ -111,6 +110,8 @@ namespace FormPersoon
                     DialogResult dialogResult = MessageBox.Show("Weet u zeker dat u door wilt gaan?", "Controleer", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (dialogResult == DialogResult.Yes)
                     {
+                        bus.voegPersoon(txtNaam.Text, txtFamilienaam.Text, txtGeboorte.Text, txtEmail.Text, txtTel.Text, txtAfst.Text, txtRichting.Text);
+                        vulForm();
                         MessageBox.Show("U bent geregistreerd!", "Welkom", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Visible = false;
 
