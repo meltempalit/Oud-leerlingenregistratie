@@ -143,5 +143,10 @@ namespace Lijst
              new FormInfo().Show();
              Visible = false;
         }
+
+        private void btnVerwijder_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

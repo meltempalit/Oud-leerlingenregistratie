@@ -100,9 +100,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(13, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 13);
+            this.label1.Size = new System.Drawing.Size(328, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Klik op een oud-leerling voor meer informatie";
+            this.label1.Text = "Klik tweemaal op een oud-leerling voor meer informatie";
             // 
             // lstLijst
             // 
@@ -148,6 +148,7 @@
             this.btnVerwijder.TabIndex = 45;
             this.btnVerwijder.Text = "VERWIJDER";
             this.btnVerwijder.UseVisualStyleBackColor = true;
+            this.btnVerwijder.Click += new System.EventHandler(this.btnVerwijder_Click);
             this.btnVerwijder.MouseLeave += new System.EventHandler(this.btnVerwijder_MouseLeave);
             this.btnVerwijder.MouseHover += new System.EventHandler(this.btnVerwijder_MouseHover);
             // 
