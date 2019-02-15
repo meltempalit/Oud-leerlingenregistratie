@@ -1,6 +1,6 @@
-﻿namespace FormVervolgstudies
+﻿namespace FormWerk
 {
-    partial class Form1
+    partial class Werken
     {
         /// <summary>
         /// Required designer variable.

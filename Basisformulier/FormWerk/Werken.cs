@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FormWerk
 {
-    public partial class Form1 : Form
+    public partial class Werken : Form
     {
-        public Form1()
+        public Werken()
         {
             InitializeComponent();
         }
