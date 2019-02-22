@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using FormVervolgstudies;
 
 namespace FormPosts
 {
@@ -87,6 +88,8 @@ namespace FormPosts
                     txtMededeling.BackColor = Color.FromArgb(242, 220, 220);
 
                 }
+
+
             }
             else
             {
@@ -94,6 +97,7 @@ namespace FormPosts
                 progressBar1.Visible = true;
                 bus.voegToe(txtErvaring.Text, txtMededeling.Text, txtHerinnering.Text);
                 vulForm();
+                
             }
 
         }
@@ -105,6 +109,7 @@ namespace FormPosts
             if (dialogresult == DialogResult.Yes)
             {
                 Visible = false;
+                Close();
             }
             else
             {
@@ -168,6 +173,7 @@ namespace FormPosts
                 if (dialogResult == DialogResult.OK)
                 {
                     Visible = false;
+                    new Vervolgstudies().Show();
                 }
             }
         }
@@ -280,6 +286,11 @@ namespace FormPosts
         private void txtHerinnering_MouseClick(object sender, MouseEventArgs e)
         {
             txtHerinnering.BackColor = Color.White;
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

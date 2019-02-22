@@ -137,6 +137,7 @@
             this.progressBar1.Size = new System.Drawing.Size(371, 23);
             this.progressBar1.TabIndex = 38;
             this.progressBar1.Visible = false;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // txtErvaring
             // 

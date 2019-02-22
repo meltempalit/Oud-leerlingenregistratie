@@ -100,5 +100,11 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_Cross_2001870.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FormVervolgstudies\FormVervolgstudies.csproj">
+      <Project>{82742039-351a-40ff-8e8f-8c4c6ba671fd}</Project>
+      <Name>FormVervolgstudies</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
