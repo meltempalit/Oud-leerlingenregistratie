@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblafstrichting = new System.Windows.Forms.Label();
             this.txtAfstudeerjaar = new System.Windows.Forms.TextBox();
             this.txtDiploma = new System.Windows.Forms.TextBox();
             this.txtRichtingVervolg = new System.Windows.Forms.TextBox();
+            this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtSchool = new System.Windows.Forms.TextBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.btnVolgende = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pcbox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,6 +74,39 @@
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "STUDIES";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(102, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 17);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "School*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(72, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Afstudeerjaar*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(93, 244);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Diploma*";
             // 
             // lblafstrichting
             // 
@@ -122,6 +155,16 @@
             this.txtRichtingVervolg.Enter += new System.EventHandler(this.txtRichtingVervolg_Enter);
             this.txtRichtingVervolg.Leave += new System.EventHandler(this.txtRichtingVervolg_Leave);
             // 
+            // pcbox
+            // 
+            this.pcbox.Location = new System.Drawing.Point(394, 306);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(16, 16);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pcbox.TabIndex = 37;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
+            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(17, 299);
@@ -129,6 +172,7 @@
             this.progressBar1.Size = new System.Drawing.Size(371, 23);
             this.progressBar1.TabIndex = 38;
             this.progressBar1.Visible = false;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // txtSchool
             // 
@@ -139,6 +183,7 @@
             this.txtSchool.Size = new System.Drawing.Size(187, 32);
             this.txtSchool.TabIndex = 35;
             this.txtSchool.Text = "Typ hier de naam van uw hogeschool/ universiteit...";
+            this.txtSchool.TextChanged += new System.EventHandler(this.txtSchool_TextChanged);
             this.txtSchool.Enter += new System.EventHandler(this.txtSchool_Enter);
             this.txtSchool.Leave += new System.EventHandler(this.txtSchool_Leave);
             // 
@@ -168,39 +213,6 @@
             this.btnVolgende.MouseLeave += new System.EventHandler(this.btnVolgende_MouseLeave);
             this.btnVolgende.MouseHover += new System.EventHandler(this.btnVolgende_MouseHover);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(93, 244);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Diploma*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(72, 187);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Afstudeerjaar*";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(102, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 17);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "School*";
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -226,16 +238,6 @@
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
-            // pcbox
-            // 
-            this.pcbox.Location = new System.Drawing.Point(394, 306);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(16, 16);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pcbox.TabIndex = 37;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
-            // 
             // Vervolgstudies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,9 +254,9 @@
             this.Load += new System.EventHandler(this.Vervolgstudies_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbox)).EndInit();
             this.ResumeLayout(false);
 
         }

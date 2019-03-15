@@ -44,6 +44,8 @@ namespace FormInformatie
             }
         }
 
+        Business bus = new Business();
+
         private void oudleerlingGegevensToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormInfo().Show();

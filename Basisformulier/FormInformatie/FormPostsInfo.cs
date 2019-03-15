@@ -95,5 +95,10 @@ namespace FormInformatie
         {
             Close();
         }
+
+        private void txt2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

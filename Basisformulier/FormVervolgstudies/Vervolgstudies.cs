@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using FormWerk;
 
 namespace FormVervolgstudies
 {
@@ -164,6 +165,7 @@ namespace FormVervolgstudies
                 if (dialogResult == DialogResult.OK)
                 {
                     Visible = false;
+                    new Werken().Show();
                    
                 }
             }
@@ -203,11 +205,22 @@ namespace FormVervolgstudies
                 //bus.voegToe(txtErvaring.Text, txtMededeling.Text, txtHerinnering.Text);
                // vulForm();
             }
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtSchool_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -45,7 +45,12 @@ namespace Lijst
                     {
 
 
-                        MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      DialogResult dlg =   MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        if (dlg == DialogResult.OK)
+                        {
+                            Close();
+                        }
 
                     }
                     else

@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -90,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconfinder_Cross_2001870.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FormWerk\FormWerk.csproj">
+      <Project>{51babb84-a6c5-49c0-a220-0106981fe543}</Project>
+      <Name>FormWerk</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
