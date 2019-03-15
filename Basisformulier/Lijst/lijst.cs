@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FormPosts;
 using FormInformatie;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 
 
@@ -73,8 +74,8 @@ namespace Lijst
 
         private void lstLijst_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // new FormInfo().Show();
-           // Visible = false;
+            // new FormInfo().Show();
+            // Visible = false;
             btnVerwijder.Enabled = true;
         }
 
@@ -113,7 +114,7 @@ namespace Lijst
 
 
 
-          
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -140,13 +141,40 @@ namespace Lijst
 
         private void lstLijst_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-             new FormInfo().Show();
-             Visible = false;
+            new FormInfo().Show();
+            Visible = false;
         }
 
+
+        //verwijderen 
+        MySqlConnection connection = new MySqlConnection("server=localhost;Password='Test123';user id=root;database=oudleerlingen");
         private void btnVerwijder_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            new Verwijder().Show();
+            /*try
+            {
+                string deleteQuery = "DELETE FROM personen where idPersonen=" + lstLijst.SelectedItem;
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
+
+                if (cmd.ExecuteNonQuery()==1)
+                {
+                    MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("ERROR 4#$%#$%#$^%^$^#$%#$ KON NIET VERWIJDEREN$%#$$", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            connection.Close();
+
+            
+        }*/
         }
     }
 }
