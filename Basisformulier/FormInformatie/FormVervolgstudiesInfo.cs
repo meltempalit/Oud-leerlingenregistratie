@@ -84,10 +84,14 @@ namespace FormInformatie
         {
             Close();
         }
-
+        
         private void FormVervolgstudiesInfo_Load(object sender, EventArgs e)
         {
 
+            foreach (string item in bus.getStudies())
+            {
+                txt1.Text += item;
+            }
         }
 
         private void txt1_TextChanged(object sender, EventArgs e)

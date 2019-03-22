@@ -37,8 +37,9 @@ namespace FormInformatie
             get { return intID; }
             set { intID = value; }
         }
-        public StudieInfo(string pstrSchool, string pstrRichting, string pstrDiploma, string pstrAfstudeerjaar)
+        public StudieInfo(int pintId, string pstrSchool, string pstrRichting, string pstrDiploma, string pstrAfstudeerjaar)
         {
+            intID = pintId;
             strAfstudeerjaar = pstrAfstudeerjaar;
             strDiploma = pstrDiploma;
             strRichting = pstrRichting;
@@ -46,8 +47,8 @@ namespace FormInformatie
         }
         public override string ToString()
         {
-            return "OUD-LEERLING ID: " + intID + Environment.NewLine + "School vervolgstudies: " + Environment.NewLine + strSchool + Environment.NewLine +
-                 "Richting vervolgstudies: " + Environment.NewLine + strRichting + Environment.NewLine +
+            return "OUD-LEERLING ID: " + intID + Environment.NewLine +  "School vervolgstudies: " + Environment.NewLine + strSchool + Environment.NewLine  +Environment.NewLine+
+                 "Richting vervolgstudies: " + Environment.NewLine + strRichting + Environment.NewLine + Environment.NewLine +
                  "Behaald diploma: " + Environment.NewLine + strDiploma + Environment.NewLine + Environment.NewLine+ 
                  "Afstudeerjaar: " + Environment.NewLine + strAfstudeerjaar + Environment.NewLine + Environment.NewLine;
         }

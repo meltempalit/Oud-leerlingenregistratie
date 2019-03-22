@@ -45,8 +45,8 @@ namespace FormInformatie
 
         public override string ToString()
         {
-            return "OUD-LEERLING ID: " + intID +  Environment.NewLine + "Ervaringen? loopbaan: " + Environment.NewLine + strErvaring + Environment.NewLine +
-                "Herinneringen aan Sint-Lievenscollege Business: " + Environment.NewLine + strHerinnering + Environment.NewLine +
+            return "OUD-LEERLING ID: " + intID +  Environment.NewLine + "Ervaringen? loopbaan: " + Environment.NewLine + strErvaring + Environment.NewLine + Environment.NewLine +
+                "Herinneringen aan Sint-Lievenscollege Business: " + Environment.NewLine + strHerinnering + Environment.NewLine + Environment.NewLine +
                 "Mededeling: " + Environment.NewLine + strMededeling + Environment.NewLine + Environment.NewLine;
 
 

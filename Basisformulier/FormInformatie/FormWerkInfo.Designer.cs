@@ -158,6 +158,7 @@
             this.Name = "FormWerkInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Werk";
+            this.Load += new System.EventHandler(this.FormWerkInfo_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

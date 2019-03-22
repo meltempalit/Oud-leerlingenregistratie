@@ -59,12 +59,6 @@
     <Compile Include="Persistence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Verwijder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Verwijder.Designer.cs">
-      <DependentUpon>Verwijder.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="lijst.resx">
       <DependentUpon>lijst.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,9 +72,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Verwijder.resx">
-      <DependentUpon>Verwijder.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

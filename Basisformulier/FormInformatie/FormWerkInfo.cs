@@ -83,5 +83,13 @@ namespace FormInformatie
         {
             Close();
         }
+        Business bus = new Business();
+        private void FormWerkInfo_Load(object sender, EventArgs e)
+        {
+            foreach (string item in bus.getWerken())
+            {
+                txt1.Text += item;
+            }
+        }
     }
 }

@@ -53,6 +53,7 @@
             this.txt2.Size = new System.Drawing.Size(491, 230);
             this.txt2.TabIndex = 2;
             this.txt2.Text = "";
+            this.txt2.TextChanged += new System.EventHandler(this.txt2_TextChanged_1);
             // 
             // menuStrip1
             // 

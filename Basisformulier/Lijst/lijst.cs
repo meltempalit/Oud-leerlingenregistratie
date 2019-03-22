@@ -16,6 +16,7 @@ using MySql.Data.MySqlClient;
 
 
 
+
 namespace Lijst
 {
     public partial class frmLijst : Form
@@ -150,31 +151,54 @@ namespace Lijst
         MySqlConnection connection = new MySqlConnection("server=localhost;Password='Test123';user id=root;database=oudleerlingen");
         private void btnVerwijder_Click(object sender, EventArgs e)
         {
-            new Verwijder().Show();
-            /*try
+            //new Verwijder().Show();
+
+
+            DialogResult msg = MessageBox.Show("Weet u zeker dat u de gegevens wilt verwijderen?", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+            if (msg == DialogResult.Yes)
             {
-                string deleteQuery = "DELETE FROM personen where idPersonen=" + lstLijst.SelectedItem;
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
+                try
+                { int i = 1;
+                    string deleteQuery = "DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1);
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
+                    //string deleteQuery1 = "DELETE FROM posts where idPosts=" + textBox1.Text
+                    // MySqlCommand cmd1 = new MySqlCommand(deleteQuery1, connection);
 
-                if (cmd.ExecuteNonQuery()==1)
-                {
-                    MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+
+
+                        DialogResult dlg = MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        if (dlg == DialogResult.OK)
+                        {
+                            Close();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR 4#$%#$%#$^%^$^#$%#$ KON NIET VERWIJDEREN$%#$$", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("ERROR 4#$%#$%#$^%^$^#$%#$ KON NIET VERWIJDEREN$%#$$", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                    MessageBox.Show(ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            connection.Close();
+                connection.Close();
 
-            
-        }*/
+
+            }
+
+
+
+
+
         }
     }
 }

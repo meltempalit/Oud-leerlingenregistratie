@@ -56,7 +56,42 @@ namespace FormInformatie
             conn.Close();
             return lijst;
         }
-        
+
+        public List<StudieInfo> getStudiesFromDB()
+        {
+            List<StudieInfo> lijst = new List<StudieInfo>();
+
+            MySqlCommand cmd = new MySqlCommand("select * from vervolgstudies", conn);
+
+            conn.Open();
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            while (dataReader.Read())
+            {
+                StudieInfo s = new StudieInfo(Convert.ToInt32(dataReader["idVervolgstudies"]), dataReader["school_na_slcb"].ToString(), dataReader["richting"].ToString(), dataReader["diploma"].ToString(), dataReader["afstudeerjaar"].ToString());
+                lijst.Add(s);
+            }
+
+            conn.Close();
+            return lijst;
+        }
+
+        public List<WerkInfo> getWerkenFromDB()
+        {
+            List<WerkInfo> lijst = new List<WerkInfo>();
+
+            MySqlCommand cmd = new MySqlCommand("select * from werk", conn);
+
+            conn.Open();
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            while (dataReader.Read())
+            {
+                WerkInfo w = new WerkInfo(Convert.ToInt32(dataReader["idWerk"]), dataReader["Werk"].ToString(), dataReader["Bedrijf"].ToString(), dataReader["Beginjaar"].ToString(), dataReader["Vestiging_bedrijf"].ToString());
+                lijst.Add(w);
+            }
+
+            conn.Close();
+            return lijst;
+        }
     }
 
 }
