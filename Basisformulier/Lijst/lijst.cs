@@ -160,23 +160,35 @@ namespace Lijst
             if (msg == DialogResult.Yes)
             {
                 try
-                { int i = 1;
+                { 
                     string deleteQuery = "DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1);
                     connection.Open();
                     MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
-                    //string deleteQuery1 = "DELETE FROM posts where idPosts=" + textBox1.Text
-                    // MySqlCommand cmd1 = new MySqlCommand(deleteQuery1, connection);
+                    string deleteQuery1 = "DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1);
+                    MySqlCommand cmd1 = new MySqlCommand(deleteQuery1, connection);
+                    string deleteQuery2 = "DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1);
+                    MySqlCommand cmd2 = new MySqlCommand(deleteQuery2, connection);
+                    string deleteQuery3 = "DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1);
+                    MySqlCommand cmd3 = new MySqlCommand(deleteQuery3, connection);
 
-                    if (cmd.ExecuteNonQuery() == 1)
+                    if (cmd.ExecuteNonQuery()  == 1)
                     {
-
-
-                        DialogResult dlg = MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        if (dlg == DialogResult.OK)
+                        if(cmd1.ExecuteNonQuery()==1)
                         {
-                            Close();
+                            if (cmd2.ExecuteNonQuery() == 1)
+                            {
+                                if (cmd3.ExecuteNonQuery() == 1)
+                                {
+                                    DialogResult dlg = MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    if (dlg == DialogResult.OK)
+                                    {
+                                        Close();
+                                    }
+                                }
+                            }
                         }
+                        
 
                     }
                     else

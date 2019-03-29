@@ -99,7 +99,12 @@ namespace FormWerk
         {
             Close();
         }
+        Business bus = new Business();
+        public void vulForm()
+        {
+            bus = new Business();
 
+        }
         private void btnVolgende_Click(object sender, EventArgs e)
         {
 
@@ -130,9 +135,11 @@ namespace FormWerk
             }
             else
             {
+                bus.voegToe(txtJob.Text, txtBedrijf.Text, txtStartjaar.Text, txtVestiging.Text);
+                vulForm();
                 this.timer1.Start();
                 progressBar1.Visible = true;
-
+               
             }
         }
 

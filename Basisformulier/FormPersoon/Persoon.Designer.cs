@@ -226,7 +226,7 @@
             // 
             // grpbReg
             // 
-            this.grpbReg.BackColor = System.Drawing.Color.AliceBlue;
+            this.grpbReg.BackColor = System.Drawing.Color.WhiteSmoke;
             this.grpbReg.Controls.Add(this.linkLabel1);
             this.grpbReg.Controls.Add(this.label1);
             this.grpbReg.Controls.Add(this.chkControle);

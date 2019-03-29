@@ -28,8 +28,8 @@ namespace FormWerk
             MySqlDataReader dataReader = cmd.ExecuteReader();
             while (dataReader.Read())
             {
-                Werk w = new Werk(dataReader["Job"].ToString(), dataReader["Bedrijf"].ToString(),
-                    dataReader["Beginjaar"].ToString(), dataReader["Land"].ToString());
+                Werk w = new Werk(dataReader["Werk"].ToString(), dataReader["Bedrijf"].ToString(),
+                    dataReader["Beginjaar"].ToString(), dataReader["Vestiging_bedrijf"].ToString());
                 lijst.Add(w);
             }
 
@@ -38,7 +38,7 @@ namespace FormWerk
         }
         public void addWerk(Werk item)
         {
-            MySqlCommand cmd = new MySqlCommand("insert into werk (Job, Bedrijf, Beginjaar, Land) values('" + item.Job + "','" + item.Bedrijf + "','" + item.Beginjaar + "' + '" + item.Land + "')", conn);
+            MySqlCommand cmd = new MySqlCommand("insert into werk (Werk, Bedrijf, Beginjaar, Vestiging_bedrijf) values('" + item.Job + "','" + item.Bedrijf + "','" + item.Beginjaar + "' , '" + item.Land + "')", conn);
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();

@@ -170,7 +170,12 @@ namespace FormVervolgstudies
                 }
             }
         }
+        Business bus = new Business();
+        public void vulForm()
+        {
+            bus = new Business();
 
+        }
         private void btnVolgende_Click(object sender, EventArgs e)
         {
             if (txtSchool.Text.Length <= 2 || txtDiploma.Text.Length <= 2 || txtAfstudeerjaar.Text.Length <= 2 || txtRichtingVervolg.Text.Length <= 2)
@@ -200,10 +205,12 @@ namespace FormVervolgstudies
             }
             else
             {
+               
                 this.timer1.Start();
                 progressBar1.Visible = true;
-                //bus.voegToe(txtErvaring.Text, txtMededeling.Text, txtHerinnering.Text);
-               // vulForm();
+                bus.voegToe(txtSchool.Text, txtRichtingVervolg.Text, txtDiploma.Text, txtAfstudeerjaar.Text);
+                vulForm();
+
             }
             
         }
@@ -219,6 +226,11 @@ namespace FormVervolgstudies
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

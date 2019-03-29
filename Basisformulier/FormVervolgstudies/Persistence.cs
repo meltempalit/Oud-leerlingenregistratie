@@ -28,7 +28,7 @@ namespace FormVervolgstudies
             MySqlDataReader dataReader = cmd.ExecuteReader();
             while (dataReader.Read())
             {
-                Vervolgstudie v = new Vervolgstudie(dataReader["School"].ToString(), dataReader["Richting"].ToString(),
+                Vervolgstudie v = new Vervolgstudie(dataReader["School_na_SLCB"].ToString(), dataReader["Richting"].ToString(),
                     dataReader["Diploma"].ToString(), dataReader["Afstudeerjaar"].ToString());
                 lijst.Add(v);
             }
@@ -38,7 +38,7 @@ namespace FormVervolgstudies
         }
         public void addVervolgstudie(Vervolgstudie item)
         {
-            MySqlCommand cmd = new MySqlCommand("insert into vervolgstudies (School, Richting, Diploma, Afstudeerjaar) values('" + item.School + "','" + item.Richting + "','" + item.Diploma + "' + '" + item.Afstudeerjaar + "')", conn);
+            MySqlCommand cmd = new MySqlCommand("insert into vervolgstudies (School_na_SLCB, Richting, Diploma, Afstudeerjaar) values('" + item.School + "','" + item.Richting + "','" + item.Diploma + "' , '" + item.Afstudeerjaar + "')", conn);
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
