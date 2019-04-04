@@ -6,16 +6,44 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace FormWerk
 {
     public partial class Werken : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+
+        private static extern IntPtr CreateRoundRectRgn
+           (
+
+           int nLeftRect,
+           int nTopRect,
+           int nRightRect,
+           int nBottomRect,
+           int nWidthEllipse,
+           int nHeightEllipse
+           );
+
         public Werken()
         {
             InitializeComponent();
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
+
+        private const int CS_schaduw = 0x00020000;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle = CS_schaduw;
+                return cp;
+            }
+        }
+
 
         private void txtSchool_TextChanged(object sender, EventArgs e)
         {
@@ -159,6 +187,11 @@ namespace FormWerk
 
                 }
             }
+        }
+
+        private void Werken_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
