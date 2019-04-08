@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Lijst;
 
 namespace FormInformatie
 {
@@ -50,12 +51,14 @@ namespace FormInformatie
             {
                 txt2.Text += item;
             }
+            menuStrip1.BackColor = Color.FromArgb(18, 74, 111);
+            menuStrip1.ForeColor = Color.White;
         }
 
         private void oudleerlingGegevensToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormInfo().Show();
-            Visible = false;
+            Close();
         }
 
         private void ervaringenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +73,8 @@ namespace FormInformatie
             if(dialogResult == DialogResult.Yes)
             {
                 Close();
+                
+                
             }
             else { }
         }
@@ -104,6 +109,12 @@ namespace FormInformatie
         private void txt2_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void lijstToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmLijst().Show();
+            Visible = false;
         }
     }
 }

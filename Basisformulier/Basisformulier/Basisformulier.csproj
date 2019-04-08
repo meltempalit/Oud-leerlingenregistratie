@@ -278,5 +278,35 @@
   <ItemGroup>
     <None Include="Resources\icons8-close-program-96.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speech-bubble-156056_960_720 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel5.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel6.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel7.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel8.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knipsel9.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

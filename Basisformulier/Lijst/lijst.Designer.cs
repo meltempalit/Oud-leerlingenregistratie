@@ -32,20 +32,19 @@
             this.txtZoek = new System.Windows.Forms.TextBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnVerwijder = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lstLijst = new System.Windows.Forms.ListBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnVerwijder = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnZoek
             // 
             this.btnZoek.BackColor = System.Drawing.Color.LightGray;
-            this.btnZoek.Location = new System.Drawing.Point(429, 39);
+            this.btnZoek.Location = new System.Drawing.Point(429, 50);
             this.btnZoek.Name = "btnZoek";
             this.btnZoek.Size = new System.Drawing.Size(75, 20);
             this.btnZoek.TabIndex = 41;
@@ -58,7 +57,7 @@
             // txtZoek
             // 
             this.txtZoek.ForeColor = System.Drawing.Color.Silver;
-            this.txtZoek.Location = new System.Drawing.Point(235, 39);
+            this.txtZoek.Location = new System.Drawing.Point(235, 51);
             this.txtZoek.Name = "txtZoek";
             this.txtZoek.Size = new System.Drawing.Size(188, 20);
             this.txtZoek.TabIndex = 40;
@@ -80,12 +79,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.groupBox1.Controls.Add(this.btnVerwijder);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lstLijst);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Gray;
+            this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(12, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(526, 333);
@@ -93,6 +92,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OUD-LEERLINGEN";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnVerwijder
+            // 
+            this.btnVerwijder.Enabled = false;
+            this.btnVerwijder.ForeColor = System.Drawing.Color.Black;
+            this.btnVerwijder.Location = new System.Drawing.Point(16, 294);
+            this.btnVerwijder.Name = "btnVerwijder";
+            this.btnVerwijder.Size = new System.Drawing.Size(108, 26);
+            this.btnVerwijder.TabIndex = 45;
+            this.btnVerwijder.Text = "VERWIJDER";
+            this.btnVerwijder.UseVisualStyleBackColor = true;
+            this.btnVerwijder.Click += new System.EventHandler(this.btnVerwijder_Click);
+            this.btnVerwijder.MouseLeave += new System.EventHandler(this.btnVerwijder_MouseLeave);
+            this.btnVerwijder.MouseHover += new System.EventHandler(this.btnVerwijder_MouseHover);
             // 
             // label1
             // 
@@ -117,40 +130,22 @@
             this.lstLijst.SelectedIndexChanged += new System.EventHandler(this.lstLijst_SelectedIndexChanged);
             this.lstLijst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstLijst_MouseDoubleClick);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Lijst.Properties.Resources.iconfinder_Cross_2001870;
-            this.pictureBox2.Location = new System.Drawing.Point(514, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 19);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 44;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Lijst.Properties.Resources.logo_handelsschool_sint_joris;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
-            // btnVerwijder
+            // panel1
             // 
-            this.btnVerwijder.Enabled = false;
-            this.btnVerwijder.ForeColor = System.Drawing.Color.Black;
-            this.btnVerwijder.Location = new System.Drawing.Point(16, 294);
-            this.btnVerwijder.Name = "btnVerwijder";
-            this.btnVerwijder.Size = new System.Drawing.Size(108, 26);
-            this.btnVerwijder.TabIndex = 45;
-            this.btnVerwijder.Text = "VERWIJDER";
-            this.btnVerwijder.UseVisualStyleBackColor = true;
-            this.btnVerwijder.Click += new System.EventHandler(this.btnVerwijder_Click);
-            this.btnVerwijder.MouseLeave += new System.EventHandler(this.btnVerwijder_MouseLeave);
-            this.btnVerwijder.MouseHover += new System.EventHandler(this.btnVerwijder_MouseHover);
+            this.panel1.Location = new System.Drawing.Point(0, -6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(556, 23);
+            this.panel1.TabIndex = 46;
             // 
             // frmLijst
             // 
@@ -158,7 +153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(550, 443);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnZoek);
             this.Controls.Add(this.txtZoek);
             this.Controls.Add(this.llblclose);
@@ -171,7 +166,6 @@
             this.Load += new System.EventHandler(this.frmLijst_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,8 +181,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lstLijst;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnVerwijder;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

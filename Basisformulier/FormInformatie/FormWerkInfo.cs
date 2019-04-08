@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Lijst;
 
 namespace FormInformatie
 {
@@ -90,6 +91,14 @@ namespace FormInformatie
             {
                 txt1.Text += item;
             }
+            menuStrip1.BackColor = Color.FromArgb(18, 74, 111);
+            menuStrip1.ForeColor = Color.White;
+        }
+
+        private void lijstToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmLijst().Show();
+            Visible = false;
         }
     }
 }

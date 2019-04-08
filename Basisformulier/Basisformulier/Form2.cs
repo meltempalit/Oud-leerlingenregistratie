@@ -11,6 +11,7 @@ using FormPersoon;
 using Lijst;
 using Microsoft.VisualBasic;
 using System.Runtime.InteropServices; // 
+using System.Media;
 
 
 namespace Basisformulier
@@ -62,14 +63,18 @@ namespace Basisformulier
         private void btnReg_Click(object sender, EventArgs e)
         {
             new Persoon().Show();
-            
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\click.wav");
+            splayer.Play();
+
+
         }
 
         private void btnLijst_Click(object sender, EventArgs e)
         {
             new WachtwoordBeheerder().Show();
-
-           // new frmLijst().Show();
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\click.wav");
+            splayer.Play();
+            // new frmLijst().Show();
         }
 
         private void btnReg_MouseHover(object sender, EventArgs e)
@@ -120,7 +125,7 @@ namespace Basisformulier
             }
             else { }
         }
-
+        int a = 0;
         private void Form2_Load(object sender, EventArgs e)
         {
             //this.BackColor = System.Drawing.Color.FromArgb(18, 74, 111);
@@ -130,7 +135,10 @@ namespace Basisformulier
             btnLijst.TabStop = false;
             btnLijst.FlatStyle = FlatStyle.Flat;
             btnLijst.FlatAppearance.BorderSize = 0;
-           
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\elec.wav");
+            splayer.Play();
+            
+
 
         }
 
@@ -142,7 +150,8 @@ namespace Basisformulier
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             timer1.Start();
-            
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\elec.wav");
+            splayer.Play();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -200,9 +209,14 @@ namespace Basisformulier
                 panel1.Width = panel1.Width + 20;
                 if(panel1.Width >= PW)
                 {
+                
+                    pictureBox4.Visible = false;
+                    
                     timer2.Stop();
                     verborgen = false;
                     this.Refresh();
+                    button1.Cursor = Cursors.AppStarting;
+
                 }
             }
             else
@@ -213,6 +227,10 @@ namespace Basisformulier
                     timer2.Stop();
                     verborgen = true;
                     this.Refresh();
+                    pictureBox4.Visible = true;
+                    timer3.Start();
+                    button1.Cursor = Cursors.AppStarting;
+
                 }
             }
         }
@@ -221,12 +239,74 @@ namespace Basisformulier
         {
             if (verborgen) button1.Text = "Verberg";
             else button1.Text = "Show";
-            timer2.Start();
+            timer2.Start(); SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\click.wav");
+            splayer.Play();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+           
+                a++;
+                switch (a)
+                {
+
+                    case 1:
+
+                        pictureBox4.Image = Properties.Resources.Knipsel;
+                        break;
+                    case 2:
+
+                        pictureBox4.Image = Properties.Resources.Knipsel1;
+                        break;
+                    case 3:
+
+                        pictureBox4.Image = Properties.Resources.Knipsel2;
+                        break;
+                    case 4:
+
+                        pictureBox4.Image = Properties.Resources.Knipsel3;
+                        break;
+                    case 5:
+
+                        pictureBox4.Image = Properties.Resources.Knipsel5;
+                        break;
+
+                    case 6:
+
+                    pictureBox4.Image = Properties.Resources.Knipsel6;
+                    break;
+
+                    case 7:
+
+                    pictureBox4.Image = Properties.Resources.Knipsel7;
+                    break;
+
+                     case 8:
+
+                    pictureBox4.Image = Properties.Resources.Knipsel8;
+                    break;
+
+                    case 9:
+
+                    pictureBox4.Image = Properties.Resources.Knipsel9;
+                    break;
+
+                    a = 2;
+            }
+             
+           
+                
+            
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+          
         }
     }
 }

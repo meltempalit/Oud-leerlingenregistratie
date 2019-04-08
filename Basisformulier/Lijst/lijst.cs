@@ -60,6 +60,7 @@ namespace Lijst
             {
                 lstLijst.Items.Add(item);
             }
+            panel1.BackColor = Color.FromArgb(18, 74, 111);
 
         }
 
