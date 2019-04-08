@@ -65,7 +65,7 @@ namespace Basisformulier
             new Persoon().Show();
             SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\click.wav");
             splayer.Play();
-
+            
 
         }
 
@@ -75,6 +75,7 @@ namespace Basisformulier
             SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\click.wav");
             splayer.Play();
             // new frmLijst().Show();
+           
         }
 
         private void btnReg_MouseHover(object sender, EventArgs e)
@@ -85,6 +86,7 @@ namespace Basisformulier
             btnReg.TabStop = false;
             btnReg.FlatStyle = FlatStyle.Flat;
             btnReg.FlatAppearance.BorderSize = 0;
+            pReg.Visible = true;
 
         }
 
@@ -93,6 +95,7 @@ namespace Basisformulier
             btnReg.BackColor = Color.Transparent;
             btnReg.ForeColor = Color.White;
             picReg.Visible = false;
+            pReg.Visible = false;
         }
 
         private void btnLijst_MouseHover(object sender, EventArgs e)
@@ -104,6 +107,7 @@ namespace Basisformulier
             btnLijst.TabStop = false;
             btnLijst.FlatStyle = FlatStyle.Flat;
             btnLijst.FlatAppearance.BorderSize = 0;
+            pLijst.Visible = true;
            
 
         }
@@ -113,7 +117,8 @@ namespace Basisformulier
             btnLijst.BackColor = Color.Transparent;
             btnLijst.ForeColor = Color.White;
             picList.Visible = false;
-            
+            pLijst.Visible = false;
+
         }
 
         private void llblclose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -137,7 +142,11 @@ namespace Basisformulier
             btnLijst.FlatAppearance.BorderSize = 0;
             SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\elec.wav");
             splayer.Play();
-            
+            pictureBox4.SendToBack();
+            timer3.Start();
+            pLijst.BackColor = Color.FromArgb(18, 74, 111);
+            pReg.BackColor = Color.FromArgb(18, 74, 111);
+
 
 
         }
@@ -210,8 +219,6 @@ namespace Basisformulier
                 if(panel1.Width >= PW)
                 {
                 
-                    pictureBox4.Visible = false;
-                    
                     timer2.Stop();
                     verborgen = false;
                     this.Refresh();
@@ -228,7 +235,6 @@ namespace Basisformulier
                     verborgen = true;
                     this.Refresh();
                     pictureBox4.Visible = true;
-                    timer3.Start();
                     button1.Cursor = Cursors.AppStarting;
 
                 }
@@ -294,9 +300,10 @@ namespace Basisformulier
                     case 9:
 
                     pictureBox4.Image = Properties.Resources.Knipsel9;
+                    a = 0;
                     break;
 
-                    a = 2;
+                    
             }
              
            
@@ -307,6 +314,11 @@ namespace Basisformulier
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
           
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            new ContactAdministrator().Show();
         }
     }
 }

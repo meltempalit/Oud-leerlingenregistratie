@@ -113,6 +113,16 @@ namespace Basisformulier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diploma {
+            get {
+                object obj = ResourceManager.GetObject("diploma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap document_clipart_103950 {
             get {
                 object obj = ResourceManager.GetObject("document-clipart-103950", resourceCulture);
@@ -573,6 +583,16 @@ namespace Basisformulier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap owl {
+            get {
+                object obj = ResourceManager.GetObject("owl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap patient_icon_png_3 {
             get {
                 object obj = ResourceManager.GetObject("patient-icon-png-3", resourceCulture);
@@ -616,6 +636,16 @@ namespace Basisformulier.Properties {
         internal static System.Drawing.Bitmap plan {
             get {
                 object obj = ResourceManager.GetObject("plan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap professor {
+            get {
+                object obj = ResourceManager.GetObject("professor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,6 +716,16 @@ namespace Basisformulier.Properties {
         internal static System.Drawing.Bitmap VHSJ {
             get {
                 object obj = ResourceManager.GetObject("VHSJ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VHSJ1 {
+            get {
+                object obj = ResourceManager.GetObject("VHSJ1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
