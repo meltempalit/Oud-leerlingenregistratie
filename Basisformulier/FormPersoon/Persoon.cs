@@ -148,6 +148,7 @@ namespace FormPersoon
         int intAvatar;
         private void Persoon_Load(object sender, EventArgs e)
         {
+            panel1.BackColor = Color.FromArgb(18, 74, 111);
             cboLand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             vulForm();
 
@@ -550,6 +551,11 @@ namespace FormPersoon
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -49,19 +49,22 @@
             this.txtAfst = new System.Windows.Forms.TextBox();
             this.txtGeboorte = new System.Windows.Forms.TextBox();
             this.lbltel = new System.Windows.Forms.Label();
-            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.cboLand = new System.Windows.Forms.ComboBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.lblNaam = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.grpbReg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistreer
@@ -226,7 +229,7 @@
             // 
             // grpbReg
             // 
-            this.grpbReg.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.grpbReg.BackColor = System.Drawing.Color.GhostWhite;
             this.grpbReg.Controls.Add(this.linkLabel1);
             this.grpbReg.Controls.Add(this.label1);
             this.grpbReg.Controls.Add(this.chkControle);
@@ -330,17 +333,6 @@
             this.lbltel.Size = new System.Drawing.Size(0, 13);
             this.lbltel.TabIndex = 33;
             // 
-            // picAvatar
-            // 
-            this.picAvatar.Image = global::FormPersoon.Properties.Resources._17__2_;
-            this.picAvatar.Location = new System.Drawing.Point(105, 10);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(111, 116);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAvatar.TabIndex = 32;
-            this.picAvatar.TabStop = false;
-            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
-            // 
             // cboLand
             // 
             this.cboLand.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -397,12 +389,33 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Location = new System.Drawing.Point(-11, -6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(365, 19);
+            this.panel1.TabIndex = 39;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox3.Image = global::FormPersoon.Properties.Resources.icons8_help_48;
+            this.pictureBox3.Location = new System.Drawing.Point(285, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 18);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 47;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::FormPersoon.Properties.Resources.iconfinder_Cross_2001870;
-            this.pictureBox2.Location = new System.Drawing.Point(305, 12);
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::FormPersoon.Properties.Resources.icons8_close_program_96;
+            this.pictureBox2.Location = new System.Drawing.Point(314, 17);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 20);
+            this.pictureBox2.Size = new System.Drawing.Size(28, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
@@ -411,13 +424,24 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormPersoon.Properties.Resources.VHSJ;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 53);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // picAvatar
+            // 
+            this.picAvatar.Image = global::FormPersoon.Properties.Resources._17__2_;
+            this.picAvatar.Location = new System.Drawing.Point(105, 10);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(111, 116);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 32;
+            this.picAvatar.TabStop = false;
+            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
             // 
             // Persoon
             // 
@@ -425,6 +449,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(348, 660);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpbReg);
@@ -437,9 +463,10 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Persoon_MouseDown);
             this.grpbReg.ResumeLayout(false);
             this.grpbReg.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,6 +501,8 @@
         private System.Windows.Forms.CheckBox chkControle;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 
