@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textVN = new System.Windows.Forms.TextBox();
             this.textOnderwerp = new System.Windows.Forms.TextBox();
             this.textTekst = new System.Windows.Forms.TextBox();
-            this.textPWMAIL = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
@@ -43,7 +41,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(115, 252);
+            this.button1.Location = new System.Drawing.Point(125, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -51,50 +49,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textVN
-            // 
-            this.textVN.Location = new System.Drawing.Point(16, 39);
-            this.textVN.Name = "textVN";
-            this.textVN.Size = new System.Drawing.Size(174, 20);
-            this.textVN.TabIndex = 1;
-            this.textVN.Text = "oudleerlingenproject@gmail.com";
-            // 
             // textOnderwerp
             // 
-            this.textOnderwerp.Location = new System.Drawing.Point(16, 122);
+            this.textOnderwerp.Location = new System.Drawing.Point(16, 40);
             this.textOnderwerp.Name = "textOnderwerp";
-            this.textOnderwerp.Size = new System.Drawing.Size(174, 20);
+            this.textOnderwerp.Size = new System.Drawing.Size(184, 20);
             this.textOnderwerp.TabIndex = 2;
             this.textOnderwerp.Text = "Onderwerp";
             // 
             // textTekst
             // 
-            this.textTekst.Location = new System.Drawing.Point(16, 160);
+            this.textTekst.Location = new System.Drawing.Point(16, 86);
             this.textTekst.Multiline = true;
             this.textTekst.Name = "textTekst";
-            this.textTekst.Size = new System.Drawing.Size(174, 80);
+            this.textTekst.Size = new System.Drawing.Size(184, 116);
             this.textTekst.TabIndex = 3;
             this.textTekst.Text = "Typ hier uw tekst...";
-            // 
-            // textPWMAIL
-            // 
-            this.textPWMAIL.Location = new System.Drawing.Point(16, 79);
-            this.textPWMAIL.Name = "textPWMAIL";
-            this.textPWMAIL.Size = new System.Drawing.Size(174, 20);
-            this.textPWMAIL.TabIndex = 4;
-            this.textPWMAIL.UseSystemPasswordChar = true;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
-            this.groupBox1.Controls.Add(this.textVN);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textTekst);
-            this.groupBox1.Controls.Add(this.textPWMAIL);
             this.groupBox1.Controls.Add(this.textOnderwerp);
             this.groupBox1.Location = new System.Drawing.Point(21, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(219, 287);
+            this.groupBox1.Size = new System.Drawing.Size(219, 259);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contact Admin";
@@ -114,7 +94,7 @@
             // 
             this.llblclose.AutoSize = true;
             this.llblclose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.llblclose.Location = new System.Drawing.Point(207, 366);
+            this.llblclose.Location = new System.Drawing.Point(207, 338);
             this.llblclose.Name = "llblclose";
             this.llblclose.Size = new System.Drawing.Size(33, 13);
             this.llblclose.TabIndex = 41;
@@ -135,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(262, 388);
+            this.ClientSize = new System.Drawing.Size(262, 370);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.llblclose);
             this.Controls.Add(this.pictureBox1);
@@ -154,10 +134,8 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textVN;
         private System.Windows.Forms.TextBox textOnderwerp;
         private System.Windows.Forms.TextBox textTekst;
-        private System.Windows.Forms.TextBox textPWMAIL;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel llblclose;

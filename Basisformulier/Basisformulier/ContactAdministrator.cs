@@ -49,15 +49,19 @@ namespace Basisformulier
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MailMessage msg = new MailMessage(textVN.Text, "oudleerlingenproject@gmail.com", textOnderwerp.Text, textTekst.Text); // oudleerlingenproject@gmail.com WW: 12501250
+            MailMessage msg = new MailMessage("oudleerlingenproject@gmail.com", "oudleerlingenproject@gmail.com", textOnderwerp.Text, textTekst.Text); // oudleerlingenproject@gmail.com WW: 12501250
             msg.IsBodyHtml = true;
             SmtpClient sc = new SmtpClient("smtp.gmail.com", 587);
             sc.UseDefaultCredentials = false;
-            NetworkCredential cre = new NetworkCredential(textVN.Text, textPWMAIL.Text);//your mail password
+            NetworkCredential cre = new NetworkCredential("oudleerlingenproject@gmail.com", "12501250");//your mail password
             sc.Credentials = cre;
             sc.EnableSsl = true;
             sc.Send(msg); /*https:/myaccount.google.com/lesssecureapps*/ 
-            MessageBox.Show("Mail Send");
+            DialogResult dlg =  MessageBox.Show("Succesvol verzonden");
+            if(dlg == DialogResult.OK)
+            {
+                Close();
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
