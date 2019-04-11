@@ -12,6 +12,9 @@ using Lijst;
 using Microsoft.VisualBasic;
 using System.Runtime.InteropServices; // 
 using System.Media;
+using System.Net;
+using System.Net.Mail;
+
 
 
 namespace Basisformulier
@@ -123,16 +126,17 @@ namespace Basisformulier
 
         private void llblclose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Weet u zeker dat u wilt afsluiten?", "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Close();
-            }
-            else { }
+
         }
         int a = 0;
         private void Form2_Load(object sender, EventArgs e)
         {
+            Bitmap bmp = new Bitmap(new Bitmap("C:\\Users\\Public\\Documents\\curss.png"),48,48);
+            this.Cursor = new Cursor(bmp.GetHicon());
+
+            panel1.BackColor = Color.FromArgb(60,60,60);
+            btnLijst.BackColor = Color.FromArgb(60, 60, 60);
+            btnReg.BackColor = Color.FromArgb(60, 60, 60);
             //this.BackColor = System.Drawing.Color.FromArgb(18, 74, 111);
             btnReg.TabStop = false;
             btnReg.FlatStyle = FlatStyle.Flat;
@@ -146,20 +150,19 @@ namespace Basisformulier
             timer3.Start();
             pLijst.BackColor = Color.FromArgb(18, 74, 111);
             pReg.BackColor = Color.FromArgb(18, 74, 111);
+            textTekst.BorderStyle = BorderStyle.None;
+            textOnderwerp.BorderStyle = BorderStyle.None;
+            groupBox2.BringToFront();
 
 
 
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             timer1.Start();
-            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\elec.wav");
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\startup.wav");
             splayer.Play();
         }
 
@@ -175,7 +178,8 @@ namespace Basisformulier
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\vhsj.wav");
+            splayer.Play();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -318,7 +322,104 @@ namespace Basisformulier
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            new ContactAdministrator().Show();
+            groupBox2.Visible = true;
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\click.wav");
+            splayer.Play();
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            groupBox2.BringToFront();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MailMessage msg = new MailMessage("oudleerlingenproject@gmail.com", "oudleerlingenproject@gmail.com", textOnderwerp.Text, textTekst.Text); // oudleerlingenproject@gmail.com WW: 12501250
+            msg.IsBodyHtml = true;
+            SmtpClient sc = new SmtpClient("smtp.gmail.com", 587);
+            sc.UseDefaultCredentials = false;
+            NetworkCredential cre = new NetworkCredential("oudleerlingenproject@gmail.com", "12501250");//your mail password
+            sc.Credentials = cre;
+            sc.EnableSsl = true;
+            sc.Send(msg); /*https:/myaccount.google.com/lesssecureapps*/
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\send.wav");
+            splayer.Play();
+            DialogResult dlg = MessageBox.Show("Succesvol verzonden","Melding",MessageBoxButtons.OK);
+            if (dlg == DialogResult.OK)
+            {
+                groupBox2.Visible = false;
+                
+                textOnderwerp.Text = "Onderwerp";
+                textTekst.Text = "Typ hier uw tekst...";
+            }
+            
+        }
+
+        private void llblclose_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            groupBox2.Visible = false;
+        }
+
+        private void Form2_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox5_MouseHover(object sender, EventArgs e)
+        {
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\welc.wav");
+            splayer.Play();
+        }
+
+        private void btnReg_MouseClick(object sender, MouseEventArgs e)
+        {
+           // SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\regist.wav");
+           // splayer.Play();
+        }
+
+        private void textOnderwerp_Enter(object sender, EventArgs e)
+        {
+            if (textOnderwerp.Text == "Onderwerp")
+            {
+                textOnderwerp.Text = "";
+                textOnderwerp.ForeColor = Color.DarkGray;
+               // this.textOnderwerp.Font = new Font(textOnderwerp.Font, FontStyle.Regular);
+                
+            }
+        }
+
+        private void textOnderwerp_Leave(object sender, EventArgs e)
+        {
+            if (textOnderwerp.Text == "")
+            {
+                textOnderwerp.Text = "Onderwerp";
+                textOnderwerp.ForeColor = Color.DarkGray;
+               // this.textOnderwerp.Font = new Font(this.textOnderwerp.Font, FontStyle.Italic);
+                
+            }
+        }
+
+        private void textTekst_Enter(object sender, EventArgs e)
+        {
+            if (textTekst.Text == "Typ hier uw tekst...")
+            {
+                textTekst.Text = "";
+                textTekst.ForeColor = Color.DarkGray;
+                
+
+            }
+        }
+
+        private void textTekst_Leave(object sender, EventArgs e)
+        {
+            if (textTekst.Text == "")
+            {
+                textTekst.Text = "Typ hier uw tekst...";
+                textTekst.ForeColor = Color.DarkGray;
+                
+
+            }
         }
     }
 }

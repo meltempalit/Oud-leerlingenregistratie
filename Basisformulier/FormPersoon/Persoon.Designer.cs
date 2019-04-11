@@ -49,6 +49,7 @@
             this.txtAfst = new System.Windows.Forms.TextBox();
             this.txtGeboorte = new System.Windows.Forms.TextBox();
             this.lbltel = new System.Windows.Forms.Label();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.cboLand = new System.Windows.Forms.ComboBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.lblNaam = new System.Windows.Forms.Label();
@@ -59,12 +60,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.grpbReg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistreer
@@ -266,7 +266,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.MediumOrchid;
+            this.linkLabel1.LinkColor = System.Drawing.Color.PaleVioletRed;
             this.linkLabel1.Location = new System.Drawing.Point(134, 505);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(82, 16);
@@ -333,9 +333,21 @@
             this.lbltel.Size = new System.Drawing.Size(0, 13);
             this.lbltel.TabIndex = 33;
             // 
+            // picAvatar
+            // 
+            this.picAvatar.Image = global::FormPersoon.Properties.Resources._17__2_;
+            this.picAvatar.Location = new System.Drawing.Point(105, 10);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(111, 116);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 32;
+            this.picAvatar.TabStop = false;
+            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
+            // 
             // cboLand
             // 
             this.cboLand.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboLand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboLand.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLand.ForeColor = System.Drawing.Color.Silver;
             this.cboLand.FormattingEnabled = true;
@@ -432,17 +444,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // picAvatar
-            // 
-            this.picAvatar.Image = global::FormPersoon.Properties.Resources._17__2_;
-            this.picAvatar.Location = new System.Drawing.Point(105, 10);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(111, 116);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAvatar.TabIndex = 32;
-            this.picAvatar.TabStop = false;
-            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
-            // 
             // Persoon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,10 +464,10 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Persoon_MouseDown);
             this.grpbReg.ResumeLayout(false);
             this.grpbReg.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }

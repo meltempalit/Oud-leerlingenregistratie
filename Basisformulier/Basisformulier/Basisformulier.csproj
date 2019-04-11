@@ -81,12 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business.cs" />
-    <Compile Include="ContactAdministrator.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContactAdministrator.Designer.cs">
-      <DependentUpon>ContactAdministrator.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,9 +97,6 @@
     <Compile Include="WachtwoordBeheerder.Designer.cs">
       <DependentUpon>WachtwoordBeheerder.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ContactAdministrator.resx">
-      <DependentUpon>ContactAdministrator.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>

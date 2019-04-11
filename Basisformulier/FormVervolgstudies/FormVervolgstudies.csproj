@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business.cs" />
+    <Compile Include="ContactAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactAdministrator.Designer.cs">
+      <DependentUpon>ContactAdministrator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vervolgstudies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vervolgstudie.cs" />
+    <EmbeddedResource Include="ContactAdministrator.resx">
+      <DependentUpon>ContactAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

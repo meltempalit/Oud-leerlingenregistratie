@@ -82,7 +82,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Basisformulier.Properties.Resources.VHSJ1;
+            //this.pictureBox1.Image = global::Basisformulier.Properties.Resources.VHSJ1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(174, 50);
