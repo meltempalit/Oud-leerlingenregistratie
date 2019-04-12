@@ -60,6 +60,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.grpbReg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -91,7 +93,7 @@
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 26);
-            this.txtEmail.TabIndex = 26;
+            this.txtEmail.TabIndex = 6;
             this.txtEmail.Text = "someone@example.com";
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
@@ -106,7 +108,7 @@
             this.txtRichting.Multiline = true;
             this.txtRichting.Name = "txtRichting";
             this.txtRichting.Size = new System.Drawing.Size(200, 26);
-            this.txtRichting.TabIndex = 25;
+            this.txtRichting.TabIndex = 7;
             this.txtRichting.Text = "IT & Netwerken";
             this.txtRichting.TextChanged += new System.EventHandler(this.txtRichting_TextChanged);
             this.txtRichting.Enter += new System.EventHandler(this.txtRichting_Enter_1);
@@ -121,7 +123,7 @@
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(200, 26);
-            this.txtTel.TabIndex = 24;
+            this.txtTel.TabIndex = 5;
             this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             this.txtTel.Enter += new System.EventHandler(this.txtTel_Enter);
             this.txtTel.Leave += new System.EventHandler(this.txtTel_Leave);
@@ -135,7 +137,7 @@
             this.txtFamilienaam.Multiline = true;
             this.txtFamilienaam.Name = "txtFamilienaam";
             this.txtFamilienaam.Size = new System.Drawing.Size(200, 26);
-            this.txtFamilienaam.TabIndex = 23;
+            this.txtFamilienaam.TabIndex = 2;
             this.txtFamilienaam.Text = "Familienaam";
             this.txtFamilienaam.Enter += new System.EventHandler(this.txtFamilienaam_Enter);
             this.txtFamilienaam.Leave += new System.EventHandler(this.txtFamilienaam_Leave);
@@ -149,7 +151,7 @@
             this.txtNaam.Multiline = true;
             this.txtNaam.Name = "txtNaam";
             this.txtNaam.Size = new System.Drawing.Size(200, 26);
-            this.txtNaam.TabIndex = 22;
+            this.txtNaam.TabIndex = 1;
             this.txtNaam.TextChanged += new System.EventHandler(this.txtNaam_TextChanged);
             this.txtNaam.Enter += new System.EventHandler(this.txtNaam_Enter_1);
             this.txtNaam.Leave += new System.EventHandler(this.txtNaam_Leave_1);
@@ -186,9 +188,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label5.Location = new System.Drawing.Point(52, 275);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 17);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Telefoonnummer";
+            this.label5.Size = new System.Drawing.Size(85, 17);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Telefoonnummer*";
             this.label5.Visible = false;
             // 
             // lblmail
@@ -198,9 +200,9 @@
             this.lblmail.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblmail.Location = new System.Drawing.Point(51, 356);
             this.lblmail.Name = "lblmail";
-            this.lblmail.Size = new System.Drawing.Size(36, 17);
+            this.lblmail.Size = new System.Drawing.Size(40, 17);
             this.lblmail.TabIndex = 18;
-            this.lblmail.Text = "E-mail";
+            this.lblmail.Text = "E-mail*";
             this.lblmail.Visible = false;
             // 
             // lblGeboorte
@@ -211,7 +213,7 @@
             this.lblGeboorte.Location = new System.Drawing.Point(50, 226);
             this.lblGeboorte.Name = "lblGeboorte";
             this.lblGeboorte.Size = new System.Drawing.Size(82, 17);
-            this.lblGeboorte.TabIndex = 17;
+            this.lblGeboorte.TabIndex = 20;
             this.lblGeboorte.Text = "Geboortedatum*";
             this.lblGeboorte.Visible = false;
             // 
@@ -305,7 +307,7 @@
             this.txtAfst.Multiline = true;
             this.txtAfst.Name = "txtAfst";
             this.txtAfst.Size = new System.Drawing.Size(200, 26);
-            this.txtAfst.TabIndex = 35;
+            this.txtAfst.TabIndex = 8;
             this.txtAfst.Text = "2019";
             this.txtAfst.Enter += new System.EventHandler(this.txtAfst_Enter);
             this.txtAfst.Leave += new System.EventHandler(this.txtAfst_Leave);
@@ -319,7 +321,7 @@
             this.txtGeboorte.Multiline = true;
             this.txtGeboorte.Name = "txtGeboorte";
             this.txtGeboorte.Size = new System.Drawing.Size(200, 26);
-            this.txtGeboorte.TabIndex = 34;
+            this.txtGeboorte.TabIndex = 3;
             this.txtGeboorte.Text = "dd/mm/jjjj";
             this.txtGeboorte.Enter += new System.EventHandler(this.txtGeboorte_Enter);
             this.txtGeboorte.Leave += new System.EventHandler(this.txtGeboorte_Leave);
@@ -355,7 +357,7 @@
             this.cboLand.Location = new System.Drawing.Point(53, 295);
             this.cboLand.Name = "cboLand";
             this.cboLand.Size = new System.Drawing.Size(200, 26);
-            this.cboLand.TabIndex = 31;
+            this.cboLand.TabIndex = 4;
             this.cboLand.Text = "Telefoonnummer";
             this.cboLand.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cboLand_DrawItem);
             this.cboLand.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.cboLand_MeasureItem);
@@ -420,6 +422,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 47;
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Verplichte velden invullen (*)");
             // 
             // pictureBox2
             // 
@@ -431,6 +434,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
+            this.toolTip2.SetToolTip(this.pictureBox2, "Close");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
@@ -443,6 +447,10 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
             // 
             // Persoon
             // 
@@ -504,6 +512,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
 

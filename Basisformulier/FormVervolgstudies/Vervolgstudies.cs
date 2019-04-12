@@ -47,7 +47,7 @@ namespace FormVervolgstudies
 
         private void Vervolgstudies_Load(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.FromArgb(18, 74, 111);
         }
 
         private void lnklAnnu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -222,7 +222,7 @@ namespace FormVervolgstudies
 
         private void txtSchool_TextChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
@@ -231,6 +231,16 @@ namespace FormVervolgstudies
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using FormVervolgstudies;
+using System.Media;
 
 namespace FormPosts
 {
@@ -49,6 +50,9 @@ namespace FormPosts
         private void Ervaring_Load(object sender, EventArgs e)
         {
             vulForm();
+            panel1.BackColor = Color.FromArgb(18, 74, 111);
+            progressBar1.ForeColor = Color.Pink;
+
         }
 
         public void vulForm()
@@ -69,21 +73,21 @@ namespace FormPosts
 
 
 
-            if (txtErvaring.Text.Length <= 2 || txtHerinnering.Text.Length <= 2 || txtMededeling.Text.Length <= 2)
+            if (txtErvaring.Text.Length <= 2 || txtErvaring.Text == "Typ hier uw loopbaan/ ervaringen..." || txtHerinnering.Text.Length <= 2 || txtHerinnering.Text== "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business..." || txtMededeling.Text.Length <= 2 || txtMededeling.Text == "Typ hier wat u wenst mee te geven aan de leerlingen...")
             {
                 MessageBox.Show("U moet iets ingeven!", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                if (txtErvaring.Text.Length <= 2)
+                if (txtErvaring.Text.Length <= 2 || txtErvaring.Text == "Typ hier uw loopbaan/ ervaringen...")
                 {
                     txtErvaring.BackColor = Color.FromArgb(242, 220, 220);
 
                 }
-                if (txtHerinnering.Text.Length <= 2)
+                if (txtHerinnering.Text.Length <= 2 || txtHerinnering.Text == "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business...")
                 {
                     txtHerinnering.BackColor = Color.FromArgb(242, 220, 220);
                 }
 
-                if (txtMededeling.Text.Length <= 2)
+                if (txtMededeling.Text.Length <= 2 || txtMededeling.Text == "Typ hier wat u wenst mee te geven aan de leerlingen...")
                 {
                     txtMededeling.BackColor = Color.FromArgb(242, 220, 220);
 
@@ -169,6 +173,8 @@ namespace FormPosts
             {
                 timer1.Stop();
                 pcbox.Visible = true;
+                SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\send.wav");
+                splayer.Play();
                 DialogResult dialogResult = MessageBox.Show("Succesvol toegevoegd!", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.OK)
                 {
@@ -289,6 +295,11 @@ namespace FormPosts
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMededeling_TextChanged(object sender, EventArgs e)
         {
 
         }

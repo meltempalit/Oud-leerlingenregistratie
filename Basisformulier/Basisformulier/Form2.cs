@@ -421,5 +421,17 @@ namespace Basisformulier
 
             }
         }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.SteelBlue;
+            button3.ForeColor = Color.White;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.Transparent;
+            button3.ForeColor = Color.DimGray;
+        }
     }
 }

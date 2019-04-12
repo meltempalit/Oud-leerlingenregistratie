@@ -469,7 +469,7 @@ namespace FormPersoon
                 cboLand.Text = "";
                 cboLand.ForeColor = Color.DarkGray;
                 this.cboLand.Font = new Font(this.cboLand.Font, FontStyle.Regular);
-                lbltel.Visible = true;
+               // lbltel.Visible = true;
             }
 
         }
@@ -486,7 +486,7 @@ namespace FormPersoon
                 cboLand.Text = "Telefoonnummer";
                 cboLand.ForeColor = Color.Silver;
                 this.cboLand.Font = new Font(this.cboLand.Font, FontStyle.Italic);
-                lbltel.Visible = false;
+                //lbltel.Visible = false;
             }
         }
 
@@ -540,12 +540,12 @@ namespace FormPersoon
 
         private void txtTel_Enter(object sender, EventArgs e)
         {
-            
+            lbltel.Visible = true;
         }
 
         private void txtTel_Leave(object sender, EventArgs e)
         {
-            
+         //   lbltel.Visible = false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

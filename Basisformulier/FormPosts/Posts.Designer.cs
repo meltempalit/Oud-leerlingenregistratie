@@ -35,15 +35,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtHerinnering = new System.Windows.Forms.TextBox();
             this.txtMededeling = new System.Windows.Forms.TextBox();
-            this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtErvaring = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pcbox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +73,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.groupBox1.Controls.Add(this.txtHerinnering);
             this.groupBox1.Controls.Add(this.txtMededeling);
             this.groupBox1.Controls.Add(this.pcbox);
@@ -116,19 +115,9 @@
             this.txtMededeling.TabIndex = 39;
             this.txtMededeling.Text = "Typ hier wat u wenst mee te geven aan de leerlingen...";
             this.txtMededeling.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMededeling_MouseClick);
+            this.txtMededeling.TextChanged += new System.EventHandler(this.txtMededeling_TextChanged);
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
             this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
-            // 
-            // pcbox
-            // 
-            this.pcbox.Image = global::FormPosts.Properties.Resources.iconfinder_Tick_Mark_1398911__1_;
-            this.pcbox.Location = new System.Drawing.Point(394, 320);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(16, 16);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pcbox.TabIndex = 37;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
             // 
             // progressBar1
             // 
@@ -158,23 +147,31 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox2
+            // panel1
             // 
-            this.pictureBox2.Image = global::FormPosts.Properties.Resources.iconfinder_Cross_2001870;
-            this.pictureBox2.Location = new System.Drawing.Point(416, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Location = new System.Drawing.Point(-6, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(464, 19);
+            this.panel1.TabIndex = 41;
+            // 
+            // pcbox
+            // 
+            this.pcbox.Image = global::FormPosts.Properties.Resources.icons8_double_tick_48;
+            this.pcbox.Location = new System.Drawing.Point(394, 310);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(25, 28);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbox.TabIndex = 37;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormPosts.Properties.Resources.VHSJ;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(180, 64);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
@@ -184,7 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(451, 513);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -195,7 +192,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -213,6 +209,6 @@
         private System.Windows.Forms.PictureBox pcbox;
         private System.Windows.Forms.TextBox txtHerinnering;
         private System.Windows.Forms.TextBox txtMededeling;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

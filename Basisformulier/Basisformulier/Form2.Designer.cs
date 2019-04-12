@@ -319,7 +319,7 @@
             this.groupBox2.Controls.Add(this.textTekst);
             this.groupBox2.Controls.Add(this.textOnderwerp);
             this.groupBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox2.Location = new System.Drawing.Point(221, 52);
+            this.groupBox2.Location = new System.Drawing.Point(218, 52);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(336, 285);
             this.groupBox2.TabIndex = 6;
@@ -349,6 +349,8 @@
             this.button3.Text = "Verzenden";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
+            this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
             // 
             // textTekst
             // 

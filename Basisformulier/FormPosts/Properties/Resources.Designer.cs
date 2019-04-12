@@ -93,6 +93,16 @@ namespace FormPosts.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_double_tick_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-double-tick-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_windows_xp_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-windows-xp-48", resourceCulture);
