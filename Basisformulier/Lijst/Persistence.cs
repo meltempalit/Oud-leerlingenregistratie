@@ -14,7 +14,7 @@ namespace Lijst
 
         public Persistence()
         {
-            _connectionstring = "server=localhost;user id=root;database=oudleerlingen;Password='Test123';";
+            _connectionstring = "server=localhost;user id=root;database=oudleerlingen;Password='Test123'"; //;
             conn = new MySqlConnection(_connectionstring);
         }
 

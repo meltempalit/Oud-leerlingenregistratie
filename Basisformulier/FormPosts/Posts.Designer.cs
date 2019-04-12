@@ -35,11 +35,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtHerinnering = new System.Windows.Forms.TextBox();
             this.txtMededeling = new System.Windows.Forms.TextBox();
+            this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtErvaring = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pcbox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
@@ -49,7 +49,7 @@
             // btnToevoegenErvaring
             // 
             this.btnToevoegenErvaring.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToevoegenErvaring.Location = new System.Drawing.Point(236, 342);
+            this.btnToevoegenErvaring.Location = new System.Drawing.Point(196, 347);
             this.btnToevoegenErvaring.Name = "btnToevoegenErvaring";
             this.btnToevoegenErvaring.Size = new System.Drawing.Size(152, 27);
             this.btnToevoegenErvaring.TabIndex = 5;
@@ -63,7 +63,7 @@
             // 
             this.lnklAnnu.AutoSize = true;
             this.lnklAnnu.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lnklAnnu.Location = new System.Drawing.Point(172, 356);
+            this.lnklAnnu.Location = new System.Drawing.Point(132, 361);
             this.lnklAnnu.Name = "lnklAnnu";
             this.lnklAnnu.Size = new System.Drawing.Size(58, 13);
             this.lnklAnnu.TabIndex = 33;
@@ -85,7 +85,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Gray;
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(425, 395);
+            this.groupBox1.Size = new System.Drawing.Size(378, 395);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "POST";
@@ -93,12 +93,13 @@
             // 
             // txtHerinnering
             // 
+            this.txtHerinnering.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHerinnering.ForeColor = System.Drawing.Color.Silver;
-            this.txtHerinnering.Location = new System.Drawing.Point(17, 215);
+            this.txtHerinnering.Location = new System.Drawing.Point(32, 216);
             this.txtHerinnering.Multiline = true;
             this.txtHerinnering.Name = "txtHerinnering";
-            this.txtHerinnering.Size = new System.Drawing.Size(371, 82);
-            this.txtHerinnering.TabIndex = 40;
+            this.txtHerinnering.Size = new System.Drawing.Size(316, 82);
+            this.txtHerinnering.TabIndex = 2;
             this.txtHerinnering.Text = "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business...";
             this.txtHerinnering.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtHerinnering_MouseClick);
             this.txtHerinnering.TextChanged += new System.EventHandler(this.txtHerinnering_TextChanged_1);
@@ -107,35 +108,48 @@
             // 
             // txtMededeling
             // 
+            this.txtMededeling.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMededeling.ForeColor = System.Drawing.Color.Silver;
-            this.txtMededeling.Location = new System.Drawing.Point(17, 117);
+            this.txtMededeling.Location = new System.Drawing.Point(32, 117);
             this.txtMededeling.Multiline = true;
             this.txtMededeling.Name = "txtMededeling";
-            this.txtMededeling.Size = new System.Drawing.Size(371, 82);
-            this.txtMededeling.TabIndex = 39;
+            this.txtMededeling.Size = new System.Drawing.Size(316, 82);
+            this.txtMededeling.TabIndex = 1;
             this.txtMededeling.Text = "Typ hier wat u wenst mee te geven aan de leerlingen...";
             this.txtMededeling.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMededeling_MouseClick);
             this.txtMededeling.TextChanged += new System.EventHandler(this.txtMededeling_TextChanged);
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
             this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
             // 
+            // pcbox
+            // 
+            this.pcbox.Image = global::FormPosts.Properties.Resources.icons8_double_tick_48;
+            this.pcbox.Location = new System.Drawing.Point(350, 319);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(25, 23);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbox.TabIndex = 37;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
+            // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(17, 313);
+            this.progressBar1.Location = new System.Drawing.Point(32, 318);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(371, 23);
+            this.progressBar1.Size = new System.Drawing.Size(316, 23);
             this.progressBar1.TabIndex = 38;
             this.progressBar1.Visible = false;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // txtErvaring
             // 
+            this.txtErvaring.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtErvaring.ForeColor = System.Drawing.Color.Silver;
-            this.txtErvaring.Location = new System.Drawing.Point(17, 19);
+            this.txtErvaring.Location = new System.Drawing.Point(32, 20);
             this.txtErvaring.Multiline = true;
             this.txtErvaring.Name = "txtErvaring";
-            this.txtErvaring.Size = new System.Drawing.Size(371, 82);
-            this.txtErvaring.TabIndex = 35;
+            this.txtErvaring.Size = new System.Drawing.Size(316, 82);
+            this.txtErvaring.TabIndex = 0;
             this.txtErvaring.Text = "Typ hier uw loopbaan/ ervaringen...";
             this.txtErvaring.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtErvaring_MouseClick);
             this.txtErvaring.TextChanged += new System.EventHandler(this.txtErvaring_TextChanged_1);
@@ -155,17 +169,6 @@
             this.panel1.Size = new System.Drawing.Size(464, 19);
             this.panel1.TabIndex = 41;
             // 
-            // pcbox
-            // 
-            this.pcbox.Image = global::FormPosts.Properties.Resources.icons8_double_tick_48;
-            this.pcbox.Location = new System.Drawing.Point(394, 310);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(25, 28);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbox.TabIndex = 37;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormPosts.Properties.Resources.VHSJ;
@@ -180,7 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(451, 513);
+            this.ClientSize = new System.Drawing.Size(406, 513);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);

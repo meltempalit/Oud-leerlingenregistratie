@@ -139,6 +139,7 @@ namespace FormPersoon
             if (dialogresult == DialogResult.Yes)
             {
                 Visible = false;
+                Close(); 
             }
             else
             {

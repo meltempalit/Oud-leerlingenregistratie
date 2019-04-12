@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using FormWerk;
+using System.Media;
 
 namespace FormVervolgstudies
 {
@@ -79,8 +80,9 @@ namespace FormVervolgstudies
             if (txtSchool.Text == "")
             {
                 txtSchool.Text = "Typ hier de naam van uw hogeschool/ universiteit...";
-                txtSchool.ForeColor = Color.Silver;
+                txtSchool.ForeColor = Color.DarkGray;
             }
+            lblschool.Visible = false;
         }
 
         private void txtRichtingVervolg_Enter(object sender, EventArgs e)
@@ -97,8 +99,9 @@ namespace FormVervolgstudies
             if (txtRichtingVervolg.Text == "")
             {
                 txtRichtingVervolg.Text = "Typ hier uw afstudeerrichting...";
-                txtRichtingVervolg.ForeColor = Color.Silver;
+                txtRichtingVervolg.ForeColor = Color.DarkGray;
             }
+            lblafstrichting.Visible = false;
         }
 
         private void txtDiploma_Enter(object sender, EventArgs e)
@@ -115,8 +118,9 @@ namespace FormVervolgstudies
             if (txtDiploma.Text == "")
             {
                 txtDiploma.Text = "Typ hier welk diploma u heeft behaald...";
-                txtDiploma.ForeColor = Color.Silver;
+                txtDiploma.ForeColor = Color.DarkGray;
             }
+            lbldip.Visible = false;
         }
 
         private void txtAfstudeerjaar_Enter(object sender, EventArgs e)
@@ -133,8 +137,9 @@ namespace FormVervolgstudies
             if (txtAfstudeerjaar.Text == "")
             {
                 txtAfstudeerjaar.Text = "Typ hier in welk jaar u bent afgestudeerd...";
-                txtAfstudeerjaar.ForeColor = Color.Silver;
+                txtAfstudeerjaar.ForeColor = Color.DarkGray;
             }
+            lblafstj.Visible = false;
         }
 
         private void btnVolgende_MouseHover(object sender, EventArgs e)
@@ -161,6 +166,8 @@ namespace FormVervolgstudies
             {
                 timer1.Stop();
                 pcbox.Visible = true;
+                SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\send.wav");
+                splayer.Play();
                 DialogResult dialogResult = MessageBox.Show("Succesvol toegevoegd!", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.OK)
                 {
@@ -178,26 +185,26 @@ namespace FormVervolgstudies
         }
         private void btnVolgende_Click(object sender, EventArgs e)
         {
-            if (txtSchool.Text.Length <= 2 || txtDiploma.Text.Length <= 2 || txtAfstudeerjaar.Text.Length <= 2 || txtRichtingVervolg.Text.Length <= 2)
+            if (txtSchool.Text.Length <= 2 || txtSchool.Text == "Typ hier de naam van uw hogeschool/ universiteit..." || txtDiploma.Text.Length <= 2 || txtDiploma.Text == "Typ hier welk diploma u heeft behaald..." || txtAfstudeerjaar.Text.Length <= 2 || txtAfstudeerjaar.Text == "Typ hier in welk jaar u bent afgestudeerd..." || txtRichtingVervolg.Text.Length <= 2 || txtRichtingVervolg.Text == "Typ hier uw afstudeerrichting...")
             {
                 MessageBox.Show("U moet iets ingeven!", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                if (txtSchool.Text.Length <= 2)
+                if (txtSchool.Text.Length <= 2 || txtSchool.Text == "Typ hier de naam van uw hogeschool/ universiteit...")
                 {
                     txtSchool.BackColor = Color.FromArgb(242, 220, 220);
 
                 }
-                if (txtDiploma.Text.Length <= 2)
+                if (txtDiploma.Text.Length <= 2 || txtDiploma.Text == "Typ hier welk diploma u heeft behaald...")
                 {
                     txtDiploma.BackColor = Color.FromArgb(242, 220, 220);
                 }
 
-                if (txtAfstudeerjaar.Text.Length <= 2)
+                if (txtAfstudeerjaar.Text.Length <= 2 || txtAfstudeerjaar.Text == "Typ hier in welk jaar u bent afgestudeerd...")
                 {
                     txtAfstudeerjaar.BackColor = Color.FromArgb(242, 220, 220);
 
                 }
-                if (txtRichtingVervolg.Text.Length <= 2)
+                if (txtRichtingVervolg.Text.Length <= 2 || txtRichtingVervolg.Text == "Typ hier uw afstudeerrichting...")
                 {
                     txtRichtingVervolg.BackColor = Color.FromArgb(242, 220, 220);
 
@@ -222,7 +229,7 @@ namespace FormVervolgstudies
 
         private void txtSchool_TextChanged(object sender, EventArgs e)
         {
-          
+            lblschool.Visible = true;
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
@@ -243,6 +250,21 @@ namespace FormVervolgstudies
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtRichtingVervolg_TextChanged(object sender, EventArgs e)
+        {
+            lblafstrichting.Visible = true;
+        }
+
+        private void txtAfstudeerjaar_TextChanged(object sender, EventArgs e)
+        {
+            lblafstj.Visible = true;
+        }
+
+        private void txtDiploma_TextChanged(object sender, EventArgs e)
+        {
+            lbldip.Visible = true;
         }
     }
 }

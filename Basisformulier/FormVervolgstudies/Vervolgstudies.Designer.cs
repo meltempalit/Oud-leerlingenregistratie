@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vervolgstudies));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblschool = new System.Windows.Forms.Label();
             this.lblafstj = new System.Windows.Forms.Label();
             this.lbldip = new System.Windows.Forms.Label();
@@ -38,19 +39,18 @@
             this.txtAfstudeerjaar = new System.Windows.Forms.TextBox();
             this.txtDiploma = new System.Windows.Forms.TextBox();
             this.txtRichtingVervolg = new System.Windows.Forms.TextBox();
+            this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtSchool = new System.Windows.Forms.TextBox();
             this.lnklAnnu = new System.Windows.Forms.LinkLabel();
             this.btnVolgende = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pcbox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -73,18 +73,29 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Gray;
             this.groupBox1.Location = new System.Drawing.Point(14, 96);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(425, 400);
+            this.groupBox1.Size = new System.Drawing.Size(378, 395);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "STUDIES";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FormVervolgstudies.Properties.Resources.study;
+            this.pictureBox2.Location = new System.Drawing.Point(152, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(92, 85);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // lblschool
             // 
             this.lblschool.AutoSize = true;
             this.lblschool.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblschool.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblschool.Location = new System.Drawing.Point(115, 77);
+            this.lblschool.Location = new System.Drawing.Point(87, 78);
             this.lblschool.Name = "lblschool";
             this.lblschool.Size = new System.Drawing.Size(41, 17);
             this.lblschool.TabIndex = 45;
@@ -96,7 +107,7 @@
             this.lblafstj.AutoSize = true;
             this.lblafstj.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblafstj.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblafstj.Location = new System.Drawing.Point(114, 187);
+            this.lblafstj.Location = new System.Drawing.Point(85, 190);
             this.lblafstj.Name = "lblafstj";
             this.lblafstj.Size = new System.Drawing.Size(71, 17);
             this.lblafstj.TabIndex = 44;
@@ -108,7 +119,7 @@
             this.lbldip.AutoSize = true;
             this.lbldip.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldip.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbldip.Location = new System.Drawing.Point(115, 239);
+            this.lbldip.Location = new System.Drawing.Point(85, 245);
             this.lbldip.Name = "lbldip";
             this.lbldip.Size = new System.Drawing.Size(50, 17);
             this.lbldip.TabIndex = 43;
@@ -121,7 +132,7 @@
             this.lblafstrichting.AutoSize = true;
             this.lblafstrichting.Font = new System.Drawing.Font("Myanmar Text", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblafstrichting.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblafstrichting.Location = new System.Drawing.Point(114, 132);
+            this.lblafstrichting.Location = new System.Drawing.Point(85, 135);
             this.lblafstrichting.Name = "lblafstrichting";
             this.lblafstrichting.Size = new System.Drawing.Size(92, 17);
             this.lblafstrichting.TabIndex = 42;
@@ -132,12 +143,13 @@
             // 
             this.txtAfstudeerjaar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAfstudeerjaar.ForeColor = System.Drawing.Color.Silver;
-            this.txtAfstudeerjaar.Location = new System.Drawing.Point(118, 201);
+            this.txtAfstudeerjaar.Location = new System.Drawing.Point(85, 210);
             this.txtAfstudeerjaar.Multiline = true;
             this.txtAfstudeerjaar.Name = "txtAfstudeerjaar";
-            this.txtAfstudeerjaar.Size = new System.Drawing.Size(183, 32);
-            this.txtAfstudeerjaar.TabIndex = 41;
+            this.txtAfstudeerjaar.Size = new System.Drawing.Size(233, 32);
+            this.txtAfstudeerjaar.TabIndex = 2;
             this.txtAfstudeerjaar.Text = "Typ hier in welk jaar u bent afgestudeerd...";
+            this.txtAfstudeerjaar.TextChanged += new System.EventHandler(this.txtAfstudeerjaar_TextChanged);
             this.txtAfstudeerjaar.Enter += new System.EventHandler(this.txtAfstudeerjaar_Enter);
             this.txtAfstudeerjaar.Leave += new System.EventHandler(this.txtAfstudeerjaar_Leave);
             // 
@@ -145,12 +157,13 @@
             // 
             this.txtDiploma.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiploma.ForeColor = System.Drawing.Color.Silver;
-            this.txtDiploma.Location = new System.Drawing.Point(117, 256);
+            this.txtDiploma.Location = new System.Drawing.Point(85, 265);
             this.txtDiploma.Multiline = true;
             this.txtDiploma.Name = "txtDiploma";
-            this.txtDiploma.Size = new System.Drawing.Size(187, 32);
-            this.txtDiploma.TabIndex = 40;
+            this.txtDiploma.Size = new System.Drawing.Size(233, 32);
+            this.txtDiploma.TabIndex = 3;
             this.txtDiploma.Text = "Typ hier welk diploma u heeft behaald...";
+            this.txtDiploma.TextChanged += new System.EventHandler(this.txtDiploma_TextChanged);
             this.txtDiploma.Enter += new System.EventHandler(this.txtDiploma_Enter);
             this.txtDiploma.Leave += new System.EventHandler(this.txtDiploma_Leave);
             // 
@@ -158,20 +171,32 @@
             // 
             this.txtRichtingVervolg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRichtingVervolg.ForeColor = System.Drawing.Color.Silver;
-            this.txtRichtingVervolg.Location = new System.Drawing.Point(118, 147);
+            this.txtRichtingVervolg.Location = new System.Drawing.Point(85, 155);
             this.txtRichtingVervolg.Multiline = true;
             this.txtRichtingVervolg.Name = "txtRichtingVervolg";
-            this.txtRichtingVervolg.Size = new System.Drawing.Size(183, 32);
-            this.txtRichtingVervolg.TabIndex = 39;
+            this.txtRichtingVervolg.Size = new System.Drawing.Size(233, 32);
+            this.txtRichtingVervolg.TabIndex = 1;
             this.txtRichtingVervolg.Text = "Typ hier uw afstudeerrichting...";
+            this.txtRichtingVervolg.TextChanged += new System.EventHandler(this.txtRichtingVervolg_TextChanged);
             this.txtRichtingVervolg.Enter += new System.EventHandler(this.txtRichtingVervolg_Enter);
             this.txtRichtingVervolg.Leave += new System.EventHandler(this.txtRichtingVervolg_Leave);
             // 
+            // pcbox
+            // 
+            this.pcbox.Image = global::FormVervolgstudies.Properties.Resources.icons8_double_tick_48;
+            this.pcbox.Location = new System.Drawing.Point(343, 313);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(30, 23);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbox.TabIndex = 37;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
+            // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(18, 298);
+            this.progressBar1.Location = new System.Drawing.Point(24, 313);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(367, 23);
+            this.progressBar1.Size = new System.Drawing.Size(316, 23);
             this.progressBar1.TabIndex = 38;
             this.progressBar1.Visible = false;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
@@ -180,11 +205,11 @@
             // 
             this.txtSchool.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSchool.ForeColor = System.Drawing.Color.Silver;
-            this.txtSchool.Location = new System.Drawing.Point(118, 95);
+            this.txtSchool.Location = new System.Drawing.Point(85, 98);
             this.txtSchool.Multiline = true;
             this.txtSchool.Name = "txtSchool";
-            this.txtSchool.Size = new System.Drawing.Size(183, 34);
-            this.txtSchool.TabIndex = 35;
+            this.txtSchool.Size = new System.Drawing.Size(233, 34);
+            this.txtSchool.TabIndex = 0;
             this.txtSchool.Text = "Typ hier de naam van uw hogeschool/ universiteit...";
             this.txtSchool.TextChanged += new System.EventHandler(this.txtSchool_TextChanged);
             this.txtSchool.Enter += new System.EventHandler(this.txtSchool_Enter);
@@ -194,10 +219,10 @@
             // 
             this.lnklAnnu.AutoSize = true;
             this.lnklAnnu.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lnklAnnu.Location = new System.Drawing.Point(172, 356);
+            this.lnklAnnu.Location = new System.Drawing.Point(104, 356);
             this.lnklAnnu.Name = "lnklAnnu";
             this.lnklAnnu.Size = new System.Drawing.Size(58, 13);
-            this.lnklAnnu.TabIndex = 33;
+            this.lnklAnnu.TabIndex = 4;
             this.lnklAnnu.TabStop = true;
             this.lnklAnnu.Text = "Annuleer";
             this.lnklAnnu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklAnnu_LinkClicked);
@@ -205,7 +230,7 @@
             // btnVolgende
             // 
             this.btnVolgende.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolgende.Location = new System.Drawing.Point(236, 342);
+            this.btnVolgende.Location = new System.Drawing.Point(166, 342);
             this.btnVolgende.Name = "btnVolgende";
             this.btnVolgende.Size = new System.Drawing.Size(152, 27);
             this.btnVolgende.TabIndex = 5;
@@ -228,17 +253,6 @@
             this.panel1.Size = new System.Drawing.Size(464, 19);
             this.panel1.TabIndex = 42;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::FormVervolgstudies.Properties.Resources.study;
-            this.pictureBox2.Location = new System.Drawing.Point(162, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(92, 85);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FormVervolgstudies.Properties.Resources.logo;
@@ -249,22 +263,12 @@
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
-            // pcbox
-            // 
-            this.pcbox.Location = new System.Drawing.Point(394, 306);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(16, 16);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pcbox.TabIndex = 37;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
-            // 
             // Vervolgstudies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(451, 513);
+            this.ClientSize = new System.Drawing.Size(406, 513);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -277,8 +281,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

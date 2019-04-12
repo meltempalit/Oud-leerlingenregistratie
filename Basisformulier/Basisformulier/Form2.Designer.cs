@@ -58,6 +58,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textTekst = new System.Windows.Forms.TextBox();
             this.textOnderwerp = new System.Windows.Forms.TextBox();
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblClock = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -99,10 +102,10 @@
             this.btnLijst.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLijst.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLijst.ForeColor = System.Drawing.Color.White;
-            this.btnLijst.Location = new System.Drawing.Point(6, 243);
+            this.btnLijst.Location = new System.Drawing.Point(-1, 243);
             this.btnLijst.Margin = new System.Windows.Forms.Padding(0);
             this.btnLijst.Name = "btnLijst";
-            this.btnLijst.Size = new System.Drawing.Size(218, 49);
+            this.btnLijst.Size = new System.Drawing.Size(225, 49);
             this.btnLijst.TabIndex = 35;
             this.btnLijst.Text = "LIJST";
             this.btnLijst.UseVisualStyleBackColor = false;
@@ -269,7 +272,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(-19, 16);
+            this.pictureBox4.Location = new System.Drawing.Point(-16, 16);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(227, 342);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -377,6 +380,17 @@
             this.textOnderwerp.Enter += new System.EventHandler(this.textOnderwerp_Enter);
             this.textOnderwerp.Leave += new System.EventHandler(this.textOnderwerp_Leave);
             // 
+            // lblClock
+            // 
+            this.lblClock.AutoSize = true;
+            this.lblClock.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClock.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblClock.Location = new System.Drawing.Point(218, 22);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(60, 23);
+            this.lblClock.TabIndex = 49;
+            this.lblClock.Text = "00:00:00";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +398,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(566, 346);
+            this.Controls.Add(this.lblClock);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label1);
@@ -446,5 +461,8 @@
         private System.Windows.Forms.TextBox textTekst;
         private System.Windows.Forms.TextBox textOnderwerp;
         private System.Windows.Forms.LinkLabel llblclose;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip5;
+        private System.Windows.Forms.Label lblClock;
     }
 }

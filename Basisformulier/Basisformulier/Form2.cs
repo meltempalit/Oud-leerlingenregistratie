@@ -21,6 +21,8 @@ namespace Basisformulier
 {
     public partial class Form2 : Form
     {
+
+        Timer t = new Timer();
         int PW;
         bool verborgen;
 
@@ -154,9 +156,49 @@ namespace Basisformulier
             textOnderwerp.BorderStyle = BorderStyle.None;
             groupBox2.BringToFront();
 
+            t.Interval = 1000;
+
+            t.Tick += new EventHandler(this.t_Tick);
+            t.Start();
 
 
+        }
+        private void t_Tick(object sender, EventArgs e)
+        {
+            int hh = DateTime.Now.Hour;
+            int mm = DateTime.Now.Minute;
+            int ss = DateTime.Now.Second;
 
+            string time = "";
+            if(hh < 10)
+            {
+                time += "0" + hh;
+            }
+            else
+            {
+                time += hh;
+            }
+            time += ":";
+            if (mm < 10)
+            {
+                time += "0" + mm;
+            }
+            else
+            {
+                time += mm;
+            }
+            time += ":";
+            if (ss < 10)
+            {
+                time += "0" + ss;
+            }
+            else
+            {
+                time += ss;
+            }
+         
+
+            lblClock.Text = time;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -240,6 +282,8 @@ namespace Basisformulier
                     this.Refresh();
                     pictureBox4.Visible = true;
                     button1.Cursor = Cursors.AppStarting;
+                    
+                    
 
                 }
             }
@@ -335,23 +379,48 @@ namespace Basisformulier
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MailMessage msg = new MailMessage("oudleerlingenproject@gmail.com", "oudleerlingenproject@gmail.com", textOnderwerp.Text, textTekst.Text); // oudleerlingenproject@gmail.com WW: 12501250
-            msg.IsBodyHtml = true;
-            SmtpClient sc = new SmtpClient("smtp.gmail.com", 587);
-            sc.UseDefaultCredentials = false;
-            NetworkCredential cre = new NetworkCredential("oudleerlingenproject@gmail.com", "12501250");//your mail password
-            sc.Credentials = cre;
-            sc.EnableSsl = true;
-            sc.Send(msg); /*https:/myaccount.google.com/lesssecureapps*/
-            SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\send.wav");
-            splayer.Play();
-            DialogResult dlg = MessageBox.Show("Succesvol verzonden","Melding",MessageBoxButtons.OK);
-            if (dlg == DialogResult.OK)
+
+
+            if (textOnderwerp.Text == "Onderwerp"||textTekst.Text == "Typ hier uw tekst...")
             {
-                groupBox2.Visible = false;
+                MessageBox.Show("U moet iets ingeven!", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (textOnderwerp.Text=="Onderwerp")
+                {
+                    textOnderwerp.BackColor = Color.FromArgb(242, 220, 220);
+
+                }
+                if(textTekst.Text == "Typ hier uw tekst...")
+                {
+                    textTekst.BackColor = Color.FromArgb(242, 220, 220);
+                }
+                    
                 
-                textOnderwerp.Text = "Onderwerp";
-                textTekst.Text = "Typ hier uw tekst...";
+
+
+            }
+            else
+            {
+                MailMessage msg = new MailMessage("oudleerlingenproject@gmail.com", "oudleerlingenproject@gmail.com", textOnderwerp.Text, textTekst.Text); // oudleerlingenproject@gmail.com WW: 12501250
+                msg.IsBodyHtml = true;
+                SmtpClient sc = new SmtpClient("smtp.gmail.com", 587);
+                sc.UseDefaultCredentials = false;
+                NetworkCredential cre = new NetworkCredential("oudleerlingenproject@gmail.com", "12501250");//your mail password
+                sc.Credentials = cre;
+                sc.EnableSsl = true;
+                sc.Send(msg); /*https:/myaccount.google.com/lesssecureapps*/
+                SoundPlayer splayer = new SoundPlayer(@"C:\Users\Public\Documents\send.wav");
+                splayer.Play();
+                DialogResult dlg = MessageBox.Show("Succesvol verzonden", "Melding", MessageBoxButtons.OK);
+                if (dlg == DialogResult.OK)
+                {
+                    groupBox2.Visible = false;
+
+                    textOnderwerp.Text = "Onderwerp";
+                    textTekst.Text = "Typ hier uw tekst...";
+                    textTekst.BackColor = Color.White;
+                    textOnderwerp.BackColor = Color.White;
+
+                }
             }
             
         }
@@ -359,6 +428,10 @@ namespace Basisformulier
         private void llblclose_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             groupBox2.Visible = false;
+            textOnderwerp.Text = "Onderwerp";
+            textTekst.Text = "Typ hier uw tekst...";
+            textTekst.BackColor = Color.White;
+            textOnderwerp.BackColor = Color.White;
         }
 
         private void Form2_MouseHover(object sender, EventArgs e)

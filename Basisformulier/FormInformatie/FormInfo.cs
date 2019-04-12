@@ -91,7 +91,7 @@ namespace FormInformatie
         private void werkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormVervolgstudiesInfo().Show();
-            Visible = false;
+            Visible = false; 
         }
 
         private void werkToolStripMenuItem1_Click(object sender, EventArgs e)

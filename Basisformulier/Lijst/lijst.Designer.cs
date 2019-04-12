@@ -32,6 +32,7 @@
             this.txtZoek = new System.Windows.Forms.TextBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnVerwijder = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lstLijst = new System.Windows.Forms.ListBox();
@@ -80,6 +81,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnVerwijder);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lstLijst);
@@ -92,6 +94,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OUD-LEERLINGEN";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(130, 294);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 26);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "EXPORT";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // btnVerwijder
             // 
@@ -119,8 +134,8 @@
             // 
             // lstLijst
             // 
-            this.lstLijst.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstLijst.ForeColor = System.Drawing.Color.Gray;
+            this.lstLijst.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstLijst.ForeColor = System.Drawing.Color.DimGray;
             this.lstLijst.FormattingEnabled = true;
             this.lstLijst.ItemHeight = 19;
             this.lstLijst.Location = new System.Drawing.Point(16, 49);
@@ -183,6 +198,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVerwijder;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

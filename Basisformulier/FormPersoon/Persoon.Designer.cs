@@ -258,7 +258,7 @@
             this.grpbReg.ForeColor = System.Drawing.Color.DarkGray;
             this.grpbReg.Location = new System.Drawing.Point(12, 61);
             this.grpbReg.Name = "grpbReg";
-            this.grpbReg.Size = new System.Drawing.Size(324, 587);
+            this.grpbReg.Size = new System.Drawing.Size(306, 587);
             this.grpbReg.TabIndex = 30;
             this.grpbReg.TabStop = false;
             this.grpbReg.Text = "REGISTREER";
@@ -416,7 +416,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox3.Image = global::FormPersoon.Properties.Resources.icons8_help_48;
-            this.pictureBox3.Location = new System.Drawing.Point(285, 22);
+            this.pictureBox3.Location = new System.Drawing.Point(261, 22);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(33, 18);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -428,7 +428,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::FormPersoon.Properties.Resources.icons8_close_program_96;
-            this.pictureBox2.Location = new System.Drawing.Point(314, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(292, 16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -457,7 +457,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(348, 660);
+            this.ClientSize = new System.Drawing.Size(330, 660);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);

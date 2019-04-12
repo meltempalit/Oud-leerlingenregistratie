@@ -11,6 +11,7 @@ using FormPosts;
 using FormInformatie;
 using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 
 
@@ -58,7 +59,7 @@ namespace Lijst
 
             foreach (string item in bus.getOudleerlingen())
             {
-                lstLijst.Items.Add(item);
+                lstLijst.Items.Add(item); ///
             }
             panel1.BackColor = Color.FromArgb(18, 74, 111);
 
@@ -113,15 +114,20 @@ namespace Lijst
 
         private void btnZoek_Click(object sender, EventArgs e)
         {
+            MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; database = oudleerlingen; Password = 'Test123'");
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * from personen where naam like'%"+txtZoek.Text+"%'",connection);
+            da.Fill(dt);
 
-
-
-
+            lstLijst.DataSource = null;
+            lstLijst.DataSource = dt;
+            lstLijst.DisplayMember = "idpersonen";
+          
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
+       
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -299,6 +305,38 @@ namespace Lijst
 
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            if(dlg.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter writer = new StreamWriter(dlg.FileName);
+                for(int i = 0;i < lstLijst.Items.Count;i++)
+                {
+                    writer.WriteLine((string)lstLijst.Items[i]);
+                }
+                writer.Close();
+            }
+            dlg.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.FromArgb(18, 74, 111);
+            button1.ForeColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Transparent;
+            button1.ForeColor = Color.Black;
         }
     }
 }
