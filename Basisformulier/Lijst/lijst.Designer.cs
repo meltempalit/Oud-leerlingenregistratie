@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnZoek = new System.Windows.Forms.Button();
             this.txtZoek = new System.Windows.Forms.TextBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
@@ -36,9 +37,12 @@
             this.btnVerwijder = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lstLijst = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +85,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnVerwijder);
             this.groupBox1.Controls.Add(this.label1);
@@ -145,6 +150,25 @@
             this.lstLijst.SelectedIndexChanged += new System.EventHandler(this.lstLijst_SelectedIndexChanged);
             this.lstLijst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstLijst_MouseDoubleClick);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, -6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(556, 23);
+            this.panel1.TabIndex = 46;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Lijst.Properties.Resources.Refresh_icon_svg;
+            this.pictureBox2.Location = new System.Drawing.Point(482, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 18);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Refresh");
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Lijst.Properties.Resources.logo_handelsschool_sint_joris;
@@ -155,12 +179,9 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // toolTip1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, -6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 23);
-            this.panel1.TabIndex = 46;
+            this.toolTip1.IsBalloon = true;
             // 
             // frmLijst
             // 
@@ -181,6 +202,7 @@
             this.Load += new System.EventHandler(this.frmLijst_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,6 +221,8 @@
         private System.Windows.Forms.Button btnVerwijder;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

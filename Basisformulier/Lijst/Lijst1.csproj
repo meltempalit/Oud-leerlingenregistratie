@@ -104,5 +104,8 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_Cross_2001870.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_icon.svg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

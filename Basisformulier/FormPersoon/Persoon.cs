@@ -86,23 +86,41 @@ namespace FormPersoon
             }
             else
             {
-                if (  txtNaam.Text.Length == 2 || txtNaam.Text.Length == 1 || txtFamilienaam.Text.Length == 2 || txtFamilienaam.Text.Length==1 || txtRichting.Text.Length == 2|| txtRichting.Text.Length == 1)
+                if (  txtNaam.Text.Length == 2 ||txtNaam.Text == "Naam" || txtNaam.Text.Length == 1 || txtFamilienaam.Text.Length == 2 || txtFamilienaam.Text == "Familienaam"||  txtFamilienaam.Text.Length==1 || txtRichting.Text.Length == 2|| txtRichting.Text.Length == 1 || txtRichting.Text == "IT & Netwerken" || 
+                    txtGeboorte.Text.Length == 2 || txtGeboorte.Text.Length == 1 || txtGeboorte.Text == "dd/mm/jjjj" || txtTel.Text.Length == 2 || txtTel.Text.Length == 1 || txtTel.Text == "+32" || txtTel.Text == "+31" || txtTel.Text == ""|| txtEmail.Text.Length == 2 || txtEmail.Text.Length == 1 || txtEmail.Text == "someone@example.com"
+                    || txtAfst.Text.Length == 2 || txtAfst.Text.Length == 1 || txtAfst.Text == "2019")
                 {
                     MessageBox.Show("U moet iets ingeven!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                    if (txtNaam.Text.Length == 2|| txtNaam.Text.Length == 1)
+                    if (txtNaam.Text.Length == 2|| txtNaam.Text.Length == 1 || txtNaam.Text == "Naam")
                     {
-                        lblNaam.ForeColor = Color.Red;
+                        txtNaam.BackColor = Color.FromArgb(242, 220, 220);
 
                     }
-                    if (txtFamilienaam.Text.Length == 2|| txtFamilienaam.Text.Length == 1)
+                    if (txtFamilienaam.Text.Length == 2|| txtFamilienaam.Text.Length == 1 || txtFamilienaam.Text == "Familienaam")
                     {
-                        lblFamilienaam.ForeColor = Color.Red;
+                        txtFamilienaam.BackColor = Color.FromArgb(242, 220, 220);
                     }
 
-                    if (txtRichting.Text.Length == 2|| txtRichting.Text.Length == 1)
+                    if (txtRichting.Text.Length == 2|| txtRichting.Text.Length == 1 || txtRichting.Text == "IT & Netwerken")
                     {
-                        lblafstrichting.ForeColor = Color.Red;
+                        txtRichting.BackColor = Color.FromArgb(242, 220, 220);
+                    }
+                    if(txtGeboorte.Text.Length == 2|| txtGeboorte.Text == "dd/mm/jjjj" || txtGeboorte.Text.Length == 1)
+                    {
+                        txtGeboorte.BackColor = Color.FromArgb(242, 220, 220);
+                    }
+                    if(txtTel.Text.Length == 2|| txtTel.Text.Length == 1 || txtTel.Text == "+32"|| txtTel.Text=="+31" || txtTel.Text == "")
+                    {
+                        txtTel.BackColor = Color.FromArgb(242, 220, 220);
+                    }
+                    if(txtEmail.Text.Length == 2|| txtEmail.Text.Length == 1 || txtEmail.Text == "someone@example.com")
+                    {
+                        txtEmail.BackColor = Color.FromArgb(242, 220, 220);
+                    }
+                    if(txtAfst.Text.Length == 2|| txtAfst.Text.Length ==1|| txtAfst.Text == "2019")
+                    {
+                        txtAfst.BackColor = Color.FromArgb(242, 220, 220);
                     }
                 }
                 else
@@ -280,6 +298,7 @@ namespace FormPersoon
                 txtEmail.ForeColor = Color.DarkGray;
                 this.txtEmail.Font = new Font(this.txtEmail.Font, FontStyle.Regular);
                 lblmail.Visible = true;
+                txtEmail.BackColor = Color.White;
             }
         }
 
@@ -367,6 +386,7 @@ namespace FormPersoon
                 txtGeboorte.ForeColor = Color.DarkGray;
                 this.txtGeboorte.Font = new Font(this.txtGeboorte.Font, FontStyle.Regular);
                 lblGeboorte.Visible = true;
+                txtGeboorte.BackColor = Color.White;
             }
         }
 
@@ -394,6 +414,7 @@ namespace FormPersoon
                 txtAfst.ForeColor = Color.DarkGray;
                 this.txtAfst.Font = new Font(txtAfst.Font, FontStyle.Regular);
                 lblAfstudeerj.Visible = true;
+                txtAfst.BackColor = Color.White;
             }
         }
 
@@ -426,6 +447,7 @@ namespace FormPersoon
                 txtNaam.ForeColor = Color.DarkGray;
                 this.txtNaam.Font = new Font(this.txtNaam.Font, FontStyle.Regular);
                 lblNaam.Visible = true;
+                txtNaam.BackColor = Color.White;
             }
         }
 
@@ -449,6 +471,7 @@ namespace FormPersoon
                 this.txtFamilienaam.Font = new Font(this.txtFamilienaam.Font, FontStyle.Regular);
                 lblFamilienaam.Visible = true;
             }
+            txtFamilienaam.BackColor = Color.White;
         }
 
         private void txtFamilienaam_Leave(object sender, EventArgs e)
@@ -471,6 +494,7 @@ namespace FormPersoon
                 cboLand.ForeColor = Color.DarkGray;
                 this.cboLand.Font = new Font(this.cboLand.Font, FontStyle.Regular);
                // lbltel.Visible = true;
+
             }
 
         }
@@ -493,7 +517,7 @@ namespace FormPersoon
 
         private void txtRichting_Enter(object sender, EventArgs e)
         {
-
+            txtRichting.BackColor = Color.White;
         }
 
         private void txtRichting_Leave(object sender, EventArgs e)
@@ -520,6 +544,7 @@ namespace FormPersoon
                 txtRichting.ForeColor = Color.DarkGray;
                 this.txtRichting.Font = new Font(this.txtRichting.Font, FontStyle.Regular);
                 lblafstrichting.Visible = true;
+                txtRichting.BackColor = Color.White;
             }
 
         }
@@ -542,6 +567,7 @@ namespace FormPersoon
         private void txtTel_Enter(object sender, EventArgs e)
         {
             lbltel.Visible = true;
+            txtTel.BackColor = Color.White;
         }
 
         private void txtTel_Leave(object sender, EventArgs e)

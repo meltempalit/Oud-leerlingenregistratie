@@ -112,18 +112,22 @@ namespace Lijst
             }
         }
 
+        
         private void btnZoek_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; database = oudleerlingen; Password = 'Test123'");
+         /*   MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; database = oudleerlingen; Password = 'Test123'");
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter("Select * from personen where naam like'%"+txtZoek.Text+"%'",connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * from personen where naam like'%" + txtZoek.Text + "%'", connection);
             da.Fill(dt);
 
             lstLijst.DataSource = null;
             lstLijst.DataSource = dt;
-            lstLijst.DisplayMember = "idpersonen";
-          
+            lstLijst.ValueMember = "idpersonen";
+            lstLijst.DisplayMember = "naam";*/
         }
+
+       
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -166,140 +170,83 @@ namespace Lijst
 
             if (msg == DialogResult.Yes)
             {
-                try
-                {
-                    string ID;
-                    int Aantal = 1;
-                    ID = Convert.ToString(lstLijst.SelectedItem).Substring(0, 1); // positie 0 en aantal 1 teken
 
+                
+              if( Convert.ToInt32( Convert.ToString( lstLijst.SelectedItem).Substring(0,1)) <= 9)
+                {
                     connection.Open();
-                    if (Convert.ToInt32( Convert.ToString( lstLijst.SelectedItem).Substring(0,1)) < 9)
+                    MySqlCommand cmd1teken = new MySqlCommand("DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1), connection);
+                    MySqlCommand cmd1 = new MySqlCommand("DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1), connection);
+                    MySqlCommand cmd2 = new MySqlCommand("DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1), connection);
+                    MySqlCommand cmd3 = new MySqlCommand("DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 1), connection);
+                    cmd1teken.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
+                    cmd2.ExecuteNonQuery();
+                    cmd3.ExecuteNonQuery();
+                    connection.Close();
+                                       
+              }
+                 if(Convert.ToInt32(Convert.ToString(lstLijst.SelectedItem).Substring(0, 2)) >= 10)
+                 {
+                    connection.Open();
+                    MySqlCommand cmd2tekens = new MySqlCommand("DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 2), connection);
+                    MySqlCommand cmd1_1 = new MySqlCommand("DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 2), connection);
+                    MySqlCommand cmd2_2 = new MySqlCommand("DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 2), connection);
+                    MySqlCommand cmd3_3 = new MySqlCommand("DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 2), connection);
+                    cmd2tekens.ExecuteNonQuery();
+                    cmd1_1.ExecuteNonQuery();
+                    cmd2_2.ExecuteNonQuery();
+                    cmd3_3.ExecuteNonQuery();
+                    connection.Close();
+                    if (Convert.ToInt32(Convert.ToString(lstLijst.SelectedItem).Substring(0, 3)) >= 100)
                     {
-                        int aantalTekens = 1;
-                        aantalTekens++;// aantal wordt een 2
-                        string deleteQuery = "DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, aantalTekens);
-                       
-                        MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
-                        string deleteQuery1 = "DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, aantalTekens);
-                        MySqlCommand cmd1 = new MySqlCommand(deleteQuery1, connection);
-                        string deleteQuery2 = "DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, aantalTekens);
-                        MySqlCommand cmd2 = new MySqlCommand(deleteQuery2, connection);
-                        string deleteQuery3 = "DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, aantalTekens);
-                        MySqlCommand cmd3 = new MySqlCommand(deleteQuery3, connection);
-
-                        if (cmd.ExecuteNonQuery() == 1)
+                        connection.Open();
+                        MySqlCommand cmd3tekens = new MySqlCommand("DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 3), connection);
+                        MySqlCommand cmd1_1_1 = new MySqlCommand("DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 3), connection);
+                        MySqlCommand cmd2_2_2 = new MySqlCommand("DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 3), connection);
+                        MySqlCommand cmd3_3_3 = new MySqlCommand("DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 3), connection);
+                        cmd3tekens.ExecuteNonQuery();
+                        cmd1_1_1.ExecuteNonQuery();
+                        cmd2_2_2.ExecuteNonQuery();
+                        cmd3_3_3.ExecuteNonQuery();
+                        connection.Close();
+                        if (Convert.ToInt32(Convert.ToString(lstLijst.SelectedItem).Substring(0, 4)) >= 1000)
                         {
-                            if (cmd1.ExecuteNonQuery() == 1)
+                            connection.Open();
+                            MySqlCommand cmd4tekens = new MySqlCommand("DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 4), connection);
+                            MySqlCommand cmd1_1_1_1 = new MySqlCommand("DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 4), connection);
+                            MySqlCommand cmd2_2_2_2 = new MySqlCommand("DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 4), connection);
+                            MySqlCommand cmd3_3_3_3 = new MySqlCommand("DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 4), connection);
+                            cmd4tekens.ExecuteNonQuery();
+                            cmd1_1_1_1.ExecuteNonQuery();
+                            cmd2_2_2_2.ExecuteNonQuery();
+                            cmd3_3_3_3.ExecuteNonQuery();
+                            connection.Close();
+
+                            if (Convert.ToInt32(Convert.ToString(lstLijst.SelectedItem).Substring(0, 5)) > 10000)
                             {
-                                if (cmd2.ExecuteNonQuery() == 1)
-                                {
-                                    if (cmd3.ExecuteNonQuery() == 1)
-                                    {
-                                        DialogResult dlg = MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                        if (dlg == DialogResult.OK)
-                                        {
-                                            Close();
-                                        }
-                                    }
-                                }
-                            }
-
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("ERROR 4#$%#$%#$^%^$^#$%#$ KON NIET VERWIJDEREN$%#$$", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                        }
-
-                    }
-                    if (Convert.ToInt32(Convert.ToString(lstLijst.SelectedItem).Substring(0, 3)) > 99) // hier een error want neemt id 1 ipv 100
-                    {
-                        int aantalTekens = 3;
-                        // aantal wordt een 3
-                        string deleteQuery = "DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, aantalTekens);
-                        
-                        MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
-                        string deleteQuery1 = "DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, aantalTekens);
-                        MySqlCommand cmd1 = new MySqlCommand(deleteQuery1, connection);
-                        string deleteQuery2 = "DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, aantalTekens);
-                        MySqlCommand cmd2 = new MySqlCommand(deleteQuery2, connection);
-                        string deleteQuery3 = "DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, aantalTekens);
-                        MySqlCommand cmd3 = new MySqlCommand(deleteQuery3, connection);
-
-                        if (cmd.ExecuteNonQuery() == 1)
-                        {
-                            if (cmd1.ExecuteNonQuery() == 1)
-                            {
-                                if (cmd2.ExecuteNonQuery() == 1)
-                                {
-                                    if (cmd3.ExecuteNonQuery() == 1)
-                                    {
-                                        DialogResult dlg = MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                        if (dlg == DialogResult.OK)
-                                        {
-                                            Close();
-                                        }
-                                    }
-                                }
+                                connection.Open();
+                                MySqlCommand cmd5tekens = new MySqlCommand("DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 5), connection);
+                                MySqlCommand cmd1_1_1_1_1 = new MySqlCommand("DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 5), connection);
+                                MySqlCommand cmd2_2_2_2_2 = new MySqlCommand("DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 5), connection);
+                                MySqlCommand cmd3_3_3_3_3 = new MySqlCommand("DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, 5), connection);
+                                cmd5tekens.ExecuteNonQuery();
+                                cmd1_1_1_1_1.ExecuteNonQuery();
+                                cmd2_2_2_2_2.ExecuteNonQuery();
+                                cmd3_3_3_3_3.ExecuteNonQuery();
+                                connection.Close();
                             }
 
                         }
-                        
                     }
-
-                    else
-                    {
-                        
-                        string deleteQuery = "DELETE FROM personen where idPersonen=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, Aantal);
-                    
-                        MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
-                        string deleteQuery1 = "DELETE FROM posts where idPosts=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, Aantal);
-                        MySqlCommand cmd1 = new MySqlCommand(deleteQuery1, connection);
-                        string deleteQuery2 = "DELETE FROM vervolgstudies where idVervolgstudies=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, Aantal);
-                        MySqlCommand cmd2 = new MySqlCommand(deleteQuery2, connection);
-                        string deleteQuery3 = "DELETE FROM werk where idWerk=" + Convert.ToString(lstLijst.SelectedItem).Substring(0, Aantal);
-                        MySqlCommand cmd3 = new MySqlCommand(deleteQuery3, connection);
-
-                        if (cmd.ExecuteNonQuery() == 1)
-                        {
-                            if (cmd1.ExecuteNonQuery() == 1)
-                            {
-                                if (cmd2.ExecuteNonQuery() == 1)
-                                {
-                                    if (cmd3.ExecuteNonQuery() == 1)
-                                    {
-                                        DialogResult dlg = MessageBox.Show("Succesvol verwijdert!", "Verwijdering", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                        if (dlg == DialogResult.OK)
-                                        {
-                                            Close();
-                                        }
-                                    }
-                                }
-                            }
-
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("ERROR 4#$%#$%#$^%^$^#$%#$ KON NIET VERWIJDEREN$%#$$", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                        }
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                connection.Close();
-
-
+                 }
+                 
+                MessageBox.Show("succesvol verwijdert");
+                Close();
+                new frmLijst().Show();
+                panel1.BackColor = Color.FromArgb(18, 74, 111);
             }
+
 
 
 
@@ -337,6 +284,19 @@ namespace Lijst
         {
             button1.BackColor = Color.Transparent;
             button1.ForeColor = Color.Black;
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            Close();
+            new frmLijst().Show();
+            panel1.BackColor = Color.FromArgb(18, 74, 111);
+
+        }
+
+        private void lstlijst2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

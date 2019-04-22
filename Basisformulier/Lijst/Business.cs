@@ -9,18 +9,26 @@ namespace Lijst
     class Business
     {
         private Persistence _pers;
-        private List<LijstOudleerling> _oudleerlingen;
 
+        private List<LijstOudleerling> _oudleerlingen;
         public List<LijstOudleerling> oudleerlingen
         {
             get { return _oudleerlingen; }
             set { _oudleerlingen = value; }
         }
 
+        private List<LijstOudleerling> _zoek;
+        public List<LijstOudleerling> zoek
+        {
+            get { return _zoek; }
+            set { _zoek = value; }
+        }
+
         public Business()
         {
             _pers = new Persistence();
             _oudleerlingen = _pers.GetOudleerlingenFromDB();
+           
         }
 
         public List<string> getOudleerlingen()
@@ -34,6 +42,9 @@ namespace Lijst
 
             return result;
         }
+
+        
+
 
     }
 }

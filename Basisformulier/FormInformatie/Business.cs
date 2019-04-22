@@ -9,6 +9,7 @@ namespace FormInformatie
     class Business : Persistence
     {
         private Persistence _pers;
+
         private List<PersoonInfo> _persoon;
         public List<PersoonInfo> persoon
         {

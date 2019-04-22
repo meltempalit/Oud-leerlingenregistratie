@@ -35,13 +35,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtHerinnering = new System.Windows.Forms.TextBox();
             this.txtMededeling = new System.Windows.Forms.TextBox();
-            this.pcbox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtErvaring = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pcbox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +76,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.txtHerinnering);
             this.groupBox1.Controls.Add(this.txtMededeling);
             this.groupBox1.Controls.Add(this.pcbox);
@@ -95,10 +98,10 @@
             // 
             this.txtHerinnering.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHerinnering.ForeColor = System.Drawing.Color.Silver;
-            this.txtHerinnering.Location = new System.Drawing.Point(32, 216);
+            this.txtHerinnering.Location = new System.Drawing.Point(32, 234);
             this.txtHerinnering.Multiline = true;
             this.txtHerinnering.Name = "txtHerinnering";
-            this.txtHerinnering.Size = new System.Drawing.Size(316, 82);
+            this.txtHerinnering.Size = new System.Drawing.Size(316, 64);
             this.txtHerinnering.TabIndex = 2;
             this.txtHerinnering.Text = "Typ hier wat uw leukste herinneringen zijn aan Sint-Lievenscollege Business...";
             this.txtHerinnering.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtHerinnering_MouseClick);
@@ -110,27 +113,16 @@
             // 
             this.txtMededeling.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMededeling.ForeColor = System.Drawing.Color.Silver;
-            this.txtMededeling.Location = new System.Drawing.Point(32, 117);
+            this.txtMededeling.Location = new System.Drawing.Point(32, 155);
             this.txtMededeling.Multiline = true;
             this.txtMededeling.Name = "txtMededeling";
-            this.txtMededeling.Size = new System.Drawing.Size(316, 82);
+            this.txtMededeling.Size = new System.Drawing.Size(316, 62);
             this.txtMededeling.TabIndex = 1;
             this.txtMededeling.Text = "Typ hier wat u wenst mee te geven aan de leerlingen...";
             this.txtMededeling.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMededeling_MouseClick);
             this.txtMededeling.TextChanged += new System.EventHandler(this.txtMededeling_TextChanged);
             this.txtMededeling.Enter += new System.EventHandler(this.txtMededeling_Enter_2);
             this.txtMededeling.Leave += new System.EventHandler(this.txtMededeling_Leave_2);
-            // 
-            // pcbox
-            // 
-            this.pcbox.Image = global::FormPosts.Properties.Resources.icons8_double_tick_48;
-            this.pcbox.Location = new System.Drawing.Point(350, 319);
-            this.pcbox.Name = "pcbox";
-            this.pcbox.Size = new System.Drawing.Size(25, 23);
-            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbox.TabIndex = 37;
-            this.pcbox.TabStop = false;
-            this.pcbox.Visible = false;
             // 
             // progressBar1
             // 
@@ -145,10 +137,10 @@
             // 
             this.txtErvaring.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtErvaring.ForeColor = System.Drawing.Color.Silver;
-            this.txtErvaring.Location = new System.Drawing.Point(32, 20);
+            this.txtErvaring.Location = new System.Drawing.Point(32, 79);
             this.txtErvaring.Multiline = true;
             this.txtErvaring.Name = "txtErvaring";
-            this.txtErvaring.Size = new System.Drawing.Size(316, 82);
+            this.txtErvaring.Size = new System.Drawing.Size(316, 58);
             this.txtErvaring.TabIndex = 0;
             this.txtErvaring.Text = "Typ hier uw loopbaan/ ervaringen...";
             this.txtErvaring.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtErvaring_MouseClick);
@@ -168,6 +160,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 19);
             this.panel1.TabIndex = 41;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FormPosts.Properties.Resources._new;
+            this.pictureBox2.Location = new System.Drawing.Point(101, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(180, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pcbox
+            // 
+            this.pcbox.Image = global::FormPosts.Properties.Resources.icons8_double_tick_48;
+            this.pcbox.Location = new System.Drawing.Point(350, 319);
+            this.pcbox.Name = "pcbox";
+            this.pcbox.Size = new System.Drawing.Size(25, 23);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbox.TabIndex = 37;
+            this.pcbox.TabStop = false;
+            this.pcbox.Visible = false;
             // 
             // pictureBox1
             // 
@@ -194,6 +207,7 @@
             this.Load += new System.EventHandler(this.Ervaring_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -213,5 +227,6 @@
         private System.Windows.Forms.TextBox txtHerinnering;
         private System.Windows.Forms.TextBox txtMededeling;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

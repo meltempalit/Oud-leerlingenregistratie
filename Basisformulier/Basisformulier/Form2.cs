@@ -215,7 +215,7 @@ namespace Basisformulier
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            panel2.BackColor = Color.FromArgb(18, 74, 111);
+            panel2.BackColor = Color.Brown;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
