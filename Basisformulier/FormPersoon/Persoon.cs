@@ -88,7 +88,7 @@ namespace FormPersoon
             {
                 if (  txtNaam.Text.Length == 2 ||txtNaam.Text == "Naam" || txtNaam.Text.Length == 1 || txtFamilienaam.Text.Length == 2 || txtFamilienaam.Text == "Familienaam"||  txtFamilienaam.Text.Length==1 || txtRichting.Text.Length == 2|| txtRichting.Text.Length == 1 || txtRichting.Text == "IT & Netwerken" || 
                     txtGeboorte.Text.Length == 2 || txtGeboorte.Text.Length == 1 || txtGeboorte.Text == "dd/mm/jjjj" || txtTel.Text.Length == 2 || txtTel.Text.Length == 1 || txtTel.Text == "+32" || txtTel.Text == "+31" || txtTel.Text == ""|| txtEmail.Text.Length == 2 || txtEmail.Text.Length == 1 || txtEmail.Text == "someone@example.com"
-                    || txtAfst.Text.Length == 2 || txtAfst.Text.Length == 1 || txtAfst.Text == "2019")
+                    || txtAfst.Text.Length == 2 || txtAfst.Text.Length == 1 )
                 {
                     MessageBox.Show("U moet iets ingeven!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -118,7 +118,7 @@ namespace FormPersoon
                     {
                         txtEmail.BackColor = Color.FromArgb(242, 220, 220);
                     }
-                    if(txtAfst.Text.Length == 2|| txtAfst.Text.Length ==1|| txtAfst.Text == "2019")
+                    if(txtAfst.Text.Length == 2|| txtAfst.Text.Length ==1)
                     {
                         txtAfst.BackColor = Color.FromArgb(242, 220, 220);
                     }
