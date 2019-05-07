@@ -29,46 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnZoek = new System.Windows.Forms.Button();
-            this.txtZoek = new System.Windows.Forms.TextBox();
             this.llblclose = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnVerwijder = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lstLijst = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnZoek
-            // 
-            this.btnZoek.BackColor = System.Drawing.Color.LightGray;
-            this.btnZoek.Location = new System.Drawing.Point(429, 50);
-            this.btnZoek.Name = "btnZoek";
-            this.btnZoek.Size = new System.Drawing.Size(75, 20);
-            this.btnZoek.TabIndex = 41;
-            this.btnZoek.Text = "ZOEKEN";
-            this.btnZoek.UseVisualStyleBackColor = false;
-            this.btnZoek.Click += new System.EventHandler(this.btnZoek_Click);
-            this.btnZoek.MouseLeave += new System.EventHandler(this.btnZoek_MouseLeave);
-            this.btnZoek.MouseHover += new System.EventHandler(this.btnZoek_MouseHover);
-            // 
-            // txtZoek
-            // 
-            this.txtZoek.ForeColor = System.Drawing.Color.Silver;
-            this.txtZoek.Location = new System.Drawing.Point(235, 51);
-            this.txtZoek.Name = "txtZoek";
-            this.txtZoek.Size = new System.Drawing.Size(188, 20);
-            this.txtZoek.TabIndex = 40;
-            this.txtZoek.Text = "Zoeken...";
-            this.txtZoek.Enter += new System.EventHandler(this.txtZoek_Enter);
-            this.txtZoek.Leave += new System.EventHandler(this.txtZoek_Leave);
             // 
             // llblclose
             // 
@@ -99,6 +73,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OUD-LEERLINGEN";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Lijst.Properties.Resources.Refresh_icon_svg;
+            this.pictureBox2.Location = new System.Drawing.Point(482, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 18);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Refresh");
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // button1
             // 
@@ -157,18 +143,6 @@
             this.panel1.Size = new System.Drawing.Size(556, 23);
             this.panel1.TabIndex = 46;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Lijst.Properties.Resources.Refresh_icon_svg;
-            this.pictureBox2.Location = new System.Drawing.Point(482, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 18);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Refresh");
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Lijst.Properties.Resources.logo_handelsschool_sint_joris;
@@ -190,8 +164,6 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(550, 443);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnZoek);
-            this.Controls.Add(this.txtZoek);
             this.Controls.Add(this.llblclose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -210,9 +182,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnZoek;
-        private System.Windows.Forms.TextBox txtZoek;
         private System.Windows.Forms.LinkLabel llblclose;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;

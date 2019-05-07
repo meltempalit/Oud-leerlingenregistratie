@@ -84,32 +84,22 @@ namespace Lijst
 
         private void btnZoek_MouseHover(object sender, EventArgs e)
         {
-            btnZoek.BackColor = Color.FromArgb(18, 74, 111);
-            btnZoek.ForeColor = Color.White;
+          
         }
 
         private void btnZoek_MouseLeave(object sender, EventArgs e)
         {
-            btnZoek.BackColor = Color.Transparent;
-            btnZoek.ForeColor = Color.Black;
+           
         }
 
         private void txtZoek_Enter(object sender, EventArgs e)
         {
-            if (txtZoek.Text == "Zoeken...")
-            {
-                txtZoek.Text = "";
-                txtZoek.ForeColor = Color.Silver;
-            }
+           
         }
 
         private void txtZoek_Leave(object sender, EventArgs e)
         {
-            if (txtZoek.Text == "")
-            {
-                txtZoek.Text = "Zoeken...";
-                txtZoek.ForeColor = Color.Silver;
-            }
+            
         }
 
         
