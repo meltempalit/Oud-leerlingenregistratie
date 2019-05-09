@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>616E4AB3477C4073517EC5893769FC832E8E1154</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>D1EE53E52BEE70B2329885DD968320DAD6B4225C</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Basisformulier_TemporaryKey.pfx</ManifestKeyFile>
